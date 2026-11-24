@@ -1,7 +1,7 @@
 {
   "schema": "mfm_cloud_package_v1",
   "source": "original",
-  "created_at": "2026-11-24T16:35:46.442076+09:00",
+  "created_at": "2026-11-24T16:58:31.338269+09:00",
   "files": [
     {
       "path": ".dockerignore",
@@ -285,8 +285,8 @@
     },
     {
       "path": "GUIDE.md",
-      "size_bytes": 21286,
-      "sha256": "47721c006475ed81b801dc5cfe894ce0b7b033f6cd1dec3c44a0224b42311781"
+      "size_bytes": 21301,
+      "sha256": "c8166d9584d213cea0405122b9c83043b93b1b953c8eaa6a191fc9a70a9f189d"
     },
     {
       "path": "HANDOFF.md",
@@ -325,8 +325,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 11598,
-      "sha256": "52600f04ac8a5cf5dddea5c89693b4a20f33fd17b0dfbdebf83d12e826bb6d66"
+      "size_bytes": 2289,
+      "sha256": "c49f15a9ec4c183e9a7e948af9ab614e7154d356384a6b25f7657351dd2cbab9"
     },
     {
       "path": "RESULTS_2026-09-18.md",
@@ -435,8 +435,8 @@
     },
     {
       "path": "docs/Stage12_검증가속.md",
-      "size_bytes": 6322,
-      "sha256": "2e53ad3d486debbb7d26352c707e0819fbf3b961bce3b906e5220273384981d9"
+      "size_bytes": 6333,
+      "sha256": "5497890eec1c9795b40288b9e824df67a2e83a717f8c724739d7c5f2d8e40e0a"
     },
     {
       "path": "docs/original_변경이력.md",
@@ -460,18 +460,23 @@
     },
     {
       "path": "docs/단계별_입출력_상세.md",
-      "size_bytes": 74709,
-      "sha256": "52617ddf083e97ff01f178326258f6adcd3aad1ac8a8105624162118e7163313"
+      "size_bytes": 74730,
+      "sha256": "634a499f6d5b8872128c894c320f566f3ef05c19a4e8c34501ff4cab472e94c3"
     },
     {
       "path": "docs/실행과_출력구조.md",
-      "size_bytes": 7595,
-      "sha256": "8d24caa15e4802d1c2554589c9fb7d381c8b699566da8d659f233ef7f4529126"
+      "size_bytes": 7616,
+      "sha256": "90471e0106e75e1b7c03bd0bd26cfb0f18d54757465c16254ec55c3d9b13be85"
+    },
+    {
+      "path": "docs/전처리_상세.md",
+      "size_bytes": 11731,
+      "sha256": "3c5a4a8951e076ec34f38df8989c016745fb856ebce389560fc07619bc8ad717"
     },
     {
       "path": "docs/전처리_파이프라인_가이드.md",
-      "size_bytes": 15230,
-      "sha256": "99cd2fcd24336ac9107abd45593f5d0a5b4abde549f7c75b9c3906441b0a6b78"
+      "size_bytes": 15456,
+      "sha256": "3c1a9ef644242da24c1f0bde1b35000c1a0f3af1bed34d76057bd8a0fa3c1645"
     },
     {
       "path": "docs/클라우드_실행.md",

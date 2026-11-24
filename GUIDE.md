@@ -170,7 +170,7 @@ bash run_pipeline.sh run   --selection manifests/리드별/medai/001/long_read.t
 - Pileup은 HP별/allele별 지지 tensor가 아님. 같은 reference 위치에 대응하는 HAP1/2는 같은 관측을 사용함. HAP 서열은 각 allele을 보존함.
 - HAP insertion은 서열에 그대로 있고 `mapping_kind=2`임. 왼쪽 reference anchor의 generic insertion 사건 지지를 전달함. 삽입 allele 일치율이나 삽입 염기별 실제 depth/BQ/base ratio로 해석하지 않음.
 - DNA 복원 정답에서는 N/padding P를 제외하고 유효 정답 수로 정규화함. RNA/WGS 실제 관측값은 N·blacklist 위치라는 이유만으로0으로 덮어쓰지 않음. 이 계약은 window metadata에 기록하며 학습 코드가 적용함.
-- 저장: HAP DNA 4bit ACGTNP, pileup 12채널 float32, count/depth uint32, zstd level5임. MAPQ·primary/supplementary·duplicate 정책은 플랫폼의 기존 필터를 따름. 상세 배열/채널은 [README pileup 설명](README.md#reference-pileup-선택-모드-2026-11-23)에 있음.
+- 저장: HAP DNA 4bit ACGTNP, pileup 12채널 float32, count/depth uint32, zstd level5임. MAPQ·primary/supplementary·duplicate 정책은 플랫폼의 기존 필터를 따름. 상세 배열/채널은 [pileup 상세 설명](docs/전처리_상세.md#reference-pileup-선택-모드-2026-11-23)에 있음.
 
 ## 7. 검증·재개·정리
 
