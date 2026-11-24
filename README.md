@@ -7,7 +7,7 @@ Docker 엔진이 설치된 Linux x86_64 VM에서 Bash로 실행함. 기본 출�
 ```bash
 git clone https://github.com/KU-MedAI/mfm_cloud_preprocess.git
 cd mfm_cloud_preprocess
-docker build --platform linux/amd64 -t mfm-preprocess:261124-cpu .
+docker build --platform linux/amd64 -f docker/Dockerfile -t mfm-preprocess:261124-cpu .
 ```
 
 ## 2. 저장 경로·실행 설정
@@ -15,7 +15,7 @@ docker build --platform linux/amd64 -t mfm-preprocess:261124-cpu .
 ```bash
 MFM_DOCKER_ROOT="$PWD/../mfm_docker_run"
 mkdir -p "$MFM_DOCKER_ROOT"/data/{input,assets,output,state} "$MFM_DOCKER_ROOT"/{scratch,cache}
-cp docker_config.pileup.example.json "$MFM_DOCKER_ROOT/config.json"
+cp docker/config.pileup.example.json "$MFM_DOCKER_ROOT/config.json"
 ```
 
 예제는16CPU·384GiB·동시1명 설정임. VM에 맞춰 `config.json`의 CPU/RAM과 아래 `--cpus`/`--memory`를 함께 수정함.

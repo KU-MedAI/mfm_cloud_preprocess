@@ -81,12 +81,24 @@ pileup 삽입 위치의 `depth=0`은 관측 read가 실제로 전혀 없다는 �
 | readset full | 수행 | HAP별 readset 생성 |
 | pileup + WGS-only | 기본 비적용 | reference 관측과 consensus chain으로 feature 생성 |
 | pileup + RNA coverage_only | 기본 비적용 | RNA expression까지만 생성하며 ASE/CNV는 비적용 |
-| pileup + RNA full | 수행 | 기존 RNA ASE/CNV가 요구하는 개인 WGS 근거 준비 |
+| pileup + RNA full | 수행 | CNV가 요구하는 개인 HAP별 WGS depth 준비 |
 | pileup + 비교 실험 옵션1 | 수행 | `MFM_PILEUP_BENCHMARK_REALIGN=1`일 때의 별도 실험임. pileup 관측은 여전히 reference BAM 사용 |
 
 - 현재 Docker·cloud pileup 예제: `MFM_RNA_OUTPUT_MODE=full`, `MFM_SEQUENCE_DEFER_RNA=0`, `MFM_PILEUP_BENCHMARK_REALIGN=0`임. 따라서 pair의 ASE/CNV도 포함하며 WGS HAP 재정렬이 실행될 수 있음.
 - RNA 정렬·1bp expression·ASE/CNV의 계산 및 read 기준은 pileup 출력 모드 때문에 바뀌지 않음. `coverage_only`를 별도로 선택하면 분석 범위가 달라지므로 full과 구분해야 함.
 - 모든 모드에서 최종 QC와 source trace 후 정리함. pileup은 reference BAM에서 독립 재집계해 tensor를 대조하며, readset은 HAP 정렬/readset 계약을 검증함. 입력 좌표에 맞춰 검증 대상이 달라짐.
+
+RNA full의 실제 입력은 다음과 같음. [run_rna_sample.sh](../run_rna_sample.sh)의 `rna_variants`/`rna_allelic`/`rna_cnv` 호출에서 확인 가능함.
+
+| 단계 | 사용하는 정렬 | 목적 |
+|---|---|---|
+| 20 변이 검증 | Stage06 reference haplotagged WGS BAM | ASE에 쓸 이형접합 변이의 read 지지를 확인함. WGS HAP 재정렬이 직접 입력은 아님 |
+| 21 ASE 집계 | HAP1·HAP2 RNA BAM | 같은 RNA fragment의 두 HAP 정렬을 비교해 allele count를 만듦 |
+| 22 CNV 검사 | Stage10 HAP1·HAP2 WGS BAM/CRAM | 각 HAP의 exon 좌표에서 DNA depth를 구해 CNV 의심 유전자를 표시함 |
+
+- 같은 RNA 입력을 HAP1/2에 각각 정렬하며, 이 두 결과를 expression과 ASE가 공유함. ASE용 RNA 재정렬을 별도로 한 번 더 실행하지 않음. 두 정렬 결과가 필요하다는 것과 모든 fragment가 양쪽에 반드시 매핑되어야 한다는 것은 다른 조건임.
+- 현재 full 모드는 CNV까지 포함하므로 WGS HAP 재정렬 비용이 있음. 기존부터 수행하던 처리이며 Docker 디렉터리 분리로 추가되는 계산이 아님.
+- RNA 단계13–26의 시간과 WGS 준비를 포함한 pair 전과정 시간을 구분함. WGS HAP 정렬이 준비되지 않은 경우 전체 시간에는 Stage10 비용도 포함해야 함.
 
 ## 6. 코드만으로 실행 가능한 범위
 

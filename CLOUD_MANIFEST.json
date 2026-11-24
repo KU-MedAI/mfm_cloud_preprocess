@@ -1,7 +1,7 @@
 {
   "schema": "mfm_cloud_package_v1",
   "source": "original",
-  "created_at": "2026-11-24T16:58:31.338269+09:00",
+  "created_at": "2026-11-24T17:17:46.671940+09:00",
   "files": [
     {
       "path": ".dockerignore",
@@ -15,8 +15,8 @@
     },
     {
       "path": ".github/workflows/docker.yml",
-      "size_bytes": 1334,
-      "sha256": "e2062c26f9d31ffd046dcd9ec72d74ab4b7804b3892573168b9e830cf8e95dee"
+      "size_bytes": 1359,
+      "sha256": "951fe065303b259718e3cf09fa1d698284e8f57bb2fee44d5e870ec09837dddc"
     },
     {
       "path": ".gitignore",
@@ -279,11 +279,6 @@
       "sha256": "3981a6a584a91c3f0fb97a8af2a56b9da5057b7ca0ae07bb20fd7f951021eca3"
     },
     {
-      "path": "Dockerfile",
-      "size_bytes": 3183,
-      "sha256": "a83c06bf658784e315575143d77065a79513d27c7140145615463ad15effcd15"
-    },
-    {
       "path": "GUIDE.md",
       "size_bytes": 21301,
       "sha256": "c8166d9584d213cea0405122b9c83043b93b1b953c8eaa6a191fc9a70a9f189d"
@@ -325,8 +320,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 2289,
-      "sha256": "c49f15a9ec4c183e9a7e948af9ab614e7154d356384a6b25f7657351dd2cbab9"
+      "size_bytes": 2310,
+      "sha256": "232f03aa71aa9ca2752b9e01b996f1741f64bb99a4262b87a0aeb2c6e718a705"
     },
     {
       "path": "RESULTS_2026-09-18.md",
@@ -409,6 +404,16 @@
       "sha256": "3c38ba763c931befc13b1d43a8e1e95000c42272e412dade4d2819caa049fba8"
     },
     {
+      "path": "docker/Dockerfile",
+      "size_bytes": 3183,
+      "sha256": "a83c06bf658784e315575143d77065a79513d27c7140145615463ad15effcd15"
+    },
+    {
+      "path": "docker/config.pileup.example.json",
+      "size_bytes": 1575,
+      "sha256": "1cfa278c32e9152444182ffcc2e8c5e78e1db37e118e11e9664b532e45bb2775"
+    },
+    {
       "path": "docker/entrypoint.sh",
       "size_bytes": 1091,
       "sha256": "fa2f8e5c6acf1ee65f7b2ef460626bbed2d0a7ccb10ed0d06511881ebca5952b"
@@ -419,14 +424,9 @@
       "sha256": "08efcce81f2298b29519c531d1cd4e401d7a580d05637fca0c1a9bcdb99ef9de"
     },
     {
-      "path": "docker_config.pileup.example.json",
-      "size_bytes": 1575,
-      "sha256": "1cfa278c32e9152444182ffcc2e8c5e78e1db37e118e11e9664b532e45bb2775"
-    },
-    {
       "path": "docs/Docker_실행.md",
-      "size_bytes": 10813,
-      "sha256": "fc4340c97abfb3b3ae537e577943c587993adda84a6fe99972331443766b2298"
+      "size_bytes": 11054,
+      "sha256": "86b09263aba194040be06c90e088622a892db66c340300040142b4f4175af9fc"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -445,8 +445,8 @@
     },
     {
       "path": "docs/pileup_필터_비교.md",
-      "size_bytes": 9216,
-      "sha256": "c3eff987400ff67be81fc5ea4515fe438ae1b15ec6a55c252daabd83212bad64"
+      "size_bytes": 10533,
+      "sha256": "515c699b5e5a3c37a3b825f0286af418ad4b445fae90ee7c27cc4752c095f43f"
     },
     {
       "path": "docs/pilot5_복구가이드.md",
@@ -455,8 +455,8 @@
     },
     {
       "path": "docs/검증결과.md",
-      "size_bytes": 18252,
-      "sha256": "f864ba1753fdc38be83f1b76a72ca74851c7079ad90774fc402a2a5bf2ff8032"
+      "size_bytes": 19063,
+      "sha256": "3519bced4933a7b02552f40c082c0decf9b016657b549265ebd63f274bf0387e"
     },
     {
       "path": "docs/단계별_입출력_상세.md",
@@ -470,8 +470,8 @@
     },
     {
       "path": "docs/전처리_상세.md",
-      "size_bytes": 11731,
-      "sha256": "3c5a4a8951e076ec34f38df8989c016745fb856ebce389560fc07619bc8ad717"
+      "size_bytes": 11958,
+      "sha256": "a30bc87ddc751a3f344efece85fe453af51f02645dedc7c1d03bb0274d539f99"
     },
     {
       "path": "docs/전처리_파이프라인_가이드.md",
@@ -3711,7 +3711,7 @@
     {
       "path": "tests/test_docker_package.py",
       "size_bytes": 6179,
-      "sha256": "096389bce458e5dbcab11feb5dd95ba1a995280a4a8ac2cd2b7c1f7f8a381afc"
+      "sha256": "4ad08c6618682cb822c80cec854398d12df23ed326b57727caa8343532bd0966"
     },
     {
       "path": "tests/test_download_live_ranges.py",
@@ -4505,8 +4505,8 @@
     },
     {
       "path": "tools/check_cloud_package.py",
-      "size_bytes": 5472,
-      "sha256": "161ed238577ec23646a378b704438acd518f02832692c1d45371127594e4d165"
+      "size_bytes": 5479,
+      "sha256": "1adbaca38fb951ebe592a1789a813d260d70d180418926bc3efff9639c47d605"
     },
     {
       "path": "tools/check_model_input.py",

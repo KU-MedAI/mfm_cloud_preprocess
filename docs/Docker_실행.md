@@ -12,11 +12,13 @@
 
 Docker Engine이 실행되는 Linux x86_64 호스트에서 이 코드 폴더를 사용함. 최초 빌드는 Ubuntu 저장소·GitHub·Conda 채널 접속이 필요함.
 
+Dockerfile·전용 JSON·entrypoint·소형검사는 `docker/`에서 관리함. 공통 환경 정의와 `.dockerignore`는 루트에 두며, 빌드할 때 마지막 `.`으로 저장소 전체를 context로 지정함.
+
 ```bash
 cd /path/to/mfm_cloud_preprocess
 python3 tools/check_cloud_package.py
-# Dockerfile/.dockerignore와 코드 전체를 현재 배포 snapshot 그대로 사용함.
-docker build --platform linux/amd64 -t mfm-preprocess:261124-cpu .
+# 저장소 루트를 build context로 사용함. Docker 전용 파일은 docker/에 있음.
+docker build --platform linux/amd64 -f docker/Dockerfile -t mfm-preprocess:261124-cpu .
 docker run --rm mfm-preprocess:261124-cpu
 ```
 
@@ -46,7 +48,7 @@ docker run --rm mfm-preprocess:261124-cpu
 MFM_DOCKER_ROOT="$PWD/../mfm_docker_run"
 mkdir -p "$MFM_DOCKER_ROOT"/data/{input,assets,output,state}
 mkdir -p "$MFM_DOCKER_ROOT"/scratch "$MFM_DOCKER_ROOT"/cache
-cp docker_config.pileup.example.json "$MFM_DOCKER_ROOT/config.json"
+cp docker/config.pileup.example.json "$MFM_DOCKER_ROOT/config.json"
 
 # 여러 docker run에서 재사용하는 실행 옵션임.
 MFM_DOCKER_ARGS=(

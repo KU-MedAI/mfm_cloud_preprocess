@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {
-    'Dockerfile', '.dockerignore', 'docker_config.pileup.example.json',
+    'docker/Dockerfile', '.dockerignore', 'docker/config.pileup.example.json',
     'docker/entrypoint.sh', 'docker/smoke.py', 'docs/Docker_실행.md',
     'run_pipeline.sh', 'config_v2.sh', 'handoff_config.example.json',
     'cloud_config.pileup.example.json', 'environment.yml', 'requirements.txt',
