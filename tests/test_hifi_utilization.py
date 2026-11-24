@@ -75,11 +75,17 @@ class ActualHiFi(unittest.TestCase):
             for hap in [1,2]:
                 folder=root/f'inputHAP{hap}';folder.mkdir();f=folder/'chr1.fa';f.write_text('>chr1\n'+sequence+'\n');pysam.faidx(str(f));(folder/'chr1.chain').write_text(f'chain 0 chr1 8000 + 0 8000 chr1 8000 + 0 8000 1\n8000\n');hapdirs[hap]=folder
             outputs=[]
-            for label,phase in [('old','0'),('new','1')]:
+            for label,phase in [('old','0'),('new','1'),('pair16','1'),('pair32','1')]:
                 cfg=PersonalRealignConfig(cohort='T',output_root=root/label,sample_list=None,samples=['S'],chroms=['chr1'],sequence_variant_policy='snv_indel',dataset_role='pre_training',platform='hifi',realigned_subdir='realigned/all_to_both',alignment=source,hap1_fasta_dir=hapdirs[1],hap2_fasta_dir=hapdirs[2],reference_fasta=ref,hap_read_mode='all_to_both',threads=2,sort_threads=1,sort_mem='32M',hap_jobs=2,include_unmapped=False,inspect_reads=5)
                 env={'PATH':os.environ['PATH'],'MFM_REALIGN_PHASE_RESOURCES':phase,'MFM_CPU_BUDGET':'24','MFM_SAMPLE_CPU_BUDGET':'24','MFM_RAM_LIMIT_BYTES':str(500*GIB),'MFM_REALIGN_INPUT_BACKEND':'indexed','MFM_WGS_ALIGN_REQUESTED':'auto','MFM_WGS_SORT_REQUESTED':'auto','MFM_WGS_HAP_REQUESTED':'auto','OPENBLAS_NUM_THREADS':'1','OMP_NUM_THREADS':'1'}
+                env['PYTHONPATH']=os.environ.get('PYTHONPATH',str(Path(__file__).resolve().parents[1]/'src'))
+                if label in {'pair16','pair32'}:
+                    cfg.sort_mem='2G'
+                    cpus='16' if label=='pair16' else '32'
+                    env.update(MFM_CPU_BUDGET=cpus, MFM_SAMPLE_CPU_BUDGET=cpus,
+                               MFM_WGS_SORT_MEM_REQUESTED='auto')
                 if phase=='1':
-                    pool=root/'pool';(pool/'leases').mkdir(parents=True);(pool/'waiters').mkdir();lease=pool/'leases/owner.json';_atomic(lease,{'manager_pid':os.getpid(),'child_pid':None,'cpus':4,'total_cpus':24,'memory_bytes':4*GIB});env['MFM_CPU_POOL_LEASE_FILE']=str(lease)
+                    pool=root/f'pool_{label}';(pool/'leases').mkdir(parents=True);(pool/'waiters').mkdir();lease=pool/'leases/owner.json';_atomic(lease,{'manager_pid':os.getpid(),'child_pid':None,'cpus':4,'total_cpus':int(env['MFM_CPU_BUDGET']),'memory_bytes':4*GIB});env['MFM_CPU_POOL_LEASE_FILE']=str(lease)
                 with patch.dict(os.environ,env,clear=True):run_personal_realign_generation(cfg)
                 result=[]
                 for hap in [1,2]:
@@ -89,7 +95,19 @@ class ActualHiFi(unittest.TestCase):
                 outputs.append(result)
                 if phase=='1':
                     self.assertEqual(json.loads(lease.read_text())['cpus'],1)
-                    timing=json.loads((root/label/'S/qc/S.stage11_timing.json').read_text());self.assertEqual(set(timing['hap_resource_phases']),{'1','2'});self.assertGreater(timing['effective_threads']['input_decode_per_hap'],0)
+                    timing=json.loads((root/label/'S/qc/S.stage11_timing.json').read_text())
+                    if timing['effective_threads']['hap_jobs']>1:
+                        self.assertEqual(set(timing['hap_resource_phases']),{'1','2'})
+                    else:
+                        self.assertEqual(set(timing['effective_threads_by_hap']),{'HAP1','HAP2'})
+                    self.assertGreater(timing['effective_threads']['input_decode_per_hap'],0)
                     self.assertIn('view -@', (root/label/'S/logs/personal_realign/S.HAP1.realign.sh').read_text())
-            self.assertEqual(outputs[0],outputs[1])
+                    if label in {'pair16','pair32'}:
+                        self.assertEqual(timing['effective_threads']['hap_jobs'], 1 if label=='pair16' else 2)
+                        for hap in [1,2]:
+                            script=(root/label/f'S/logs/personal_realign/S.HAP{hap}.realign.sh').read_text()
+                            self.assertIn('-t 10', script)
+                            self.assertIn('-m '+str(8*GIB), script)
+            for output in outputs[1:]:
+                self.assertEqual(outputs[0],output)
 if __name__=='__main__':unittest.main()

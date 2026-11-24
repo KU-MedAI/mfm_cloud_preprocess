@@ -4983,6 +4983,48 @@
         }
       ],
       "biological_modules_changed": false
+    },
+    {
+      "applied_at": "2026-11-24T18:10:21.986597+09:00",
+      "reason": "사용자 승인: Stage10 sort 기본 버퍼를 CPU/HAP 병렬도와 RAM 예산 안에서 확대함. 생물학적 정책은 유지함.",
+      "files": [
+        {
+          "path": "config_v2.sh",
+          "size_bytes": 70077,
+          "source_sha256": "e4e12975853633b9e2ec8fd27a276e5a866798ac9905f34fa780aaadc5e1af9f"
+        },
+        {
+          "path": "src/integrate_wgs_rna/realign/phases.py",
+          "size_bytes": 19335,
+          "source_sha256": "5e66e7d4263be84c024fbfc8b2e3abee9248f86dc5b53217ab645ebfc6a13543"
+        },
+        {
+          "path": "tests/test_align_resources.py",
+          "size_bytes": 9419,
+          "source_sha256": "efbde42ec8d68070efe9ffa00c9f083d6406af0af594703e5748c0ff1284ca56"
+        },
+        {
+          "path": "tests/test_fixed_sample_cpu.py",
+          "size_bytes": 15126,
+          "source_sha256": "29ab5cb0040c3d607611af7d290f6a778ab11a5fd225c9c0317953255e2f8eb2"
+        },
+        {
+          "path": "tests/test_hifi_utilization.py",
+          "size_bytes": 10510,
+          "source_sha256": "8586b72cba4280763f7bd5c40f386651334cd7bcc2b282a776d4c47882e5b176"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T18:27:43.588132+09:00",
+      "reason": "사용자 최신16CPU 클라우드 기준: 실제HiFi16CPU/고정예산 회귀 보완. 생산계산정책은 동일함.",
+      "files": [
+        {
+          "path": "tests/test_hifi_utilization.py",
+          "size_bytes": 10857,
+          "source_sha256": "3e7ac8d4a75958e0b1a1c8d7d22c7e15fa80ef82b268684a6382830fa0752166"
+        }
+      ]
     }
   ],
   "deployment_updates": [

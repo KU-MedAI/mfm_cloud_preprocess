@@ -173,6 +173,24 @@ class FixedSampleCpuTests(unittest.TestCase):
         with self.assertRaises(ValueError):apply({'processing_buffers':{'unknown':1}})
         with self.assertRaises(ValueError):apply({'processing_buffers':{'sort_memory_per_thread':'1G'},'pipeline_env':{'WGS_SORT_MEM':'2G'}})
 
+    def test_sort메모리_자동요청과명시값을_자식단계에도보존(self):
+        script = ('source ./config_v2.sh\nsource ./config_v2.sh\n'
+                  'printf "%s\\n" "$MFM_WGS_SORT_MEM_REQUESTED"\n'
+                  'bash -c \'source ./config_v2.sh; '
+                  'printf "%s\\n" "$MFM_WGS_SORT_MEM_REQUESTED"\'\n')
+        for requested in [None, '2G']:
+            env = dict(self.env, OUTPUT_ROOT=str(self.root/'output'),
+                       DATASET_ROOT=str(self.root/'output'),
+                       MFM_CORE_ENV=str(Path(sys.executable).parent.parent))
+            env.pop('MFM_WGS_SORT_MEM_REQUESTED', None)
+            env.pop('WGS_SORT_MEM', None)
+            if requested is not None:
+                env['WGS_SORT_MEM'] = requested
+            run = subprocess.run(['bash'], input=script, cwd=ROOT, env=env,
+                                 text=True, capture_output=True, timeout=15)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            self.assertEqual(run.stdout.splitlines(), [requested or 'auto']*2)
+
     def test_cli_override_selects_fixed_mode_and_slot_limit(self):
         config=dict(self.config(16,68),cpu_allocation_mode='dynamic',resource_profile='throughput',
                     local_jobs='auto',download_jobs=1,slurm={'cpus':16,'concurrency':4})
