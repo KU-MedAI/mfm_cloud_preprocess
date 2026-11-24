@@ -93,4 +93,4 @@ pileup 삽입 위치의 `depth=0`은 관측 read가 실제로 전혀 없다는 �
 - 포함: 전처리 코드와 vendor 모듈, 자동 환경 설치, WGS/RNA 단계, 입력 목록·공통 자산 준비, 내장 큐, QC·재개·정리임. 빌드할 때 다른 전처리 저장소의 소스 접근은 필요하지 않음.
 - 실행 조건: Linux x86_64, Docker 또는 기본 OS 도구, 입력 URL 네트워크, 쓰기·잠금·rename·native 실행을 지원하는 디스크, CPU/RAM 설정이 필요함. 원본/reference 실물은 이미지에 넣지 않음.
 - CPU Docker 범위: 제공 public/panel VCF 기반 WGS/RNA를 대상으로 함. GPU Parabricks·CuPy·Clair3 self-call은 현재 CPU 이미지에 포함하지 않음. 일반 설치의 Clair3는 별도 환경 설치 경로가 있음.
-- 검증 한계: 현재 서버에는 Docker 엔진이 없어 실제 image build/run과 새 VM의 대용량 donor 전과정은 미검증임. 환경·소형검사 통과와 구분함.
+- 검증 범위: 작성 서버의 환경·소형검사와 GitHub 자동 검사의 실제 image build/run 결과를 구분함. 커밋별 PR Checks에서 이미지 검사 상태를 확인함. 새 VM의 대용량 donor 전과정 완주는 별도 검증 대상임.

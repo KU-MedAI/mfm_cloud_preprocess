@@ -133,7 +133,9 @@ gunzip -c mfm-preprocess_261124-cpu.tar.gz | docker load
 - 이미지의 /opt/mfm-image에는 실제 Conda explicit 목록·pip freeze·OS 패키지 목록이 남음. 빌드에서 검증한 native 바이너리는 첫 실행 때 쓰기 가능한 캐시에 잠금/원자적 복사로 재사용하며 기존 캐시를 덮어쓰지 않음.
 - 소형 검사와 실제 donor 전과정의 처리시간·RAM·I/O는 구분함. 실제 클라우드 노드에서 한 샘플을 완료해 결과와 자원 사용량을 대조하는 PoC가 필요함.
 - 현재 구현한 이미지는 CPU WGS/RNA 범위임. Clair3 self-call/CuPy/Parabricks GPU runtime은 포함하지 않음. 공개 VCF 기반 기본3212명 구성과 구분하며 GPU는 별도 이미지·호스트 runtime·경로 연동을 검증해야 함.
-- 현재 작업 서버에는 Docker 실행기가 없고 rootless namespace도 제한되어 실제 image build/run은 미검증임. entrypoint·기존 파이프라인 연결·native13종 및 소형검사는 별도 설치된 jj_mfm으로 검증함. 이후 실제 Docker 검증 시 이 상태를 갱신함.
+- 작성 서버에는 Docker 실행기가 없고 rootless namespace도 제한되어 로컬 image build/run은 수행하지 않음. entrypoint·기존 파이프라인 연결·native13종 및 소형검사는 별도 설치된 jj_mfm으로 검증함.
+- [GitHub 자동 검사](../.github/workflows/docker.yml)는 Ubuntu24.04 실행기에서 실제 image build 후 컨테이너의 help/doctor/dry-run·소형 WGS/RNA 검사를 수행함. 해당 커밋의 PR Checks에서 성공 여부를 확인함. 검사 중 실제 donor 원본 다운로드·대용량 전처리·레지스트리 이미지 게시를 수행하지 않음.
+- 자동 검사의 실행 CPU는2이며 설정의 샘플/풀 CPU도2로 맞춤. 제공 실사용 JSON의16CPU·384GiB 예제를 변경하지 않음. 작은 검사를 통과한 것만으로 해당 작은 자원에서 실제 donor 전처리가 가능하다고 판단하지 않음.
 
 ## 공식 문서
 
