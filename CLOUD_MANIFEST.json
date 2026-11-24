@@ -425,8 +425,8 @@
     },
     {
       "path": "docs/Docker_실행.md",
-      "size_bytes": 11328,
-      "sha256": "36ccf76a47d68f54a3251ca47c358666c508cba46cd8140bc9614e9b4cf2bc41"
+      "size_bytes": 11329,
+      "sha256": "58d01228764bc60c8e8c2c4f0aa158b0696c7f73f8a0d78612208eb7c690692e"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -4894,6 +4894,6 @@
       "sha256": "5199dd9f1e8aca86ebe8ac0f7ed0b4c8369aa4c69bb27354b6d007f4f8702f6b"
     }
   ],
-  "updated_at": "2026-11-24T18:27:43.588132+09:00",
+  "updated_at": "2026-11-24T18:32:40.523747+09:00",
   "packaging_note": "cloud 전달 코드 전체를 저장소 루트에 배치함. 설명서·회귀검사·Git 배포 설정만 보완하며 생물학 소스는 변경하지 않음."
 }

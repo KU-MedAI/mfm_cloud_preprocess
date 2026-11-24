@@ -84,7 +84,7 @@ docker run "${MFM_DOCKER_ARGS[@]}" --name mfm-hg00308 mfm-preprocess:261124-cpu 
 - JSON sample_cpus/local_jobs: 고정 샘플 CPU와 동시 샘플 수임.
 - JSON memory_limit_bytes: 내부 RAM 운영 상한임. 실제 cgroup/물리 한도가 더 작으면 우선하며10%여유를 유지함.
 - 예제는 CPU16·동시1·RAM384GiB임.384GiB는 두 HAP STAR 예약·부모·여유를 고려한 검증용 설정이며 실제 RSS를 뜻하지 않음. WGS-only의 최적 메모리를 확정한 값도 아님.
-- 클라우드 기본은 샘플당 고정16CPU임. CPU Stage10은 이 예산 안에서 HAP을 순차 처리하며, 미지정 sort 버퍼만 RAM에 맞춰 최대8GiB로 확대함. 부족하면4GiB·기존값으로 낮춤.32CPU를 자동 요청하지 않음.
+- 클라우드 기본은 샘플당 고정16CPU임. HiFi Stage10은 이 예산 안에서 HAP을 순차 처리하며, 미지정 sort 버퍼만 RAM에 맞춰 최대8GiB로 확대함. 부족하면4GiB·기존값으로 낮춤.32CPU를 자동 요청하지 않음.
 - 여러 샘플을 처리하려면 Docker CPU·RAM과 JSON의 풀/동시수를 함께 올림. 예를 들어 CPU68풀에서 샘플16CPU×4개를 설정 가능함. 실제 노드/다른 작업과 공유하는 커널 한도를 우선함.
 - 서로 다른 노드/독립 컨테이너의 PID·CPU lease를 같은 state 폴더에 공유하지 않음. 노드별 state와 고유 run_id를 사용하고 동일 샘플 output 중복 실행을 피함.
 - 이 구성의 cgroup 탐지 기준은 Linux cgroup v2임. v1 호스트에서 같은 한도 탐지가 된다고 검증한 것은 아님.
