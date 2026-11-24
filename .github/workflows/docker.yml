@@ -1,0 +1,37 @@
+name: Docker 빌드·실행 점검
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docker:
+    name: CPU 이미지 빌드와 소형검사
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: 코드 받기
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: 이미지 빌드
+        run: docker build --platform linux/amd64 --tag mfm-preprocess:ci .
+      - name: 진입점·환경·작업 계획 확인
+        run: |
+          docker run --rm --cpus 2 mfm-preprocess:ci help
+          docker run --rm --cpus 2 mfm-preprocess:ci doctor \
+            --config /opt/mfm/docker_config.pileup.example.json \
+            --sample-cpus 2 --cpu-pool-limit 2 --local-jobs 1
+          docker run --rm --cpus 2 mfm-preprocess:ci dry-run \
+            --target azure_poc --sample HG00308 \
+            --config /opt/mfm/docker_config.pileup.example.json \
+            --sample-cpus 2 --cpu-pool-limit 2 --local-jobs 1
+      - name: 컨테이너 내부 소형 WGS·RNA 검사
+        run: |
+          docker run --rm --cpus 2 \
+            --entrypoint /opt/conda/envs/jj_mfm/bin/python \
+            mfm-preprocess:ci /opt/mfm/docker/smoke.py
+          docker image inspect --format '{{.Id}} {{.Size}}' mfm-preprocess:ci

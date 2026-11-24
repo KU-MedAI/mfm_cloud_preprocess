@@ -1,0 +1,27 @@
+클라우드 분담 최신 재배정 안내 (2026-11-24T01:09:04+09:00)
+
+azure_poc 228명: Short pair228명 유지.
+azure_main 1257명: Short WGS-only1132명 + Long WGS-only125명.
+aws_main 1257명: Short WGS-only1121명 + Long WGS-only136명.
+server 470명: 우선 Short pair188명 + Long pair33명, 후속 Short WGS-only249명.
+네 명단 총3212명, 중복/누락0. 전체pair449명은 PoC228 + 서버221명이다.
+
+기존 --target 실행 방법은 유지한다. server_pair_221.tsv는 서버 우선 전체,
+server_short_pair_188.tsv와 server_long_pair_33.tsv는 그 하위 명단,
+server_wgs_249.tsv는 서버 후속 WGS 명단이다. 모두 전체 server.tsv에 포함된다.
+서버의 특정 샘플은 run --target server --sample ID로 선택할 수 있다.
+--target server 전체 실행은470명을 선택하므로 pair221명만의 실행과 구분한다.
+부분명단 전체를 선택할 때는 각 sample_id를 --sample ID로 반복 지정한다.
+MedAI/TGIL과 과거 batch는 출처 정보이며 클라우드 실행 구분이 아니다.
+
+jj_mfm에서 선택 확인: bash run_pipeline.sh dry-run --target azure_poc
+대상 실행: bash run_pipeline.sh run --target azure_poc (또는 azure_main/aws_main/server)
+--target은 명단과 설정/대상_pileup.json을 자동 선택한다. 실제VM 자원·경로는 --config로 지정한다.
+CPU/RAM·저장공간 보호는 유지한다. 명단 전체 완료가 기준이며220명/10TB 조기 중지는 target에 적용하지 않는다.
+DNA는 pileup_feature, pair RNA는 full 설정이다. 기존 파일은 검증 후 재사용한다.
+공통 자산은 manifests/공통자산.json과 assets, 대상 입력/결과/상태는 runtime/대상에 연결된다.
+원격 전송·검증 후 공간 회수 모드는 후속 구현 대상이다. 현재 run에 자동 적용되지 않는다.
+현재 입력 URL은 azure_poc_228 / azure_main_1257 / aws_main_1257 / server_470 및 common_ 파일이다.
+서버 부분명단도 같은 이름의 개인/공통 CSV로 제공한다. 이전 배정 CSV는 현재 경로에서 삭제하고 백업에 보존했다.
+예산은 각1900만원에서10%여유를 남긴 기존 단가 가정이다. AWS 확정 견적이나 실제 지출 상한이 아니다.
+이번에는 명단과 전달 자료만 갱신했으며 실제 전처리·데이터 전송·삭제는 실행하지 않았다.

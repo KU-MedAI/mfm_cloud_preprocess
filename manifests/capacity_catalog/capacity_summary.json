@@ -1,0 +1,16 @@
+{
+  "schema": "mfm_raw_resource_compact_capacity_v1",
+  "created_at_utc": "2026-09-29T16:52:58.691593+00:00",
+  "samples": 3212,
+  "resource_count_unique_url": 8224,
+  "resource_missing_size_count": 3411,
+  "raw_unique_known_bytes": 88795284675933,
+  "raw_shared_unique_known_bytes": 3120165381,
+  "raw_sample_owned_known_bytes": 88792164510552,
+  "observed_compact_count": 14,
+  "observed_compact_excluded_count": 21,
+  "estimated_compact_total_bytes_low": 141183733151994,
+  "estimated_compact_total_bytes_central": 146218137546251,
+  "estimated_compact_total_bytes_high": 147565836011124,
+  "estimate_note": "Illumina는 eligible complete Compact 관측 비율을 사용하며 validation level은 observation table에 명시; HiFi와 RNA는 동종 완료 관측이 충분할 때까지 legacy conservative를 유지."
+}

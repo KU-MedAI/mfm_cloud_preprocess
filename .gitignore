@@ -221,3 +221,38 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 전처리 실행 데이터·설치 환경·자격정보는 코드 배포에 포함하지 않음.
+/data/
+/output/
+/assets/
+/runtime/
+/run_state*/
+/.conda*/
+/.bootstrap/
+/scratch/
+/cache/
+**/native_cache/
+**/.aws/
+**/.ssh/
+.netrc
+.env.*
+*.pem
+*.key
+*.bam
+*.bai
+*.cram
+*.crai
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.vcf
+*.vcf.gz
+*.tar
+*.tar.gz
+*.tgz
+
+# Python 기본 양식의 lib/ 제외 규칙과 전처리 셸 모듈을 구분함.
+!/lib/
+!/lib/**

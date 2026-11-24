@@ -1,0 +1,59 @@
+{
+  "schema": "mfm_cloud_manifest_partition_v1",
+  "작성시각": "2026-11-23T23:01:44+09:00",
+  "기준master상대경로": "manifests/분담/전체_분담배치.tsv",
+  "기준masterSHA256": "06e3383909cf189766ddbf12806ddf18ea4e70a04b90a5c95cfaa69a3b9a52c2",
+  "대상": [
+    {
+      "target": "azure_poc",
+      "이름": "Azure_PoC",
+      "인원": 228,
+      "전체명단": "azure_poc.tsv",
+      "config": "설정/azure_poc_pileup.json"
+    },
+    {
+      "target": "azure_main",
+      "이름": "Azure_본처리",
+      "인원": 1257,
+      "전체명단": "azure_main.tsv",
+      "config": "설정/azure_main_pileup.json"
+    },
+    {
+      "target": "aws_main",
+      "이름": "AWS_본처리",
+      "인원": 1257,
+      "전체명단": "aws_main.tsv",
+      "config": "설정/aws_main_pileup.json"
+    },
+    {
+      "target": "server",
+      "이름": "현재서버",
+      "인원": 470,
+      "전체명단": "server.tsv",
+      "config": "설정/server_pileup.json"
+    }
+  ],
+  "공식선택파일수": 63,
+  "전체샘플수": 3212,
+  "샘플중복": 0,
+  "누락": 0,
+  "PoC본처리중복": 0,
+  "PoC정책": "228명 전체가 하나의 대상이며 회차·순차투입 조건 없음",
+  "입력URL": "입력URL/전달양식은 기존4열CSV, 입력URL/는상세형. 실행시는기존공식master/다운로드명세를사용.",
+  "배치의미": "기존63개선택파일은과거명령호환용으로보존한다. 새클라우드실행에는선택할필요가없다.",
+  "추정시간": "계산견적3시간/샘플. Short pair·Azure VM 실측상한으로검증된값은아님.",
+  "설정예제": "기존설정과독립된예제이며실제VM경로·RAM·CPU와참조마운트를배포때맞춘다. 클라우드는1샘플16CPU,서버는기존공유68CPU를참조한다. 원본/중간자료자동삭제는예제에서끄고보존한다.",
+  "업데이트시각": "2026-11-24T01:09:04+09:00",
+  "실행기준": "--target azure_poc/azure_main/aws_main/server로 네 명단 전체를 선택한다. MedAI/TGIL·batch는 출처 기록이며 클라우드 실행 구분으로 사용하지 않는다.",
+  "명단전체완료": "target 실행은 지정 명단 전체 완료가 기준이며 과거220명/10TB중단조건을적용하지않는다. CPU/RAM/저장공간보호는유지한다.",
+  "입력경로": "original/runtime/대상/input·output·state 및 original/assets. 기존 파일은 검증 후 재사용한다.",
+  "서버pair우선": {
+    "인원": 221,
+    "부분명단": "server_pair_221.tsv",
+    "Short188": "server_short_pair_188.tsv",
+    "Long33": "server_long_pair_33.tsv",
+    "WGS잔여명단": "server_wgs_249.tsv"
+  },
+  "재배정정책": "PoC228명 유지. Short pair188명과 Long pair33명은 서버 우선. Long WGS는 전원 클라우드, 기존 클라우드 WGS 배정 유지 후 남은 예산에서 Short WGS 추가 인원을 최대화한다.",
+  "공식선택목록파일수": 63
+}

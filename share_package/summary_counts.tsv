@@ -1,0 +1,15 @@
+category	label	count
+cohort	unique_samples	3212
+cohort	in_1kgp_3202_panel	3202
+cohort	outside_1kgp_panel	10
+training	strict_rna_bam_pair	449
+training	wgs_only	2763
+platform	Illumina_30x	2918
+platform	PacBio_HiFi	294
+project	1KGP_ILLUMINA	2918
+project	HGSVC2	1
+project	HGSVC3	60
+project	HPRC_R1	1
+project	HPRC_R2	232
+rna_pair_platform	Illumina_30x	416
+rna_pair_platform	PacBio_HiFi	33

@@ -1,0 +1,913 @@
+﻿번호,bam파일명,설명,링크
+1,HG00108,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00108/genomic/HG00108.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+2,HG00108,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00108/genomic/HG00108.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+3,HG00108,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240124/HG00108.final.cram
+4,HG00108,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240124/HG00108.final.cram.crai
+5,HG00111,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00111/genomic/HG00111.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+6,HG00111,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00111/genomic/HG00111.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+7,HG00111,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240127/HG00111.final.cram
+8,HG00111,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240127/HG00111.final.cram.crai
+9,HG00112,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00112/genomic/HG00112.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+10,HG00112,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00112/genomic/HG00112.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+11,HG00112,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240128/HG00112.final.cram
+12,HG00112,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240128/HG00112.final.cram.crai
+13,HG00114,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00114/genomic/HG00114.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+14,HG00114,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00114/genomic/HG00114.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+15,HG00114,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240130/HG00114.final.cram
+16,HG00114,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240130/HG00114.final.cram.crai
+17,HG00116,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00116/genomic/HG00116.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+18,HG00116,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00116/genomic/HG00116.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+19,HG00116,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240132/HG00116.final.cram
+20,HG00116,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240132/HG00116.final.cram.crai
+21,HG00117,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00117/genomic/HG00117.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+22,HG00117,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00117/genomic/HG00117.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+23,HG00117,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240133/HG00117.final.cram
+24,HG00117,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240133/HG00117.final.cram.crai
+25,HG00119,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00119/genomic/HG00119.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+26,HG00119,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00119/genomic/HG00119.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+27,HG00119,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240194/HG00119.final.cram
+28,HG00119,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240194/HG00119.final.cram.crai
+29,HG00121,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00121/genomic/HG00121.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+30,HG00121,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00121/genomic/HG00121.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+31,HG00121,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240195/HG00121.final.cram
+32,HG00121,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240195/HG00121.final.cram.crai
+33,HG00123,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00123/genomic/HG00123.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+34,HG00123,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00123/genomic/HG00123.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+35,HG00123,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240197/HG00123.final.cram
+36,HG00123,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240197/HG00123.final.cram.crai
+37,HG00125,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00125/genomic/HG00125.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+38,HG00125,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00125/genomic/HG00125.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+39,HG00125,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240198/HG00125.final.cram
+40,HG00125,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240198/HG00125.final.cram.crai
+41,HG00127,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00127/genomic/HG00127.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+42,HG00127,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00127/genomic/HG00127.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+43,HG00127,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240135/HG00127.final.cram
+44,HG00127,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240135/HG00127.final.cram.crai
+45,HG00129,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00129/genomic/HG00129.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+46,HG00129,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00129/genomic/HG00129.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+47,HG00129,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240137/HG00129.final.cram
+48,HG00129,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240137/HG00129.final.cram.crai
+49,HG00132,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00132/genomic/HG00132.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+50,HG00132,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00132/genomic/HG00132.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+51,HG00132,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240140/HG00132.final.cram
+52,HG00132,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240140/HG00132.final.cram.crai
+53,HG00137,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00137/genomic/HG00137.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+54,HG00137,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00137/genomic/HG00137.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+55,HG00137,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240143/HG00137.final.cram
+56,HG00137,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240143/HG00137.final.cram.crai
+57,HG00141,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00141/genomic/HG00141.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+58,HG00141,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00141/genomic/HG00141.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+59,HG00141,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240147/HG00141.final.cram
+60,HG00141,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240147/HG00141.final.cram.crai
+61,HG00142,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00142/genomic/HG00142.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+62,HG00142,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00142/genomic/HG00142.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+63,HG00142,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240148/HG00142.final.cram
+64,HG00142,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240148/HG00142.final.cram.crai
+65,HG00143,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00143/genomic/HG00143.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+66,HG00143,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00143/genomic/HG00143.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+67,HG00143,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240149/HG00143.final.cram
+68,HG00143,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240149/HG00143.final.cram.crai
+69,HG00145,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00145/genomic/HG00145.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+70,HG00145,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00145/genomic/HG00145.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+71,HG00145,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240150/HG00145.final.cram
+72,HG00145,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240150/HG00145.final.cram.crai
+73,HG00149,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00149/genomic/HG00149.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+74,HG00149,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00149/genomic/HG00149.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+75,HG00149,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240153/HG00149.final.cram
+76,HG00149,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240153/HG00149.final.cram.crai
+77,HG00155,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00155/genomic/HG00155.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+78,HG00155,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00155/genomic/HG00155.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+79,HG00155,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240156/HG00155.final.cram
+80,HG00155,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240156/HG00155.final.cram.crai
+81,HG00157,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00157/genomic/HG00157.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+82,HG00157,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00157/genomic/HG00157.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+83,HG00157,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240157/HG00157.final.cram
+84,HG00157,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240157/HG00157.final.cram.crai
+85,HG00159,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00159/genomic/HG00159.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+86,HG00159,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00159/genomic/HG00159.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+87,HG00159,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240200/HG00159.final.cram
+88,HG00159,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240200/HG00159.final.cram.crai
+89,HG00160,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00160/genomic/HG00160.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+90,HG00160,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00160/genomic/HG00160.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+91,HG00160,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240159/HG00160.final.cram
+92,HG00160,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240159/HG00160.final.cram.crai
+93,HG00178,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00178/genomic/HG00178.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+94,HG00178,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00178/genomic/HG00178.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+95,HG00178,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240165/HG00178.final.cram
+96,HG00178,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240165/HG00178.final.cram.crai
+97,HG00180,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00180/genomic/HG00180.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+98,HG00180,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00180/genomic/HG00180.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+99,HG00180,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240167/HG00180.final.cram
+100,HG00180,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240167/HG00180.final.cram.crai
+101,HG00181,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00181/genomic/HG00181.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+102,HG00181,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00181/genomic/HG00181.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+103,HG00181,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240168/HG00181.final.cram
+104,HG00181,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240168/HG00181.final.cram.crai
+105,HG00182,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00182/genomic/HG00182.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+106,HG00182,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00182/genomic/HG00182.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+107,HG00182,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240169/HG00182.final.cram
+108,HG00182,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240169/HG00182.final.cram.crai
+109,HG00183,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00183/genomic/HG00183.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+110,HG00183,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00183/genomic/HG00183.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+111,HG00183,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240170/HG00183.final.cram
+112,HG00183,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240170/HG00183.final.cram.crai
+113,HG00185,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00185/genomic/HG00185.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+114,HG00185,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00185/genomic/HG00185.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+115,HG00185,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240171/HG00185.final.cram
+116,HG00185,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240171/HG00185.final.cram.crai
+117,HG00187,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00187/genomic/HG00187.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+118,HG00187,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00187/genomic/HG00187.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+119,HG00187,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240173/HG00187.final.cram
+120,HG00187,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240173/HG00187.final.cram.crai
+121,HG00188,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00188/genomic/HG00188.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+122,HG00188,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00188/genomic/HG00188.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+123,HG00188,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240174/HG00188.final.cram
+124,HG00188,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240174/HG00188.final.cram.crai
+125,HG00231,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00231/genomic/HG00231.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+126,HG00231,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00231/genomic/HG00231.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+127,HG00231,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240201/HG00231.final.cram
+128,HG00231,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240201/HG00231.final.cram.crai
+129,HG00233,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00233/genomic/HG00233.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+130,HG00233,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00233/genomic/HG00233.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+131,HG00233,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240177/HG00233.final.cram
+132,HG00233,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240177/HG00233.final.cram.crai
+133,HG00234,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00234/genomic/HG00234.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+134,HG00234,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00234/genomic/HG00234.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+135,HG00234,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240178/HG00234.final.cram
+136,HG00234,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240178/HG00234.final.cram.crai
+137,HG00239,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00239/genomic/HG00239.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+138,HG00239,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00239/genomic/HG00239.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+139,HG00239,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240205/HG00239.final.cram
+140,HG00239,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240205/HG00239.final.cram.crai
+141,HG00240,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00240/genomic/HG00240.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+142,HG00240,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00240/genomic/HG00240.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+143,HG00240,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240181/HG00240.final.cram
+144,HG00240,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240181/HG00240.final.cram.crai
+145,HG00242,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00242/genomic/HG00242.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+146,HG00242,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00242/genomic/HG00242.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+147,HG00242,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240206/HG00242.final.cram
+148,HG00242,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240206/HG00242.final.cram.crai
+149,HG00246,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00246/genomic/HG00246.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+150,HG00246,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00246/genomic/HG00246.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+151,HG00246,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241780/HG00246.final.cram
+152,HG00246,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241780/HG00246.final.cram.crai
+153,HG00256,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00256/genomic/HG00256.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+154,HG00256,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00256/genomic/HG00256.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+155,HG00256,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240213/HG00256.final.cram
+156,HG00256,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240213/HG00256.final.cram.crai
+157,HG00257,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00257/genomic/HG00257.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+158,HG00257,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00257/genomic/HG00257.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+159,HG00257,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240214/HG00257.final.cram
+160,HG00257,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240214/HG00257.final.cram.crai
+161,HG00258,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00258/genomic/HG00258.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+162,HG00258,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00258/genomic/HG00258.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+163,HG00258,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240215/HG00258.final.cram
+164,HG00258,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240215/HG00258.final.cram.crai
+165,HG00260,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00260/genomic/HG00260.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+166,HG00260,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00260/genomic/HG00260.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+167,HG00260,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240217/HG00260.final.cram
+168,HG00260,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240217/HG00260.final.cram.crai
+169,HG00261,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00261/genomic/HG00261.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+170,HG00261,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00261/genomic/HG00261.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+171,HG00261,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240218/HG00261.final.cram
+172,HG00261,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240218/HG00261.final.cram.crai
+173,HG00262,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00262/genomic/HG00262.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+174,HG00262,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00262/genomic/HG00262.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+175,HG00262,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240219/HG00262.final.cram
+176,HG00262,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240219/HG00262.final.cram.crai
+177,HG00263,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00263/genomic/HG00263.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+178,HG00263,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00263/genomic/HG00263.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+179,HG00263,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240220/HG00263.final.cram
+180,HG00263,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240220/HG00263.final.cram.crai
+181,HG00264,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00264/genomic/HG00264.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+182,HG00264,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00264/genomic/HG00264.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+183,HG00264,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240221/HG00264.final.cram
+184,HG00264,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240221/HG00264.final.cram.crai
+185,HG00265,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00265/genomic/HG00265.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+186,HG00265,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG00265/genomic/HG00265.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+187,HG00265,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240222/HG00265.final.cram
+188,HG00265,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240222/HG00265.final.cram.crai
+189,HG00269,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00269/genomic/HG00269.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+190,HG00269,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00269/genomic/HG00269.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+191,HG00269,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240226/HG00269.final.cram
+192,HG00269,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240226/HG00269.final.cram.crai
+193,HG00273,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00273/genomic/HG00273.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+194,HG00273,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00273/genomic/HG00273.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+195,HG00273,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240229/HG00273.final.cram
+196,HG00273,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240229/HG00273.final.cram.crai
+197,HG00274,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00274/genomic/HG00274.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+198,HG00274,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00274/genomic/HG00274.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+199,HG00274,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241783/HG00274.final.cram
+200,HG00274,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241783/HG00274.final.cram.crai
+201,HG00275,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00275/genomic/HG00275.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+202,HG00275,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00275/genomic/HG00275.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+203,HG00275,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241784/HG00275.final.cram
+204,HG00275,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241784/HG00275.final.cram.crai
+205,HG00277,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00277/genomic/HG00277.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+206,HG00277,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00277/genomic/HG00277.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+207,HG00277,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241786/HG00277.final.cram
+208,HG00277,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241786/HG00277.final.cram.crai
+209,HG00278,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00278/genomic/HG00278.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+210,HG00278,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00278/genomic/HG00278.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+211,HG00278,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241787/HG00278.final.cram
+212,HG00278,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241787/HG00278.final.cram.crai
+213,HG00281,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00281/genomic/HG00281.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+214,HG00281,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00281/genomic/HG00281.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+215,HG00281,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241789/HG00281.final.cram
+216,HG00281,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241789/HG00281.final.cram.crai
+217,HG00282,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00282/genomic/HG00282.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+218,HG00282,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00282/genomic/HG00282.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+219,HG00282,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241790/HG00282.final.cram
+220,HG00282,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241790/HG00282.final.cram.crai
+221,HG00285,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00285/genomic/HG00285.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+222,HG00285,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00285/genomic/HG00285.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+223,HG00285,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241792/HG00285.final.cram
+224,HG00285,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241792/HG00285.final.cram.crai
+225,HG00308,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00308/genomic/HG00308.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+226,HG00308,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00308/genomic/HG00308.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+227,HG00308,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240231/HG00308.final.cram
+228,HG00308,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240231/HG00308.final.cram.crai
+229,HG00325,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00325/genomic/HG00325.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+230,HG00325,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00325/genomic/HG00325.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+231,HG00325,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241795/HG00325.final.cram
+232,HG00325,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241795/HG00325.final.cram.crai
+233,HG00326,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00326/genomic/HG00326.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+234,HG00326,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00326/genomic/HG00326.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+235,HG00326,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241796/HG00326.final.cram
+236,HG00326,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241796/HG00326.final.cram.crai
+237,HG00330,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00330/genomic/HG00330.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+238,HG00330,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00330/genomic/HG00330.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+239,HG00330,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241798/HG00330.final.cram
+240,HG00330,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241798/HG00330.final.cram.crai
+241,HG00331,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00331/genomic/HG00331.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+242,HG00331,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00331/genomic/HG00331.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+243,HG00331,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241799/HG00331.final.cram
+244,HG00331,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241799/HG00331.final.cram.crai
+245,HG00332,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00332/genomic/HG00332.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+246,HG00332,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00332/genomic/HG00332.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+247,HG00332,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241800/HG00332.final.cram
+248,HG00332,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241800/HG00332.final.cram.crai
+249,HG00336,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00336/genomic/HG00336.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+250,HG00336,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00336/genomic/HG00336.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+251,HG00336,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240244/HG00336.final.cram
+252,HG00336,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240244/HG00336.final.cram.crai
+253,HG00338,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00338/genomic/HG00338.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+254,HG00338,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00338/genomic/HG00338.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+255,HG00338,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240246/HG00338.final.cram
+256,HG00338,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240246/HG00338.final.cram.crai
+257,HG00339,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00339/genomic/HG00339.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+258,HG00339,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00339/genomic/HG00339.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+259,HG00339,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240247/HG00339.final.cram
+260,HG00339,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240247/HG00339.final.cram.crai
+261,HG00341,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00341/genomic/HG00341.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+262,HG00341,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00341/genomic/HG00341.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+263,HG00341,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241802/HG00341.final.cram
+264,HG00341,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241802/HG00341.final.cram.crai
+265,HG00346,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00346/genomic/HG00346.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+266,HG00346,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00346/genomic/HG00346.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+267,HG00346,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240252/HG00346.final.cram
+268,HG00346,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240252/HG00346.final.cram.crai
+269,HG00349,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00349/genomic/HG00349.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+270,HG00349,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00349/genomic/HG00349.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+271,HG00349,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240253/HG00349.final.cram
+272,HG00349,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240253/HG00349.final.cram.crai
+273,HG00356,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00356/genomic/HG00356.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+274,HG00356,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00356/genomic/HG00356.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+275,HG00356,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240258/HG00356.final.cram
+276,HG00356,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240258/HG00356.final.cram.crai
+277,HG00360,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00360/genomic/HG00360.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+278,HG00360,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00360/genomic/HG00360.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+279,HG00360,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240261/HG00360.final.cram
+280,HG00360,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240261/HG00360.final.cram.crai
+281,HG00361,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00361/genomic/HG00361.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+282,HG00361,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00361/genomic/HG00361.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+283,HG00361,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240262/HG00361.final.cram
+284,HG00361,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240262/HG00361.final.cram.crai
+285,HG00364,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00364/genomic/HG00364.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+286,HG00364,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00364/genomic/HG00364.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+287,HG00364,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240264/HG00364.final.cram
+288,HG00364,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240264/HG00364.final.cram.crai
+289,HG00366,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00366/genomic/HG00366.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+290,HG00366,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00366/genomic/HG00366.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+291,HG00366,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240266/HG00366.final.cram
+292,HG00366,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240266/HG00366.final.cram.crai
+293,HG00367,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00367/genomic/HG00367.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+294,HG00367,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00367/genomic/HG00367.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+295,HG00367,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240267/HG00367.final.cram
+296,HG00367,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240267/HG00367.final.cram.crai
+297,HG00369,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00369/genomic/HG00369.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+298,HG00369,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00369/genomic/HG00369.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+299,HG00369,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240269/HG00369.final.cram
+300,HG00369,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240269/HG00369.final.cram.crai
+301,HG00371,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00371/genomic/HG00371.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+302,HG00371,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00371/genomic/HG00371.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+303,HG00371,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240270/HG00371.final.cram
+304,HG00371,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240270/HG00371.final.cram.crai
+305,HG00372,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00372/genomic/HG00372.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+306,HG00372,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00372/genomic/HG00372.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+307,HG00372,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240271/HG00372.final.cram
+308,HG00372,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240271/HG00372.final.cram.crai
+309,HG00373,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00373/genomic/HG00373.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+310,HG00373,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00373/genomic/HG00373.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+311,HG00373,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240272/HG00373.final.cram
+312,HG00373,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240272/HG00373.final.cram.crai
+313,HG00378,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00378/genomic/HG00378.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+314,HG00378,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00378/genomic/HG00378.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+315,HG00378,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241659/HG00378.final.cram
+316,HG00378,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241659/HG00378.final.cram.crai
+317,HG00380,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00380/genomic/HG00380.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+318,HG00380,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00380/genomic/HG00380.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+319,HG00380,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241661/HG00380.final.cram
+320,HG00380,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241661/HG00380.final.cram.crai
+321,HG00381,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00381/genomic/HG00381.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+322,HG00381,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00381/genomic/HG00381.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+323,HG00381,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241662/HG00381.final.cram
+324,HG00381,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241662/HG00381.final.cram.crai
+325,HG00382,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00382/genomic/HG00382.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+326,HG00382,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00382/genomic/HG00382.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+327,HG00382,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241663/HG00382.final.cram
+328,HG00382,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241663/HG00382.final.cram.crai
+329,HG00383,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00383/genomic/HG00383.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+330,HG00383,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00383/genomic/HG00383.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+331,HG00383,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241803/HG00383.final.cram
+332,HG00383,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241803/HG00383.final.cram.crai
+333,HG00384,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00384/genomic/HG00384.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+334,HG00384,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/FIN/HG00384/genomic/HG00384.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+335,HG00384,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241664/HG00384.final.cram
+336,HG00384,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241664/HG00384.final.cram.crai
+337,HG01791,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG01791/genomic/HG01791.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+338,HG01791,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/GBR/HG01791/genomic/HG01791.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+339,HG01791,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242187/HG01791.final.cram
+340,HG01791,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242187/HG01791.final.cram.crai
+341,NA06985,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA06985/genomic/NA06985.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+342,NA06985,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA06985/genomic/NA06985.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+343,NA06985,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239276/NA06985.final.cram
+344,NA06985,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239276/NA06985.final.cram.crai
+345,NA07048,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07048/genomic/NA07048.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+346,NA07048,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07048/genomic/NA07048.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+347,NA07048,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239642/NA07048.final.cram
+348,NA07048,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239642/NA07048.final.cram.crai
+349,NA07051,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07051/genomic/NA07051.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+350,NA07051,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07051/genomic/NA07051.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+351,NA07051,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239281/NA07051.final.cram
+352,NA07051,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239281/NA07051.final.cram.crai
+353,NA07056,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07056/genomic/NA07056.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+354,NA07056,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07056/genomic/NA07056.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+355,NA07056,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239456/NA07056.final.cram
+356,NA07056,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239456/NA07056.final.cram.crai
+357,NA07347,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07347/genomic/NA07347.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+358,NA07347,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA07347/genomic/NA07347.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+359,NA07347,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239282/NA07347.final.cram
+360,NA07347,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239282/NA07347.final.cram.crai
+361,NA10851,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA10851/genomic/NA10851.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+362,NA10851,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA10851/genomic/NA10851.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+363,NA10851,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239285/NA10851.final.cram
+364,NA10851,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239285/NA10851.final.cram.crai
+365,NA11829,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11829/genomic/NA11829.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+366,NA11829,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11829/genomic/NA11829.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+367,NA11829,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239286/NA11829.final.cram
+368,NA11829,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239286/NA11829.final.cram.crai
+369,NA11830,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11830/genomic/NA11830.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+370,NA11830,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11830/genomic/NA11830.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+371,NA11830,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239287/NA11830.final.cram
+372,NA11830,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239287/NA11830.final.cram.crai
+373,NA11840,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11840/genomic/NA11840.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+374,NA11840,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11840/genomic/NA11840.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+375,NA11840,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239290/NA11840.final.cram
+376,NA11840,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239290/NA11840.final.cram.crai
+377,NA11893,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11893/genomic/NA11893.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+378,NA11893,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11893/genomic/NA11893.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+379,NA11893,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239462/NA11893.final.cram
+380,NA11893,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239462/NA11893.final.cram.crai
+381,NA11920,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11920/genomic/NA11920.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+382,NA11920,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11920/genomic/NA11920.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+383,NA11920,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239295/NA11920.final.cram
+384,NA11920,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239295/NA11920.final.cram.crai
+385,NA11930,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11930/genomic/NA11930.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+386,NA11930,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11930/genomic/NA11930.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+387,NA11930,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239463/NA11930.final.cram
+388,NA11930,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239463/NA11930.final.cram.crai
+389,NA11992,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11992/genomic/NA11992.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+390,NA11992,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11992/genomic/NA11992.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+391,NA11992,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239297/NA11992.final.cram
+392,NA11992,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239297/NA11992.final.cram.crai
+393,NA11993,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11993/genomic/NA11993.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+394,NA11993,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11993/genomic/NA11993.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+395,NA11993,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989307/NA11993.final.cram
+396,NA11993,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989307/NA11993.final.cram.crai
+397,NA11994,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11994/genomic/NA11994.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+398,NA11994,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11994/genomic/NA11994.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+399,NA11994,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239298/NA11994.final.cram
+400,NA11994,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239298/NA11994.final.cram.crai
+401,NA11995,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11995/genomic/NA11995.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+402,NA11995,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA11995/genomic/NA11995.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+403,NA11995,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239299/NA11995.final.cram
+404,NA11995,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239299/NA11995.final.cram.crai
+405,NA12043,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12043/genomic/NA12043.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+406,NA12043,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12043/genomic/NA12043.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+407,NA12043,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239304/NA12043.final.cram
+408,NA12043,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239304/NA12043.final.cram.crai
+409,NA12044,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12044/genomic/NA12044.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+410,NA12044,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12044/genomic/NA12044.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+411,NA12044,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239305/NA12044.final.cram
+412,NA12044,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239305/NA12044.final.cram.crai
+413,NA12045,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12045/genomic/NA12045.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+414,NA12045,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12045/genomic/NA12045.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+415,NA12045,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239306/NA12045.final.cram
+416,NA12045,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239306/NA12045.final.cram.crai
+417,NA12058,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12058/genomic/NA12058.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+418,NA12058,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12058/genomic/NA12058.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+419,NA12058,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239464/NA12058.final.cram
+420,NA12058,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239464/NA12058.final.cram.crai
+421,NA12234,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12234/genomic/NA12234.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+422,NA12234,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12234/genomic/NA12234.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+423,NA12234,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239311/NA12234.final.cram
+424,NA12234,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239311/NA12234.final.cram.crai
+425,NA12249,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12249/genomic/NA12249.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+426,NA12249,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12249/genomic/NA12249.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+427,NA12249,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239312/NA12249.final.cram
+428,NA12249,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239312/NA12249.final.cram.crai
+429,NA12272,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12272/genomic/NA12272.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+430,NA12272,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12272/genomic/NA12272.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+431,NA12272,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239465/NA12272.final.cram
+432,NA12272,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239465/NA12272.final.cram.crai
+433,NA12275,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12275/genomic/NA12275.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+434,NA12275,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12275/genomic/NA12275.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+435,NA12275,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239467/NA12275.final.cram
+436,NA12275,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239467/NA12275.final.cram.crai
+437,NA12282,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12282/genomic/NA12282.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+438,NA12282,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12282/genomic/NA12282.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+439,NA12282,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239468/NA12282.final.cram
+440,NA12282,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239468/NA12282.final.cram.crai
+441,NA12286,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12286/genomic/NA12286.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+442,NA12286,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12286/genomic/NA12286.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+443,NA12286,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239470/NA12286.final.cram
+444,NA12286,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239470/NA12286.final.cram.crai
+445,NA12287,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12287/genomic/NA12287.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+446,NA12287,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12287/genomic/NA12287.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+447,NA12287,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239313/NA12287.final.cram
+448,NA12287,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239313/NA12287.final.cram.crai
+449,NA12340,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12340/genomic/NA12340.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+450,NA12340,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12340/genomic/NA12340.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+451,NA12340,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239471/NA12340.final.cram
+452,NA12340,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239471/NA12340.final.cram.crai
+453,NA12342,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12342/genomic/NA12342.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+454,NA12342,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12342/genomic/NA12342.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+455,NA12342,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239473/NA12342.final.cram
+456,NA12342,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239473/NA12342.final.cram.crai
+457,NA12347,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12347/genomic/NA12347.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+458,NA12347,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12347/genomic/NA12347.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+459,NA12347,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239474/NA12347.final.cram
+460,NA12347,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239474/NA12347.final.cram.crai
+461,NA12348,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12348/genomic/NA12348.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+462,NA12348,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12348/genomic/NA12348.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+463,NA12348,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239475/NA12348.final.cram
+464,NA12348,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239475/NA12348.final.cram.crai
+465,NA12383,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12383/genomic/NA12383.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+466,NA12383,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12383/genomic/NA12383.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+467,NA12383,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239476/NA12383.final.cram
+468,NA12383,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239476/NA12383.final.cram.crai
+469,NA12399,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12399/genomic/NA12399.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+470,NA12399,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12399/genomic/NA12399.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+471,NA12399,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239477/NA12399.final.cram
+472,NA12399,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239477/NA12399.final.cram.crai
+473,NA12400,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12400/genomic/NA12400.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+474,NA12400,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12400/genomic/NA12400.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+475,NA12400,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239478/NA12400.final.cram
+476,NA12400,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239478/NA12400.final.cram.crai
+477,NA12413,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12413/genomic/NA12413.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+478,NA12413,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12413/genomic/NA12413.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+479,NA12413,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239479/NA12413.final.cram
+480,NA12413,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239479/NA12413.final.cram.crai
+481,NA12546,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12546/genomic/NA12546.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+482,NA12546,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12546/genomic/NA12546.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+483,NA12546,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243163/NA12546.final.cram
+484,NA12546,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243163/NA12546.final.cram.crai
+485,NA12716,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12716/genomic/NA12716.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+486,NA12716,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12716/genomic/NA12716.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+487,NA12716,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239316/NA12716.final.cram
+488,NA12716,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239316/NA12716.final.cram.crai
+489,NA12717,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12717/genomic/NA12717.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+490,NA12717,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12717/genomic/NA12717.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+491,NA12717,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239317/NA12717.final.cram
+492,NA12717,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239317/NA12717.final.cram.crai
+493,NA12749,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12749/genomic/NA12749.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+494,NA12749,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12749/genomic/NA12749.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+495,NA12749,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239318/NA12749.final.cram
+496,NA12749,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239318/NA12749.final.cram.crai
+497,NA12750,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12750/genomic/NA12750.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+498,NA12750,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12750/genomic/NA12750.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+499,NA12750,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239319/NA12750.final.cram
+500,NA12750,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239319/NA12750.final.cram.crai
+501,NA12762,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12762/genomic/NA12762.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+502,NA12762,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12762/genomic/NA12762.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+503,NA12762,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239323/NA12762.final.cram
+504,NA12762,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239323/NA12762.final.cram.crai
+505,NA12763,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12763/genomic/NA12763.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+506,NA12763,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12763/genomic/NA12763.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+507,NA12763,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239324/NA12763.final.cram
+508,NA12763,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239324/NA12763.final.cram.crai
+509,NA12776,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12776/genomic/NA12776.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+510,NA12776,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12776/genomic/NA12776.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+511,NA12776,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239325/NA12776.final.cram
+512,NA12776,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239325/NA12776.final.cram.crai
+513,NA12778,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12778/genomic/NA12778.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+514,NA12778,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12778/genomic/NA12778.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+515,NA12778,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239484/NA12778.final.cram
+516,NA12778,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239484/NA12778.final.cram.crai
+517,NA12812,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12812/genomic/NA12812.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+518,NA12812,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12812/genomic/NA12812.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+519,NA12812,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239326/NA12812.final.cram
+520,NA12812,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239326/NA12812.final.cram.crai
+521,NA12813,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12813/genomic/NA12813.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+522,NA12813,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12813/genomic/NA12813.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+523,NA12813,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239327/NA12813.final.cram
+524,NA12813,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239327/NA12813.final.cram.crai
+525,NA12815,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12815/genomic/NA12815.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+526,NA12815,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12815/genomic/NA12815.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+527,NA12815,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239329/NA12815.final.cram
+528,NA12815,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239329/NA12815.final.cram.crai
+529,NA12842,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12842/genomic/NA12842.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+530,NA12842,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12842/genomic/NA12842.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+531,NA12842,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239487/NA12842.final.cram
+532,NA12842,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239487/NA12842.final.cram.crai
+533,NA12874,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12874/genomic/NA12874.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+534,NA12874,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12874/genomic/NA12874.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+535,NA12874,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239333/NA12874.final.cram
+536,NA12874,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239333/NA12874.final.cram.crai
+537,NA12889,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12889/genomic/NA12889.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+538,NA12889,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12889/genomic/NA12889.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+539,NA12889,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239489/NA12889.final.cram
+540,NA12889,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239489/NA12889.final.cram.crai
+541,NA12890,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12890/genomic/NA12890.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+542,NA12890,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/CEU/NA12890/genomic/NA12890.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+543,NA12890,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239490/NA12890.final.cram
+544,NA12890,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239490/NA12890.final.cram.crai
+545,NA18489,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18489/genomic/NA18489.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+546,NA18489,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18489/genomic/NA18489.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+547,NA18489,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239336/NA18489.final.cram
+548,NA18489,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239336/NA18489.final.cram.crai
+549,NA18499,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18499/genomic/NA18499.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+550,NA18499,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18499/genomic/NA18499.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+551,NA18499,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239338/NA18499.final.cram
+552,NA18499,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239338/NA18499.final.cram.crai
+553,NA18510,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18510/genomic/NA18510.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+554,NA18510,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18510/genomic/NA18510.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+555,NA18510,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239345/NA18510.final.cram
+556,NA18510,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239345/NA18510.final.cram.crai
+557,NA18511,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18511/genomic/NA18511.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+558,NA18511,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18511/genomic/NA18511.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+559,NA18511,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239346/NA18511.final.cram
+560,NA18511,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239346/NA18511.final.cram.crai
+561,NA18517,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18517/genomic/NA18517.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+562,NA18517,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18517/genomic/NA18517.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+563,NA18517,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239348/NA18517.final.cram
+564,NA18517,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239348/NA18517.final.cram.crai
+565,NA18519,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18519/genomic/NA18519.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+566,NA18519,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18519/genomic/NA18519.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+567,NA18519,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239349/NA18519.final.cram
+568,NA18519,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239349/NA18519.final.cram.crai
+569,NA18520,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18520/genomic/NA18520.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+570,NA18520,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18520/genomic/NA18520.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+571,NA18520,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239350/NA18520.final.cram
+572,NA18520,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239350/NA18520.final.cram.crai
+573,NA18858,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18858/genomic/NA18858.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+574,NA18858,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18858/genomic/NA18858.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+575,NA18858,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239384/NA18858.final.cram
+576,NA18858,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239384/NA18858.final.cram.crai
+577,NA18873,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18873/genomic/NA18873.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+578,NA18873,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18873/genomic/NA18873.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+579,NA18873,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239549/NA18873.final.cram
+580,NA18873,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239549/NA18873.final.cram.crai
+581,NA18908,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18908/genomic/NA18908.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+582,NA18908,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18908/genomic/NA18908.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+583,NA18908,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239550/NA18908.final.cram
+584,NA18908,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239550/NA18908.final.cram.crai
+585,NA18909,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18909/genomic/NA18909.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+586,NA18909,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18909/genomic/NA18909.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+587,NA18909,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239389/NA18909.final.cram
+588,NA18909,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239389/NA18909.final.cram.crai
+589,NA18916,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18916/genomic/NA18916.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+590,NA18916,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18916/genomic/NA18916.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+591,NA18916,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239391/NA18916.final.cram
+592,NA18916,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239391/NA18916.final.cram.crai
+593,NA18923,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18923/genomic/NA18923.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+594,NA18923,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18923/genomic/NA18923.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+595,NA18923,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239553/NA18923.final.cram
+596,NA18923,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239553/NA18923.final.cram.crai
+597,NA18933,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18933/genomic/NA18933.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+598,NA18933,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA18933/genomic/NA18933.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+599,NA18933,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239555/NA18933.final.cram
+600,NA18933,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239555/NA18933.final.cram.crai
+601,NA19092,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19092/genomic/NA19092.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+602,NA19092,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19092/genomic/NA19092.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+603,NA19092,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239617/NA19092.final.cram
+604,NA19092,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239617/NA19092.final.cram.crai
+605,NA19093,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19093/genomic/NA19093.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+606,NA19093,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19093/genomic/NA19093.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+607,NA19093,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239422/NA19093.final.cram
+608,NA19093,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239422/NA19093.final.cram.crai
+609,NA19096,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19096/genomic/NA19096.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+610,NA19096,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19096/genomic/NA19096.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+611,NA19096,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239619/NA19096.final.cram
+612,NA19096,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239619/NA19096.final.cram.crai
+613,NA19099,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19099/genomic/NA19099.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+614,NA19099,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19099/genomic/NA19099.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+615,NA19099,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239424/NA19099.final.cram
+616,NA19099,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239424/NA19099.final.cram.crai
+617,NA19107,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19107/genomic/NA19107.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+618,NA19107,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19107/genomic/NA19107.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+619,NA19107,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239620/NA19107.final.cram
+620,NA19107,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239620/NA19107.final.cram.crai
+621,NA19113,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19113/genomic/NA19113.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+622,NA19113,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19113/genomic/NA19113.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+623,NA19113,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239621/NA19113.final.cram
+624,NA19113,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239621/NA19113.final.cram.crai
+625,NA19118,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19118/genomic/NA19118.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+626,NA19118,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19118/genomic/NA19118.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+627,NA19118,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239623/NA19118.final.cram
+628,NA19118,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239623/NA19118.final.cram.crai
+629,NA19121,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19121/genomic/NA19121.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+630,NA19121,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19121/genomic/NA19121.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+631,NA19121,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239624/NA19121.final.cram
+632,NA19121,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239624/NA19121.final.cram.crai
+633,NA19131,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19131/genomic/NA19131.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+634,NA19131,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19131/genomic/NA19131.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+635,NA19131,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239431/NA19131.final.cram
+636,NA19131,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239431/NA19131.final.cram.crai
+637,NA19137,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19137/genomic/NA19137.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+638,NA19137,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19137/genomic/NA19137.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+639,NA19137,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239432/NA19137.final.cram
+640,NA19137,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239432/NA19137.final.cram.crai
+641,NA19138,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19138/genomic/NA19138.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+642,NA19138,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19138/genomic/NA19138.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+643,NA19138,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239433/NA19138.final.cram
+644,NA19138,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239433/NA19138.final.cram.crai
+645,NA19141,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19141/genomic/NA19141.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+646,NA19141,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19141/genomic/NA19141.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+647,NA19141,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239434/NA19141.final.cram
+648,NA19141,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239434/NA19141.final.cram.crai
+649,NA19146,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19146/genomic/NA19146.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+650,NA19146,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19146/genomic/NA19146.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+651,NA19146,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239626/NA19146.final.cram
+652,NA19146,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239626/NA19146.final.cram.crai
+653,NA19147,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19147/genomic/NA19147.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+654,NA19147,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19147/genomic/NA19147.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+655,NA19147,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239437/NA19147.final.cram
+656,NA19147,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239437/NA19147.final.cram.crai
+657,NA19149,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19149/genomic/NA19149.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+658,NA19149,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19149/genomic/NA19149.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+659,NA19149,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239627/NA19149.final.cram
+660,NA19149,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239627/NA19149.final.cram.crai
+661,NA19171,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19171/genomic/NA19171.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+662,NA19171,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19171/genomic/NA19171.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+663,NA19171,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239442/NA19171.final.cram
+664,NA19171,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239442/NA19171.final.cram.crai
+665,NA19175,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19175/genomic/NA19175.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+666,NA19175,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19175/genomic/NA19175.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+667,NA19175,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239628/NA19175.final.cram
+668,NA19175,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239628/NA19175.final.cram.crai
+669,NA19184,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19184/genomic/NA19184.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+670,NA19184,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19184/genomic/NA19184.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+671,NA19184,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239629/NA19184.final.cram
+672,NA19184,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239629/NA19184.final.cram.crai
+673,NA19189,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19189/genomic/NA19189.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+674,NA19189,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19189/genomic/NA19189.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+675,NA19189,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239631/NA19189.final.cram
+676,NA19189,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239631/NA19189.final.cram.crai
+677,NA19190,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19190/genomic/NA19190.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+678,NA19190,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19190/genomic/NA19190.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+679,NA19190,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239444/NA19190.final.cram
+680,NA19190,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239444/NA19190.final.cram.crai
+681,NA19197,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19197/genomic/NA19197.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+682,NA19197,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19197/genomic/NA19197.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+683,NA19197,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239632/NA19197.final.cram
+684,NA19197,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239632/NA19197.final.cram.crai
+685,NA19198,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19198/genomic/NA19198.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+686,NA19198,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19198/genomic/NA19198.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+687,NA19198,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239633/NA19198.final.cram
+688,NA19198,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239633/NA19198.final.cram.crai
+689,NA19201,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19201/genomic/NA19201.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+690,NA19201,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19201/genomic/NA19201.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+691,NA19201,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239446/NA19201.final.cram
+692,NA19201,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239446/NA19201.final.cram.crai
+693,NA19206,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19206/genomic/NA19206.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+694,NA19206,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19206/genomic/NA19206.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+695,NA19206,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239448/NA19206.final.cram
+696,NA19206,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239448/NA19206.final.cram.crai
+697,NA19207,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19207/genomic/NA19207.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+698,NA19207,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19207/genomic/NA19207.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+699,NA19207,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239449/NA19207.final.cram
+700,NA19207,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239449/NA19207.final.cram.crai
+701,NA19210,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19210/genomic/NA19210.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+702,NA19210,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19210/genomic/NA19210.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+703,NA19210,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239451/NA19210.final.cram
+704,NA19210,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239451/NA19210.final.cram.crai
+705,NA19213,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19213/genomic/NA19213.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+706,NA19213,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19213/genomic/NA19213.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+707,NA19213,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239634/NA19213.final.cram
+708,NA19213,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239634/NA19213.final.cram.crai
+709,NA19223,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19223/genomic/NA19223.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+710,NA19223,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19223/genomic/NA19223.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+711,NA19223,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239636/NA19223.final.cram
+712,NA19223,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239636/NA19223.final.cram.crai
+713,NA19236,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19236/genomic/NA19236.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+714,NA19236,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19236/genomic/NA19236.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+715,NA19236,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239638/NA19236.final.cram
+716,NA19236,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239638/NA19236.final.cram.crai
+717,NA19247,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19247/genomic/NA19247.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+718,NA19247,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19247/genomic/NA19247.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+719,NA19247,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239639/NA19247.final.cram
+720,NA19247,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239639/NA19247.final.cram.crai
+721,NA19256,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19256/genomic/NA19256.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+722,NA19256,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19256/genomic/NA19256.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+723,NA19256,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239641/NA19256.final.cram
+724,NA19256,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239641/NA19256.final.cram.crai
+725,NA19257,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19257/genomic/NA19257.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+726,NA19257,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/YRI/NA19257/genomic/NA19257.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+727,NA19257,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239455/NA19257.final.cram
+728,NA19257,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239455/NA19257.final.cram.crai
+729,NA20502,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20502/genomic/NA20502.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+730,NA20502,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20502/genomic/NA20502.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+731,NA20502,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239785/NA20502.final.cram
+732,NA20502,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239785/NA20502.final.cram.crai
+733,NA20504,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20504/genomic/NA20504.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+734,NA20504,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20504/genomic/NA20504.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+735,NA20504,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239787/NA20504.final.cram
+736,NA20504,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239787/NA20504.final.cram.crai
+737,NA20505,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20505/genomic/NA20505.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+738,NA20505,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20505/genomic/NA20505.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+739,NA20505,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239788/NA20505.final.cram
+740,NA20505,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239788/NA20505.final.cram.crai
+741,NA20507,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20507/genomic/NA20507.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+742,NA20507,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20507/genomic/NA20507.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+743,NA20507,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239790/NA20507.final.cram
+744,NA20507,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239790/NA20507.final.cram.crai
+745,NA20512,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20512/genomic/NA20512.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+746,NA20512,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20512/genomic/NA20512.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+747,NA20512,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239795/NA20512.final.cram
+748,NA20512,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239795/NA20512.final.cram.crai
+749,NA20515,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20515/genomic/NA20515.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+750,NA20515,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20515/genomic/NA20515.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+751,NA20515,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239798/NA20515.final.cram
+752,NA20515,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239798/NA20515.final.cram.crai
+753,NA20519,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20519/genomic/NA20519.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+754,NA20519,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20519/genomic/NA20519.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+755,NA20519,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239802/NA20519.final.cram
+756,NA20519,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239802/NA20519.final.cram.crai
+757,NA20525,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20525/genomic/NA20525.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+758,NA20525,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20525/genomic/NA20525.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+759,NA20525,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239807/NA20525.final.cram
+760,NA20525,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239807/NA20525.final.cram.crai
+761,NA20527,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20527/genomic/NA20527.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+762,NA20527,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20527/genomic/NA20527.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+763,NA20527,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239808/NA20527.final.cram
+764,NA20527,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239808/NA20527.final.cram.crai
+765,NA20528,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20528/genomic/NA20528.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+766,NA20528,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20528/genomic/NA20528.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+767,NA20528,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239809/NA20528.final.cram
+768,NA20528,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239809/NA20528.final.cram.crai
+769,NA20530,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20530/genomic/NA20530.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+770,NA20530,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20530/genomic/NA20530.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+771,NA20530,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239811/NA20530.final.cram
+772,NA20530,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239811/NA20530.final.cram.crai
+773,NA20532,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20532/genomic/NA20532.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+774,NA20532,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20532/genomic/NA20532.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+775,NA20532,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239813/NA20532.final.cram
+776,NA20532,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239813/NA20532.final.cram.crai
+777,NA20534,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20534/genomic/NA20534.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+778,NA20534,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20534/genomic/NA20534.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+779,NA20534,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239815/NA20534.final.cram
+780,NA20534,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239815/NA20534.final.cram.crai
+781,NA20535,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20535/genomic/NA20535.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+782,NA20535,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20535/genomic/NA20535.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+783,NA20535,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239816/NA20535.final.cram
+784,NA20535,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239816/NA20535.final.cram.crai
+785,NA20536,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20536/genomic/NA20536.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+786,NA20536,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20536/genomic/NA20536.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+787,NA20536,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239817/NA20536.final.cram
+788,NA20536,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239817/NA20536.final.cram.crai
+789,NA20540,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20540/genomic/NA20540.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+790,NA20540,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20540/genomic/NA20540.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+791,NA20540,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239820/NA20540.final.cram
+792,NA20540,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239820/NA20540.final.cram.crai
+793,NA20541,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20541/genomic/NA20541.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+794,NA20541,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20541/genomic/NA20541.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+795,NA20541,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239821/NA20541.final.cram
+796,NA20541,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239821/NA20541.final.cram.crai
+797,NA20542,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20542/genomic/NA20542.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+798,NA20542,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20542/genomic/NA20542.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+799,NA20542,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239822/NA20542.final.cram
+800,NA20542,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239822/NA20542.final.cram.crai
+801,NA20543,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20543/genomic/NA20543.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+802,NA20543,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20543/genomic/NA20543.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+803,NA20543,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239823/NA20543.final.cram
+804,NA20543,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239823/NA20543.final.cram.crai
+805,NA20581,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20581/genomic/NA20581.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+806,NA20581,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20581/genomic/NA20581.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+807,NA20581,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239825/NA20581.final.cram
+808,NA20581,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239825/NA20581.final.cram.crai
+809,NA20585,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20585/genomic/NA20585.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+810,NA20585,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20585/genomic/NA20585.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+811,NA20585,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239827/NA20585.final.cram
+812,NA20585,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239827/NA20585.final.cram.crai
+813,NA20586,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20586/genomic/NA20586.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+814,NA20586,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20586/genomic/NA20586.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+815,NA20586,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239828/NA20586.final.cram
+816,NA20586,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239828/NA20586.final.cram.crai
+817,NA20754,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20754/genomic/NA20754.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+818,NA20754,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20754/genomic/NA20754.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+819,NA20754,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239834/NA20754.final.cram
+820,NA20754,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239834/NA20754.final.cram.crai
+821,NA20756,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20756/genomic/NA20756.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+822,NA20756,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20756/genomic/NA20756.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+823,NA20756,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239836/NA20756.final.cram
+824,NA20756,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239836/NA20756.final.cram.crai
+825,NA20757,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20757/genomic/NA20757.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+826,NA20757,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20757/genomic/NA20757.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+827,NA20757,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239837/NA20757.final.cram
+828,NA20757,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239837/NA20757.final.cram.crai
+829,NA20759,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20759/genomic/NA20759.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+830,NA20759,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20759/genomic/NA20759.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+831,NA20759,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239839/NA20759.final.cram
+832,NA20759,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239839/NA20759.final.cram.crai
+833,NA20766,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20766/genomic/NA20766.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+834,NA20766,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20766/genomic/NA20766.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+835,NA20766,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239846/NA20766.final.cram
+836,NA20766,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239846/NA20766.final.cram.crai
+837,NA20768,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20768/genomic/NA20768.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+838,NA20768,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20768/genomic/NA20768.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+839,NA20768,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239848/NA20768.final.cram
+840,NA20768,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239848/NA20768.final.cram.crai
+841,NA20769,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20769/genomic/NA20769.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+842,NA20769,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20769/genomic/NA20769.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+843,NA20769,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239849/NA20769.final.cram
+844,NA20769,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239849/NA20769.final.cram.crai
+845,NA20772,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20772/genomic/NA20772.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+846,NA20772,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20772/genomic/NA20772.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+847,NA20772,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239852/NA20772.final.cram
+848,NA20772,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239852/NA20772.final.cram.crai
+849,NA20774,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20774/genomic/NA20774.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+850,NA20774,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20774/genomic/NA20774.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+851,NA20774,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239854/NA20774.final.cram
+852,NA20774,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239854/NA20774.final.cram.crai
+853,NA20785,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20785/genomic/NA20785.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+854,NA20785,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20785/genomic/NA20785.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+855,NA20785,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239858/NA20785.final.cram
+856,NA20785,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239858/NA20785.final.cram.crai
+857,NA20786,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20786/genomic/NA20786.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+858,NA20786,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20786/genomic/NA20786.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+859,NA20786,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239859/NA20786.final.cram
+860,NA20786,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239859/NA20786.final.cram.crai
+861,NA20787,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20787/genomic/NA20787.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+862,NA20787,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20787/genomic/NA20787.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+863,NA20787,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239860/NA20787.final.cram
+864,NA20787,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239860/NA20787.final.cram.crai
+865,NA20790,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20790/genomic/NA20790.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+866,NA20790,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20790/genomic/NA20790.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+867,NA20790,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239861/NA20790.final.cram
+868,NA20790,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239861/NA20790.final.cram.crai
+869,NA20795,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20795/genomic/NA20795.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+870,NA20795,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20795/genomic/NA20795.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+871,NA20795,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239863/NA20795.final.cram
+872,NA20795,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239863/NA20795.final.cram.crai
+873,NA20801,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20801/genomic/NA20801.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+874,NA20801,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20801/genomic/NA20801.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+875,NA20801,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239869/NA20801.final.cram
+876,NA20801,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239869/NA20801.final.cram.crai
+877,NA20802,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20802/genomic/NA20802.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+878,NA20802,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20802/genomic/NA20802.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+879,NA20802,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239870/NA20802.final.cram
+880,NA20802,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239870/NA20802.final.cram.crai
+881,NA20803,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20803/genomic/NA20803.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+882,NA20803,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20803/genomic/NA20803.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+883,NA20803,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239871/NA20803.final.cram
+884,NA20803,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239871/NA20803.final.cram.crai
+885,NA20804,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20804/genomic/NA20804.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+886,NA20804,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20804/genomic/NA20804.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+887,NA20804,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239872/NA20804.final.cram
+888,NA20804,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239872/NA20804.final.cram.crai
+889,NA20807,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20807/genomic/NA20807.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+890,NA20807,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20807/genomic/NA20807.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+891,NA20807,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239875/NA20807.final.cram
+892,NA20807,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239875/NA20807.final.cram.crai
+893,NA20808,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20808/genomic/NA20808.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+894,NA20808,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20808/genomic/NA20808.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+895,NA20808,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239876/NA20808.final.cram
+896,NA20808,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239876/NA20808.final.cram.crai
+897,NA20814,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20814/genomic/NA20814.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+898,NA20814,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20814/genomic/NA20814.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+899,NA20814,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239882/NA20814.final.cram
+900,NA20814,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239882/NA20814.final.cram.crai
+901,NA20815,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20815/genomic/NA20815.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+902,NA20815,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20815/genomic/NA20815.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+903,NA20815,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239883/NA20815.final.cram
+904,NA20815,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239883/NA20815.final.cram.crai
+905,NA20819,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20819/genomic/NA20819.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+906,NA20819,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20819/genomic/NA20819.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+907,NA20819,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239885/NA20819.final.cram
+908,NA20819,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239885/NA20819.final.cram.crai
+909,NA20828,동일 pair의 RNA BAM,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20828/genomic/NA20828.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam
+910,NA20828,동일 pair의 RNA BAM 인덱스 (.bai),https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/geuvadis/working/geuvadis_topmed/data/TSI/NA20828/genomic/NA20828.star.GRCh38.Aligned.sortedByCoord.markduplicates.bam.bai
+911,NA20828,WGS–RNA pair의 WGS CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239890/NA20828.final.cram
+912,NA20828,WGS–RNA pair의 WGS 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239890/NA20828.final.cram.crai

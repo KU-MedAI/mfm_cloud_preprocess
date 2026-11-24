@@ -1,0 +1,9 @@
+﻿번호,bam파일명,설명,링크
+1,Homo_sapiens_assembly38.fasta,Broad GRCh38 원본; RNA 추가 서열 및 FAI는 필요 시 생성,https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta
+2,gencode.v47.annotation.gtf.gz,GENCODE v47 RNA 유전자 주석 원본,https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
+3,hg38.no_alt.fa.gz,HGSVC 전용 reference 원본; 해제 후 상염색체 FASTA/FAI 생성,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC2/technical/reference/20200513_hg38_NoALT/hg38.no_alt.fa.gz
+4,GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz,NCBI GRCh38 원본; 해제 후 상염색체 FASTA/FAI 생성,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz
+5,variants_GRCh38_indel_insdel_alt_HGSVC2024v1.0.vcf.gz.tbi,공용 VCF 인덱스,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/variants_GRCh38_indel_insdel_alt_HGSVC2024v1.0.vcf.gz.tbi
+6,variants_GRCh38_snv_snv_alt_HGSVC2024v1.0.vcf.gz.tbi,공용 VCF 인덱스,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/variants_GRCh38_snv_snv_alt_HGSVC2024v1.0.vcf.gz.tbi
+7,variants_GRCh38_indel_insdel_alt_HGSVC2024v1.0.vcf.gz,프로젝트 공용 VCF,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/variants_GRCh38_indel_insdel_alt_HGSVC2024v1.0.vcf.gz
+8,variants_GRCh38_snv_snv_alt_HGSVC2024v1.0.vcf.gz,프로젝트 공용 VCF,https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/variants_GRCh38_snv_snv_alt_HGSVC2024v1.0.vcf.gz

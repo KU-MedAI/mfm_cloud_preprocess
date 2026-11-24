@@ -1,0 +1,3 @@
+data_group	sample_count	sample_raw_total_bytes	estimated_compact_total_bytes_low	estimated_compact_total_bytes_central	estimated_compact_total_bytes_high
+wgs	2763	76125764954251	115842058864161	120152001169855	121305762801666
+wgs_rna_pair	449	12666399556301	25341674287833	26066136376396	26260073209458

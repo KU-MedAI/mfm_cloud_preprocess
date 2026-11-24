@@ -1,0 +1,2 @@
+run_accession	file_url	md5	size_bytes	file_type	reason
+SRR19416256	https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/working/20211207_UMIGS_HiFi/HG03520/EDEVI_20210603_S64018_PL100170205A-3_A01.ccs.bam	a474553896c6904ca99888d54a8cbb74	18882250568	ubam	ENA file report URL 부재; Supplementary Table 2 filename을 공식 IGSR sample manifest와 수동 매칭

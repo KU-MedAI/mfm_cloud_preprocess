@@ -1,0 +1,59 @@
+{
+  "data_root": "../../../runtime/aws_main/input",
+  "output_root": "../../../runtime/aws_main/output",
+  "state_root": "../../../runtime/aws_main/state",
+  "resource_profile": "auto",
+  "cpu_utilization": "maximum",
+  "sample_cpus": 16,
+  "local_jobs": 1,
+  "elastic_max_jobs": 1,
+  "model_target_bytes": 10000000000000,
+  "remove_owned_raw_inputs": false,
+  "cleanup_shared_fasta": false,
+  "extra_decode_references": [],
+  "pipeline_env": {
+    "MFM_MODEL_ONLY_CLEANUP": "0",
+    "CLEAN_INTERMEDIATES_ON_SUCCESS": "0",
+    "CLEAN_SHARED_ASSETS_ON_SUCCESS": "0",
+    "WINDOW_STORAGE_POLICY": "annotated_acgtn_v1",
+    "MFM_SHORT_READ_OUTPUT_MODE": "pileup_feature",
+    "MFM_LONG_READ_OUTPUT_MODE": "pileup_feature",
+    "MFM_RNA_OUTPUT_MODE": "full",
+    "MFM_SEQUENCE_DEFER_RNA": "0",
+    "MFM_PILEUP_BENCHMARK_REALIGN": "0",
+    "MFM_PILEUP_PRODUCTION_BACKEND": "native",
+    "MFM_PILEUP_VALIDATION_BACKEND": "native",
+    "WGS_START_AT": "01",
+    "RNA_START_AT": "13",
+    "BLACKLIST_BED": "references/hg38_autosomes_blacklist_union.bed"
+  },
+  "slurm": {
+    "partition": "",
+    "account": "",
+    "qos": "",
+    "constraint": "",
+    "cpus": 16,
+    "memory": "384G",
+    "time": "96:00:00",
+    "concurrency": 4
+  },
+  "bundled_assets_root": "../../../assets",
+  "download_jobs": 1,
+  "memory_limit_bytes": 1650000000000,
+  "cpu_pool_limit": 16,
+  "acceleration": {
+    "mode": "cpu",
+    "gpu_devices": "auto",
+    "gpu_runtime": "auto",
+    "parabricks_image": "nvcr.io/nvidia/clara/clara-parabricks:4.8.0-1",
+    "rna_gpu_policy": "strict"
+  },
+  "cpu_allocation_mode": "fixed_sample",
+  "processing_buffers": {},
+  "run_id": "cloud_aws_main_261123",
+  "output_layout": "run_root",
+  "queue_policy": {
+    "mode": "ready_first",
+    "pair_first": true
+  }
+}

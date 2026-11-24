@@ -1,0 +1,46 @@
+{
+  "package_schema": "mfm_1000g_3202_sample_share_package_v1",
+  "sample_count": 3202,
+  "files": {
+    "readme": "README.md",
+    "source_projects": "source_projects.md",
+    "sample_csv": "samples_3202.csv",
+    "summary_counts": "summary_counts.csv",
+    "manifests": "manifests/",
+    "download_guide": "DOWNLOAD_GUIDE.md",
+    "download_policy": "DOWNLOAD_POLICY.md",
+    "samples_tsv": "samples_3202.tsv",
+    "phase_assignments": "phase_assignments.tsv",
+    "phase_summary": "phase_summary.tsv",
+    "scripts": "scripts/"
+  },
+  "strict_training_use_by_platform": {
+    "post_training_wgs_rna_pair | ONT": 117,
+    "post_training_wgs_rna_pair | HiFi_CCS": 28,
+    "post_training_wgs_rna_pair | Illumina_30x": 304,
+    "pre_training_wgs_only | ONT": 838,
+    "pre_training_wgs_only | HiFi_CCS": 215,
+    "pre_training_wgs_only | Illumina_30x": 1700
+  },
+  "wgs_download_source_counts": {
+    "ENA_PRJEB31736_1kGP_30x": 2004,
+    "HGSVC_HiFi": 17,
+    "HPRC_HiFi": 196,
+    "HPRC_ONT": 30,
+    "NA": 92,
+    "ONT_Vienna": 863
+  },
+  "current_server_raw_status_snapshot": {
+    "downloaded | HiFi_CCS": 6,
+    "downloaded | Illumina_30x": 265,
+    "downloaded | ONT": 683,
+    "not_downloaded_or_not_in_current_roots | HiFi_CCS": 237,
+    "not_downloaded_or_not_in_current_roots | Illumina_30x": 1739,
+    "not_downloaded_or_not_in_current_roots | ONT": 272
+  },
+  "note": "RNA BAM strict-only policy: samples without RNA BAM are WGS-only; recount3 BigWig and non-BAM RNA sources are excluded from operational classification.",
+  "rna_download_source_for_post_training_rna_bam_samples": {
+    "Geuvadis_TOPMed": 449
+  },
+  "classification_policy": "RNA BAM strict only: samples without RNA BAM are integrated into pre_training_wgs_only."
+}

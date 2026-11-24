@@ -1,0 +1,6 @@
+phase	samples	estimated_download_bytes	estimated_download_tib	strict_rna_bam_pair	PacBio_HiFi	PacBio_CLR	Illumina_30x	contains_estimated_pacbio_sizes
+01	642	17900783124033	16.281	90	58	0	584	False
+02	643	17739046851940	16.134	89	59	0	584	False
+03	643	17571387368649	15.981	84	59	0	584	False
+04	642	17641637059924	16.045	90	59	0	583	False
+05	642	17898261938864	16.278	96	59	0	583	False

@@ -1,0 +1,499 @@
+﻿번호,bam파일명,설명,링크
+1,HG00254,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240212/HG00254.final.cram
+2,HG00254,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240212/HG00254.final.cram.crai
+3,HG00419,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241669/HG00419.final.cram
+4,HG00419,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241669/HG00419.final.cram.crai
+5,HG00422,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241671/HG00422.final.cram
+6,HG00422,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241671/HG00422.final.cram.crai
+7,HG00553,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241695/HG00553.final.cram
+8,HG00553,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241695/HG00553.final.cram.crai
+9,HG00555,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988788/HG00555.final.cram
+10,HG00555,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988788/HG00555.final.cram.crai
+11,HG00566,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241702/HG00566.final.cram
+12,HG00566,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241702/HG00566.final.cram.crai
+13,HG00591,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988797/HG00591.final.cram
+14,HG00591,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988797/HG00591.final.cram.crai
+15,HG00599,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242514/HG00599.final.cram
+16,HG00599,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242514/HG00599.final.cram.crai
+17,HG00619,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241719/HG00619.final.cram
+18,HG00619,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241719/HG00619.final.cram.crai
+19,HG00628,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241723/HG00628.final.cram
+20,HG00628,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241723/HG00628.final.cram.crai
+21,HG00650,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241730/HG00650.final.cram
+22,HG00650,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241730/HG00650.final.cram.crai
+23,HG00653,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241732/HG00653.final.cram
+24,HG00653,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241732/HG00653.final.cram.crai
+25,HG00662,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241736/HG00662.final.cram
+26,HG00662,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241736/HG00662.final.cram.crai
+27,HG00982,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242138/HG00982.final.cram
+28,HG00982,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242138/HG00982.final.cram.crai
+29,HG01049,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241762/HG01049.final.cram
+30,HG01049,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241762/HG01049.final.cram.crai
+31,HG01050,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988827/HG01050.final.cram
+32,HG01050,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988827/HG01050.final.cram.crai
+33,HG01058,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242769/HG01058.final.cram
+34,HG01058,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242769/HG01058.final.cram.crai
+35,HG01100,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988839/HG01100.final.cram
+36,HG01100,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988839/HG01100.final.cram.crai
+37,HG01105,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241823/HG01105.final.cram
+38,HG01105,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241823/HG01105.final.cram.crai
+39,HG01125,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241831/HG01125.final.cram
+40,HG01125,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241831/HG01125.final.cram.crai
+41,HG01130,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242787/HG01130.final.cram
+42,HG01130,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242787/HG01130.final.cram.crai
+43,HG01136,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241834/HG01136.final.cram
+44,HG01136,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241834/HG01136.final.cram.crai
+45,HG01140,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241837/HG01140.final.cram
+46,HG01140,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241837/HG01140.final.cram.crai
+47,HG01164,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242776/HG01164.final.cram
+48,HG01164,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242776/HG01164.final.cram.crai
+49,HG01191,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241853/HG01191.final.cram
+50,HG01191,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241853/HG01191.final.cram.crai
+51,HG01205,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241857/HG01205.final.cram
+52,HG01205,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241857/HG01205.final.cram.crai
+53,HG01248,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241861/HG01248.final.cram
+54,HG01248,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241861/HG01248.final.cram.crai
+55,HG01249,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988859/HG01249.final.cram
+56,HG01249,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988859/HG01249.final.cram.crai
+57,HG01259,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241868/HG01259.final.cram
+58,HG01259,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241868/HG01259.final.cram.crai
+59,HG01269,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242790/HG01269.final.cram
+60,HG01269,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242790/HG01269.final.cram.crai
+61,HG01281,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242792/HG01281.final.cram
+62,HG01281,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242792/HG01281.final.cram.crai
+63,HG01286,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242778/HG01286.final.cram
+64,HG01286,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242778/HG01286.final.cram.crai
+65,HG01341,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241884/HG01341.final.cram
+66,HG01341,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241884/HG01341.final.cram.crai
+67,HG01355,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988874/HG01355.final.cram
+68,HG01355,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988874/HG01355.final.cram.crai
+69,HG01369,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242796/HG01369.final.cram
+70,HG01369,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242796/HG01369.final.cram.crai
+71,HG01383,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241882/HG01383.final.cram
+72,HG01383,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241882/HG01383.final.cram.crai
+73,HG01396,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242762/HG01396.final.cram
+74,HG01396,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242762/HG01396.final.cram.crai
+75,HG01403,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242764/HG01403.final.cram
+76,HG01403,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242764/HG01403.final.cram.crai
+77,HG01441,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241901/HG01441.final.cram
+78,HG01441,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241901/HG01441.final.cram.crai
+79,HG01462,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241905/HG01462.final.cram
+80,HG01462,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241905/HG01462.final.cram.crai
+81,HG01491,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241910/HG01491.final.cram
+82,HG01491,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241910/HG01491.final.cram.crai
+83,HG01603,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241943/HG01603.final.cram
+84,HG01603,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241943/HG01603.final.cram.crai
+85,HG01609,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988909/HG01609.final.cram
+86,HG01609,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988909/HG01609.final.cram.crai
+87,HG01629,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988916/HG01629.final.cram
+88,HG01629,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988916/HG01629.final.cram.crai
+89,HG01673,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241968/HG01673.final.cram
+90,HG01673,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241968/HG01673.final.cram.crai
+91,HG01683,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988923/HG01683.final.cram
+92,HG01683,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988923/HG01683.final.cram.crai
+93,HG01695,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242111/HG01695.final.cram
+94,HG01695,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242111/HG01695.final.cram.crai
+95,HG01697,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242250/HG01697.final.cram
+96,HG01697,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242250/HG01697.final.cram.crai
+97,HG01771,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242120/HG01771.final.cram
+98,HG01771,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242120/HG01771.final.cram.crai
+99,HG01785,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243158/HG01785.final.cram
+100,HG01785,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243158/HG01785.final.cram.crai
+101,HG01797,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242146/HG01797.final.cram
+102,HG01797,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242146/HG01797.final.cram.crai
+103,HG01800,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242149/HG01800.final.cram
+104,HG01800,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242149/HG01800.final.cram.crai
+105,HG01844,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242071/HG01844.final.cram
+106,HG01844,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242071/HG01844.final.cram.crai
+107,HG01846,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242073/HG01846.final.cram
+108,HG01846,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242073/HG01846.final.cram.crai
+109,HG01848,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242075/HG01848.final.cram
+110,HG01848,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242075/HG01848.final.cram.crai
+111,HG01850,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242077/HG01850.final.cram
+112,HG01850,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242077/HG01850.final.cram.crai
+113,HG01853,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242080/HG01853.final.cram
+114,HG01853,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242080/HG01853.final.cram.crai
+115,HG01855,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242081/HG01855.final.cram
+116,HG01855,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242081/HG01855.final.cram.crai
+117,HG01858,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242083/HG01858.final.cram
+118,HG01858,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242083/HG01858.final.cram.crai
+119,HG01859,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242084/HG01859.final.cram
+120,HG01859,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242084/HG01859.final.cram.crai
+121,HG01860,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242085/HG01860.final.cram
+122,HG01860,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242085/HG01860.final.cram.crai
+123,HG01867,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242092/HG01867.final.cram
+124,HG01867,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242092/HG01867.final.cram.crai
+125,HG01879,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242292/HG01879.final.cram
+126,HG01879,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242292/HG01879.final.cram.crai
+127,HG01938,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242004/HG01938.final.cram
+128,HG01938,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242004/HG01938.final.cram.crai
+129,HG01959,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988960/HG01959.final.cram
+130,HG01959,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988960/HG01959.final.cram.crai
+131,HG01983,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988967/HG01983.final.cram
+132,HG01983,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988967/HG01983.final.cram.crai
+133,HG01998,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988971/HG01998.final.cram
+134,HG01998,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988971/HG01998.final.cram.crai
+135,HG02002,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242030/HG02002.final.cram
+136,HG02002,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242030/HG02002.final.cram.crai
+137,HG02077,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988985/HG02077.final.cram
+138,HG02077,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988985/HG02077.final.cram.crai
+139,HG02143,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242306/HG02143.final.cram
+140,HG02143,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242306/HG02143.final.cram.crai
+141,HG02260,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242240/HG02260.final.cram
+142,HG02260,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242240/HG02260.final.cram.crai
+143,HG02337,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242316/HG02337.final.cram
+144,HG02337,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242316/HG02337.final.cram.crai
+145,HG02449,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242329/HG02449.final.cram
+146,HG02449,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242329/HG02449.final.cram.crai
+147,HG02495,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989020/HG02495.final.cram
+148,HG02495,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989020/HG02495.final.cram.crai
+149,HG02524,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989023/HG02524.final.cram
+150,HG02524,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989023/HG02524.final.cram.crai
+151,HG02557,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242746/HG02557.final.cram
+152,HG02557,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242746/HG02557.final.cram.crai
+153,HG02562,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242362/HG02562.final.cram
+154,HG02562,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242362/HG02562.final.cram.crai
+155,HG02569,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989027/HG02569.final.cram
+156,HG02569,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989027/HG02569.final.cram.crai
+157,HG02573,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242365/HG02573.final.cram
+158,HG02573,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242365/HG02573.final.cram.crai
+159,HG02588,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242371/HG02588.final.cram
+160,HG02588,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242371/HG02588.final.cram.crai
+161,HG02589,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242372/HG02589.final.cram
+162,HG02589,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242372/HG02589.final.cram.crai
+163,HG02604,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242402/HG02604.final.cram
+164,HG02604,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242402/HG02604.final.cram.crai
+165,HG02635,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242420/HG02635.final.cram
+166,HG02635,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242420/HG02635.final.cram.crai
+167,HG02636,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989041/HG02636.final.cram
+168,HG02636,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989041/HG02636.final.cram.crai
+169,HG02644,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989042/HG02644.final.cram
+170,HG02644,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989042/HG02644.final.cram.crai
+171,HG02656,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989046/HG02656.final.cram
+172,HG02656,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989046/HG02656.final.cram.crai
+173,HG02699,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243019/HG02699.final.cram
+174,HG02699,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243019/HG02699.final.cram.crai
+175,HG02704,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989058/HG02704.final.cram
+176,HG02704,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989058/HG02704.final.cram.crai
+177,HG02716,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242422/HG02716.final.cram
+178,HG02716,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242422/HG02716.final.cram.crai
+179,HG02722,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242396/HG02722.final.cram
+180,HG02722,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242396/HG02722.final.cram.crai
+181,HG02772,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242426/HG02772.final.cram
+182,HG02772,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242426/HG02772.final.cram.crai
+183,HG02775,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243024/HG02775.final.cram
+184,HG02775,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243024/HG02775.final.cram.crai
+185,HG02787,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242508/HG02787.final.cram
+186,HG02787,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242508/HG02787.final.cram.crai
+187,HG02815,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989079/HG02815.final.cram
+188,HG02815,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989079/HG02815.final.cram.crai
+189,HG02838,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989082/HG02838.final.cram
+190,HG02838,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989082/HG02838.final.cram.crai
+191,HG02840,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242438/HG02840.final.cram
+192,HG02840,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242438/HG02840.final.cram.crai
+193,HG02852,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242440/HG02852.final.cram
+194,HG02852,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242440/HG02852.final.cram.crai
+195,HG02880,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989089/HG02880.final.cram
+196,HG02880,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989089/HG02880.final.cram.crai
+197,HG02889,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989092/HG02889.final.cram
+198,HG02889,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989092/HG02889.final.cram.crai
+199,HG02895,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242443/HG02895.final.cram
+200,HG02895,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242443/HG02895.final.cram.crai
+201,HG02924,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989095/HG02924.final.cram
+202,HG02924,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989095/HG02924.final.cram.crai
+203,HG02943,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242484/HG02943.final.cram
+204,HG02943,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242484/HG02943.final.cram.crai
+205,HG02952,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242605/HG02952.final.cram
+206,HG02952,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242605/HG02952.final.cram.crai
+207,HG02966,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989101/HG02966.final.cram
+208,HG02966,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989101/HG02966.final.cram.crai
+209,HG02974,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242485/HG02974.final.cram
+210,HG02974,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242485/HG02974.final.cram.crai
+211,HG02979,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242975/HG02979.final.cram
+212,HG02979,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242975/HG02979.final.cram.crai
+213,HG03015,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242636/HG03015.final.cram
+214,HG03015,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242636/HG03015.final.cram.crai
+215,HG03047,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989115/HG03047.final.cram
+216,HG03047,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989115/HG03047.final.cram.crai
+217,HG03048,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242451/HG03048.final.cram
+218,HG03048,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242451/HG03048.final.cram.crai
+219,HG03052,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242467/HG03052.final.cram
+220,HG03052,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242467/HG03052.final.cram.crai
+221,HG03055,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242541/HG03055.final.cram
+222,HG03055,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242541/HG03055.final.cram.crai
+223,HG03061,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242548/HG03061.final.cram
+224,HG03061,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242548/HG03061.final.cram.crai
+225,HG03073,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242955/HG03073.final.cram
+226,HG03073,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242955/HG03073.final.cram.crai
+227,HG03100,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242487/HG03100.final.cram
+228,HG03100,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242487/HG03100.final.cram.crai
+229,HG03101,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989120/HG03101.final.cram
+230,HG03101,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989120/HG03101.final.cram.crai
+231,HG03112,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242980/HG03112.final.cram
+232,HG03112,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242980/HG03112.final.cram.crai
+233,HG03166,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242985/HG03166.final.cram
+234,HG03166,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242985/HG03166.final.cram.crai
+235,HG03175,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242986/HG03175.final.cram
+236,HG03175,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242986/HG03175.final.cram.crai
+237,HG03240,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242525/HG03240.final.cram
+238,HG03240,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242525/HG03240.final.cram.crai
+239,HG03260,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989145/HG03260.final.cram
+240,HG03260,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989145/HG03260.final.cram.crai
+241,HG03267,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242588/HG03267.final.cram
+242,HG03267,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242588/HG03267.final.cram.crai
+243,HG03300,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242597/HG03300.final.cram
+244,HG03300,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242597/HG03300.final.cram.crai
+245,HG03306,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989152/HG03306.final.cram
+246,HG03306,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989152/HG03306.final.cram.crai
+247,HG03376,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242542/HG03376.final.cram
+248,HG03376,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242542/HG03376.final.cram.crai
+249,HG03382,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242966/HG03382.final.cram
+250,HG03382,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242966/HG03382.final.cram.crai
+251,HG03419,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242547/HG03419.final.cram
+252,HG03419,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242547/HG03419.final.cram.crai
+253,HG03438,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989165/HG03438.final.cram
+254,HG03438,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989165/HG03438.final.cram.crai
+255,HG03469,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242479/HG03469.final.cram
+256,HG03469,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242479/HG03469.final.cram.crai
+257,HG03478,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242557/HG03478.final.cram
+258,HG03478,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242557/HG03478.final.cram.crai
+259,HG03479,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242558/HG03479.final.cram
+260,HG03479,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242558/HG03479.final.cram.crai
+261,HG03559,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242576/HG03559.final.cram
+262,HG03559,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242576/HG03559.final.cram.crai
+263,HG03563,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242577/HG03563.final.cram
+264,HG03563,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242577/HG03563.final.cram.crai
+265,HG03567,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242971/HG03567.final.cram
+266,HG03567,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242971/HG03567.final.cram.crai
+267,HG03574,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989178/HG03574.final.cram
+268,HG03574,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989178/HG03574.final.cram.crai
+269,HG03604,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243072/HG03604.final.cram
+270,HG03604,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243072/HG03604.final.cram.crai
+271,HG03607,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242832/HG03607.final.cram
+272,HG03607,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242832/HG03607.final.cram.crai
+273,HG03618,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989187/HG03618.final.cram
+274,HG03618,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989187/HG03618.final.cram.crai
+275,HG03633,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989190/HG03633.final.cram
+276,HG03633,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989190/HG03633.final.cram.crai
+277,HG03640,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243031/HG03640.final.cram
+278,HG03640,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243031/HG03640.final.cram.crai
+279,HG03651,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989195/HG03651.final.cram
+280,HG03651,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989195/HG03651.final.cram.crai
+281,HG03701,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989203/HG03701.final.cram
+282,HG03701,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989203/HG03701.final.cram.crai
+283,HG03702,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242638/HG03702.final.cram
+284,HG03702,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242638/HG03702.final.cram.crai
+285,HG03708,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242640/HG03708.final.cram
+286,HG03708,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242640/HG03708.final.cram.crai
+287,HG03713,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242698/HG03713.final.cram
+288,HG03713,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242698/HG03713.final.cram.crai
+289,HG03717,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242701/HG03717.final.cram
+290,HG03717,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242701/HG03717.final.cram.crai
+291,HG03729,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242705/HG03729.final.cram
+292,HG03729,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242705/HG03729.final.cram.crai
+293,HG03738,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242888/HG03738.final.cram
+294,HG03738,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242888/HG03738.final.cram.crai
+295,HG03754,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242684/HG03754.final.cram
+296,HG03754,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242684/HG03754.final.cram.crai
+297,HG03774,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243112/HG03774.final.cram
+298,HG03774,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243112/HG03774.final.cram.crai
+299,HG03778,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243129/HG03778.final.cram
+300,HG03778,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243129/HG03778.final.cram.crai
+301,HG03786,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242714/HG03786.final.cram
+302,HG03786,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242714/HG03786.final.cram.crai
+303,HG03794,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989213/HG03794.final.cram
+304,HG03794,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989213/HG03794.final.cram.crai
+305,HG03799,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989217/HG03799.final.cram
+306,HG03799,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989217/HG03799.final.cram.crai
+307,HG03844,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242686/HG03844.final.cram
+308,HG03844,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242686/HG03844.final.cram.crai
+309,HG03846,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242896/HG03846.final.cram
+310,HG03846,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242896/HG03846.final.cram.crai
+311,HG03858,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242691/HG03858.final.cram
+312,HG03858,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242691/HG03858.final.cram.crai
+313,HG03869,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242720/HG03869.final.cram
+314,HG03869,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242720/HG03869.final.cram.crai
+315,HG03902,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242845/HG03902.final.cram
+316,HG03902,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242845/HG03902.final.cram.crai
+317,HG03906,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989227/HG03906.final.cram
+318,HG03906,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989227/HG03906.final.cram.crai
+319,HG03911,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242848/HG03911.final.cram
+320,HG03911,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242848/HG03911.final.cram.crai
+321,HG03917,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243074/HG03917.final.cram
+322,HG03917,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243074/HG03917.final.cram.crai
+323,HG03944,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242867/HG03944.final.cram
+324,HG03944,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242867/HG03944.final.cram.crai
+325,HG03973,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242727/HG03973.final.cram
+326,HG03973,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242727/HG03973.final.cram.crai
+327,HG03985,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243103/HG03985.final.cram
+328,HG03985,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243103/HG03985.final.cram.crai
+329,HG03990,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243101/HG03990.final.cram
+330,HG03990,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243101/HG03990.final.cram.crai
+331,HG04025,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242932/HG04025.final.cram
+332,HG04025,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242932/HG04025.final.cram.crai
+333,HG04033,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242902/HG04033.final.cram
+334,HG04033,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242902/HG04033.final.cram.crai
+335,HG04039,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243108/HG04039.final.cram
+336,HG04039,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243108/HG04039.final.cram.crai
+337,HG04042,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242908/HG04042.final.cram
+338,HG04042,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242908/HG04042.final.cram.crai
+339,HG04047,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243109/HG04047.final.cram
+340,HG04047,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243109/HG04047.final.cram.crai
+341,HG04080,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243125/HG04080.final.cram
+342,HG04080,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243125/HG04080.final.cram.crai
+343,HG04098,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243128/HG04098.final.cram
+344,HG04098,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243128/HG04098.final.cram.crai
+345,HG04099,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242909/HG04099.final.cram
+346,HG04099,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3242909/HG04099.final.cram.crai
+347,HG04106,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243111/HG04106.final.cram
+348,HG04106,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243111/HG04106.final.cram.crai
+349,HG04127,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989238/HG04127.final.cram
+350,HG04127,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989238/HG04127.final.cram.crai
+351,HG04134,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243061/HG04134.final.cram
+352,HG04134,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243061/HG04134.final.cram.crai
+353,HG04148,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989245/HG04148.final.cram
+354,HG04148,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989245/HG04148.final.cram.crai
+355,HG04151,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989248/HG04151.final.cram
+356,HG04151,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989248/HG04151.final.cram.crai
+357,HG04161,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243079/HG04161.final.cram
+358,HG04161,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243079/HG04161.final.cram.crai
+359,HG04164,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243081/HG04164.final.cram
+360,HG04164,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243081/HG04164.final.cram.crai
+361,HG04180,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243069/HG04180.final.cram
+362,HG04180,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243069/HG04180.final.cram.crai
+363,HG04192,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989256/HG04192.final.cram
+364,HG04192,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989256/HG04192.final.cram.crai
+365,HG04227,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243098/HG04227.final.cram
+366,HG04227,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3243098/HG04227.final.cram.crai
+367,NA10843,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989289/NA10843.final.cram
+368,NA10843,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989289/NA10843.final.cram.crai
+369,NA12343,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989320/NA12343.final.cram
+370,NA12343,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989320/NA12343.final.cram.crai
+371,NA12877,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989340/NA12877.final.cram
+372,NA12877,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989340/NA12877.final.cram.crai
+373,NA18538,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239651/NA18538.final.cram
+374,NA18538,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239651/NA18538.final.cram.crai
+375,NA18542,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239356/NA18542.final.cram
+376,NA18542,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239356/NA18542.final.cram.crai
+377,NA18577,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239372/NA18577.final.cram
+378,NA18577,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239372/NA18577.final.cram.crai
+379,NA18591,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239659/NA18591.final.cram
+380,NA18591,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239659/NA18591.final.cram.crai
+381,NA18593,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239376/NA18593.final.cram
+382,NA18593,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239376/NA18593.final.cram.crai
+383,NA18599,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239505/NA18599.final.cram
+384,NA18599,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239505/NA18599.final.cram.crai
+385,NA18635,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239531/NA18635.final.cram
+386,NA18635,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239531/NA18635.final.cram.crai
+387,NA18638,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239381/NA18638.final.cram
+388,NA18638,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239381/NA18638.final.cram.crai
+389,NA18643,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239538/NA18643.final.cram
+390,NA18643,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239538/NA18643.final.cram.crai
+391,NA18645,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239539/NA18645.final.cram
+392,NA18645,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239539/NA18645.final.cram.crai
+393,NA18854,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989354/NA18854.final.cram
+394,NA18854,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989354/NA18854.final.cram.crai
+395,NA18855,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989355/NA18855.final.cram
+396,NA18855,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989355/NA18855.final.cram.crai
+397,NA18862,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989359/NA18862.final.cram
+398,NA18862,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989359/NA18862.final.cram.crai
+399,NA18876,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239666/NA18876.final.cram
+400,NA18876,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239666/NA18876.final.cram.crai
+401,NA18881,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239670/NA18881.final.cram
+402,NA18881,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239670/NA18881.final.cram.crai
+403,NA18949,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239399/NA18949.final.cram
+404,NA18949,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239399/NA18949.final.cram.crai
+405,NA18951,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239400/NA18951.final.cram
+406,NA18951,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239400/NA18951.final.cram.crai
+407,NA18953,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239402/NA18953.final.cram
+408,NA18953,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239402/NA18953.final.cram.crai
+409,NA18968,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239410/NA18968.final.cram
+410,NA18968,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239410/NA18968.final.cram.crai
+411,NA18975,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239417/NA18975.final.cram
+412,NA18975,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239417/NA18975.final.cram.crai
+413,NA18980,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239419/NA18980.final.cram
+414,NA18980,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239419/NA18980.final.cram.crai
+415,NA18998,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239576/NA18998.final.cram
+416,NA18998,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239576/NA18998.final.cram.crai
+417,NA19011,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239682/NA19011.final.cram
+418,NA19011,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239682/NA19011.final.cram.crai
+419,NA19012,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239585/NA19012.final.cram
+420,NA19012,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239585/NA19012.final.cram.crai
+421,NA19017,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239683/NA19017.final.cram
+422,NA19017,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239683/NA19017.final.cram.crai
+423,NA19019,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239684/NA19019.final.cram
+424,NA19019,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239684/NA19019.final.cram.crai
+425,NA19027,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239690/NA19027.final.cram
+426,NA19027,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239690/NA19027.final.cram.crai
+427,NA19028,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239691/NA19028.final.cram
+428,NA19028,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239691/NA19028.final.cram.crai
+429,NA19035,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239694/NA19035.final.cram
+430,NA19035,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239694/NA19035.final.cram.crai
+431,NA19042,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239699/NA19042.final.cram
+432,NA19042,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239699/NA19042.final.cram.crai
+433,NA19072,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239601/NA19072.final.cram
+434,NA19072,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239601/NA19072.final.cram.crai
+435,NA19191,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989398/NA19191.final.cram
+436,NA19191,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989398/NA19191.final.cram.crai
+437,NA19237,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989409/NA19237.final.cram
+438,NA19237,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989409/NA19237.final.cram.crai
+439,NA19307,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239704/NA19307.final.cram
+440,NA19307,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239704/NA19307.final.cram.crai
+441,NA19308,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239705/NA19308.final.cram
+442,NA19308,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239705/NA19308.final.cram.crai
+443,NA19315,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239710/NA19315.final.cram
+444,NA19315,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239710/NA19315.final.cram.crai
+445,NA19372,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239731/NA19372.final.cram
+446,NA19372,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239731/NA19372.final.cram.crai
+447,NA19379,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239737/NA19379.final.cram
+448,NA19379,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239737/NA19379.final.cram.crai
+449,NA19456,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239772/NA19456.final.cram
+450,NA19456,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239772/NA19456.final.cram.crai
+451,NA19474,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239783/NA19474.final.cram
+452,NA19474,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239783/NA19474.final.cram.crai
+453,NA19660,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989417/NA19660.final.cram
+454,NA19660,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989417/NA19660.final.cram.crai
+455,NA19675,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989421/NA19675.final.cram
+456,NA19675,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989421/NA19675.final.cram.crai
+457,NA19679,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239909/NA19679.final.cram
+458,NA19679,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239909/NA19679.final.cram.crai
+459,NA19723,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239926/NA19723.final.cram
+460,NA19723,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239926/NA19723.final.cram.crai
+461,NA19772,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989440/NA19772.final.cram
+462,NA19772,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989440/NA19772.final.cram.crai
+463,NA19787,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989445/NA19787.final.cram
+464,NA19787,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989445/NA19787.final.cram.crai
+465,NA19818,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239959/NA19818.final.cram
+466,NA19818,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239959/NA19818.final.cram.crai
+467,NA19819,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239960/NA19819.final.cram
+468,NA19819,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239960/NA19819.final.cram.crai
+469,NA19919,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989452/NA19919.final.cram
+470,NA19919,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989452/NA19919.final.cram.crai
+471,NA20289,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239981/NA20289.final.cram
+472,NA20289,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239981/NA20289.final.cram.crai
+473,NA20340,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239990/NA20340.final.cram
+474,NA20340,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239990/NA20340.final.cram.crai
+475,NA20357,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239995/NA20357.final.cram
+476,NA20357,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239995/NA20357.final.cram.crai
+477,NA20362,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241777/NA20362.final.cram
+478,NA20362,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241777/NA20362.final.cram.crai
+479,NA20533,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239814/NA20533.final.cram
+480,NA20533,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239814/NA20533.final.cram.crai
+481,NA20775,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239855/NA20775.final.cram
+482,NA20775,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239855/NA20775.final.cram.crai
+483,NA20859,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240008/NA20859.final.cram
+484,NA20859,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240008/NA20859.final.cram.crai
+485,NA20866,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240011/NA20866.final.cram
+486,NA20866,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240011/NA20866.final.cram.crai
+487,NA20868,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240105/NA20868.final.cram
+488,NA20868,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240105/NA20868.final.cram.crai
+489,NA20906,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240041/NA20906.final.cram
+490,NA20906,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240041/NA20906.final.cram.crai
+491,NA21105,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240060/NA21105.final.cram
+492,NA21105,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240060/NA21105.final.cram.crai
+493,NA21123,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240076/NA21123.final.cram
+494,NA21123,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240076/NA21123.final.cram.crai
+495,NA21127,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240078/NA21127.final.cram
+496,NA21127,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240078/NA21127.final.cram.crai
+497,NA21135,WGS-only CRAM,https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240082/NA21135.final.cram
+498,NA21135,WGS-only 인덱스 (.crai),https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3240082/NA21135.final.cram.crai

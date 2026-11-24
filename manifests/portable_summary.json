@@ -1,0 +1,25 @@
+{
+  "schema": "mfm_portable_manifest_v3",
+  "samples": 3212,
+  "wgs_only": 2763,
+  "wgs_rna_pair": 449,
+  "wgs_primary_bytes": 86820574655817,
+  "rna_primary_bytes": 1930541687593,
+  "primary_input_bytes": 88751116343410,
+  "unique_known_resource_bytes": 88798744565917,
+  "resource_count_deduplicated_by_url": 4813,
+  "resource_total_semantics": "known remote resources deduplicated by exact URL; unknown indexes and unfrozen panel files excluded",
+  "unknown_wgs_index_samples": 2918,
+  "unknown_rna_index_samples": 449,
+  "wgs_library_amplification_counts": {
+    "pcr_free_confirmed": 2918,
+    "pcr_free_inferred": 232,
+    "pcr_free_protocol": 62
+  },
+  "rna_library_amplification_counts": {
+    "not_applicable": 2763,
+    "pcr_amplified_confirmed": 449
+  },
+  "manifest": "manifests/preprocess_manifest.tsv",
+  "read_files_manifest": "manifests/read_files.tsv"
+}

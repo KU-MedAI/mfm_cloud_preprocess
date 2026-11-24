@@ -1,0 +1,26 @@
+{
+  "branch_counts": {
+    "wgs_only": 2763,
+    "wgs_rna_pair": 449
+  },
+  "format_counts": {
+    "bam": 233,
+    "cram": 2918,
+    "fastq_gz": 29,
+    "fastq_gz+ubam": 7,
+    "ubam": 25
+  },
+  "platform_counts": {
+    "hifi": 294,
+    "illumina": 2918
+  },
+  "project_counts": {
+    "1KGP_ILLUMINA": 2918,
+    "HGSVC2": 1,
+    "HGSVC3": 60,
+    "HPRC_R1": 1,
+    "HPRC_R2": 232
+  },
+  "sample_count": 3212,
+  "schema": "mfm_input_inventory_v1"
+}
