@@ -18,7 +18,7 @@ mkdir -p "$MFM_DOCKER_ROOT"/data/{input,assets,output,state} "$MFM_DOCKER_ROOT"/
 cp docker/config.pileup.example.json "$MFM_DOCKER_ROOT/config.json"
 ```
 
-예제는16CPU·384GiB·동시1명 설정임. VM에 맞춰 `config.json`의 CPU/RAM과 아래 `--cpus`/`--memory`를 함께 수정함.
+예제는 **샘플당 고정16CPU·384GiB·동시1명** 설정임. VM에 맞춰 RAM 예산과 아래 `--memory`를 함께 수정함. CPU 변경 시 JSON과 `--cpus`도 함께 맞춤.
 
 ```bash
 MFM_DOCKER_ARGS=(

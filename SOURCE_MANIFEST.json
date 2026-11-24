@@ -5014,6 +5014,17 @@
           "source_sha256": "8586b72cba4280763f7bd5c40f386651334cd7bcc2b282a776d4c47882e5b176"
         }
       ]
+    },
+    {
+      "applied_at": "2026-11-24T18:27:43.588132+09:00",
+      "reason": "사용자 최신16CPU 클라우드 기준: 실제HiFi16CPU/고정예산 회귀 보완. 생산계산정책은 동일함.",
+      "files": [
+        {
+          "path": "tests/test_hifi_utilization.py",
+          "size_bytes": 10857,
+          "source_sha256": "3e7ac8d4a75958e0b1a1c8d7d22c7e15fa80ef82b268684a6382830fa0752166"
+        }
+      ]
     }
   ],
   "deployment_updates": [

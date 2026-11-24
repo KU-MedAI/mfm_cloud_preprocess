@@ -23,6 +23,7 @@ def main():
         'test_rna_window_package.RnaWindowPackageTest.test_legacy_coordinates_produce_identical_depth',
         'test_align_resources.SortBufferPlans',
         'test_fixed_sample_cpu.FixedSampleCpuTests.test_sort메모리_자동요청과명시값을_자식단계에도보존',
+        'test_docker_package.DockerPackageTests.test_docker_config_preserves_biology_and_limits_fixed_cpu',
     ])
     stream = io.StringIO()
     with redirect_stdout(stream), redirect_stderr(stream):

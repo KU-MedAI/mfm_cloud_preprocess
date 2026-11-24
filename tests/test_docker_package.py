@@ -85,6 +85,11 @@ class DockerPackageTests(unittest.TestCase):
     def test_docker_config_preserves_biology_and_limits_fixed_cpu(self):
         original = json.loads((ROOT / 'cloud_config.pileup.example.json').read_text())
         docker = json.loads((ROOT / 'docker/config.pileup.example.json').read_text())
+        for config in [original, docker]:
+            self.assertEqual(config['cpu_allocation_mode'], 'fixed_sample')
+            self.assertEqual(config['sample_cpus'], 16)
+            self.assertEqual(config['slurm']['cpus'], 16)
+        self.assertEqual((docker['cpu_pool_limit'], docker['local_jobs']), (16, 1))
         policy = dict(docker['pipeline_env']); policy.pop('MFM_SCRATCH_ROOT')
         self.assertEqual(policy, original['pipeline_env'])
         for key in ['remove_owned_raw_inputs', 'cleanup_shared_fasta', 'acceleration']:

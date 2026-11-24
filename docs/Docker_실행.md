@@ -23,7 +23,7 @@ docker run --rm mfm-preprocess:261124-cpu
 ```
 
 - Ubuntu24.04 베이스는 digest, Miniforge26.7.2-0 installer는 SHA256를 고정함. 환경 정의 레이어와 코드 레이어를 나누어 코드 수정만으로 환경 전체를 재설치하는 일을 줄임.
-- Python 패키지는 environment.yml/requirements.txt를 사용함. 빌드 중 pip check·코드 해시·00번 core/RNA 검사·native13종 빌드·소형 WGS/RNA10검사를 수행하며 실패 시 build도 실패함.
+- Python 패키지는 environment.yml/requirements.txt를 사용함. 빌드 중 pip check·코드 해시·00번 core/RNA 검사·native13종 빌드·소형 WGS/RNA와 자원 설정13검사를 수행하며 실패 시 build도 실패함.
 - bare run은 도움말만 표시함. 실제 작업은 아래처럼 명시한 run 인자로 시작함.
 - 기본 UID:GID는10001:10001임. 호스트 결과 소유자를 맞추려면 아래 --user 옵션을 사용함.
 - 기존 클라우드 코드 폴더에 별도 운영파일/자격정보를 추가했다면 먼저 `python3 tools/check_cloud_package.py --export-to /path/to/new-code-only-context`로 코드만 내보내고 그 경로에서 build함. 자격정보나 원본 자료를 이미지에 추가하지 않음.
@@ -84,6 +84,7 @@ docker run "${MFM_DOCKER_ARGS[@]}" --name mfm-hg00308 mfm-preprocess:261124-cpu 
 - JSON sample_cpus/local_jobs: 고정 샘플 CPU와 동시 샘플 수임.
 - JSON memory_limit_bytes: 내부 RAM 운영 상한임. 실제 cgroup/물리 한도가 더 작으면 우선하며10%여유를 유지함.
 - 예제는 CPU16·동시1·RAM384GiB임.384GiB는 두 HAP STAR 예약·부모·여유를 고려한 검증용 설정이며 실제 RSS를 뜻하지 않음. WGS-only의 최적 메모리를 확정한 값도 아님.
+- 클라우드 기본은 샘플당 고정16CPU임. CPU Stage10은 이 예산 안에서 HAP을 순차 처리하며, 미지정 sort 버퍼만 RAM에 맞춰 최대8GiB로 확대함. 부족하면4GiB·기존값으로 낮춤.32CPU를 자동 요청하지 않음.
 - 여러 샘플을 처리하려면 Docker CPU·RAM과 JSON의 풀/동시수를 함께 올림. 예를 들어 CPU68풀에서 샘플16CPU×4개를 설정 가능함. 실제 노드/다른 작업과 공유하는 커널 한도를 우선함.
 - 서로 다른 노드/독립 컨테이너의 PID·CPU lease를 같은 state 폴더에 공유하지 않음. 노드별 state와 고유 run_id를 사용하고 동일 샘플 output 중복 실행을 피함.
 - 이 구성의 cgroup 탐지 기준은 Linux cgroup v2임. v1 호스트에서 같은 한도 탐지가 된다고 검증한 것은 아님.
