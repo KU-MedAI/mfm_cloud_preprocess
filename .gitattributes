@@ -1,0 +1,5 @@
+# 배포 inventory의 바이트 해시를 보존함.
+* -text
+/manifests/** linguist-generated=true
+/share_package/manifests/** linguist-generated=true
+/CLOUD_MANIFEST.json linguist-generated=true

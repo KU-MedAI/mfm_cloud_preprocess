@@ -1,0 +1,66 @@
+{
+  "배정": [
+    {
+      "배정": "Azure_PoC",
+      "인원": 228,
+      "개인파일": 912,
+      "read원본": 456,
+      "공통파일": 48,
+      "개인입력_알려진GB": 4740.709955801,
+      "공통입력GB": 37.212574228,
+      "용량미확인파일": 0,
+      "상세CSV": "azure_poc_228.csv",
+      "공통CSV": "common_azure_poc_228.csv"
+    },
+    {
+      "배정": "Azure_본처리",
+      "인원": 1257,
+      "개인파일": 2776,
+      "read원본": 1341,
+      "공통파일": 52,
+      "개인입력_알려진GB": 35550.0782826,
+      "공통입력GB": 38.843044385,
+      "용량미확인파일": 12,
+      "상세CSV": "azure_main_1257.csv",
+      "공통CSV": "common_azure_main_1257.csv"
+    },
+    {
+      "배정": "AWS_본처리",
+      "인원": 1257,
+      "개인파일": 2800,
+      "read원본": 1366,
+      "공통파일": 56,
+      "개인입력_알려진GB": 36243.418225838,
+      "공통입력GB": 40.363875185,
+      "용량미확인파일": 15,
+      "상세CSV": "aws_main_1257.csv",
+      "공통CSV": "common_aws_main_1257.csv"
+    },
+    {
+      "배정": "현재서버",
+      "인원": 470,
+      "개인파일": 1450,
+      "read원본": 711,
+      "공통파일": 53,
+      "개인입력_알려진GB": 12238.717676634,
+      "공통입력GB": 38.901998288,
+      "용량미확인파일": 5,
+      "상세CSV": "server_470.csv",
+      "공통CSV": "common_server_470.csv"
+    }
+  ],
+  "전체샘플수": 3212,
+  "샘플중복": 0,
+  "개인파일누락": 0,
+  "개인URL중복": 0,
+  "공통고유파일합집합": 57,
+  "PoC본처리중복": 0,
+  "PoC투입정책": "228명 전체가 한 대상이며 회차·순차 투입 조건 없음",
+  "기준파일SHA256": {
+    "/NHNHOME/korea/pre-training/jungjin/codex_archive/work/261120_MS파일수확인/실제입력/공통분리/all_long_short_3212.csv": "e5df150b7d8a81975981ec81555211471e50e3e119ded69b7bb3ce7ae66dfef7",
+    "/NHNHOME/korea/pre-training/jungjin/codex_archive/work/261120_MS파일수확인/실제입력/공통분리/common_all_long_short_3212.csv": "a865e93cc76b25f141b58a8424a6adcb29ed85a3bb4e45a703543f420063a2ef",
+    "/NHNHOME/korea/pre-training/jungjin/codex_archive/work/261120_MS파일수확인/실제입력/공통분리/전달양식/all_long_short_3212.csv": "663ba09e37d1a063b9c3b92cef2749edca876a63e59b9bd4ab5a9971fcb6a847",
+    "/NHNHOME/korea/pre-training/jungjin/codex_archive/work/261120_MS파일수확인/실제입력/공통분리/전달양식/common_all_long_short_3212.csv": "28a2a5eda2431f3f5b02da7eea024bf8e70883ea59b36dc4d605791857baed35"
+  },
+  "검증": "원래 URL·파일명·크기·체크섬·경로 및 전달양식 설명을 보존했다. 공통 소비자는 각 명단과의 교집합으로 갱신했다. 기존 URL의 현재 접속 여부는 재조회하지 않았다."
+}

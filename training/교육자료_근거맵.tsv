@@ -1,0 +1,136 @@
+slide	title	source
+1	표지	README.md
+1	표지	GUIDE.md
+1	표지	manifests/portable_summary.json
+2	오늘 무엇을 이해해야 하는가	GUIDE.md
+2	오늘 무엇을 이해해야 하는가	PIPELINE_DIAGRAM.md
+3	현재 cohort와 데이터 역할	manifests/portable_summary.json
+3	현재 cohort와 데이터 역할	cohorts/pacbio_1kgp/README.md
+4	전체 파이프라인 한 장으로 보기	PIPELINE_DIAGRAM.md
+4	전체 파이프라인 한 장으로 보기	run_wgs_sample.sh
+4	전체 파이프라인 한 장으로 보기	run_rna_sample.sh
+5	현재 실행 번호와 과거 이름을 구분한다	README.md
+5	현재 실행 번호와 과거 이름을 구분한다	MIGRATION.md
+6	한 파일에서 시작하지만 내부는 모듈식이다	run_pipeline.sh
+6	한 파일에서 시작하지만 내부는 모듈식이다	config_v2.sh
+6	한 파일에서 시작하지만 내부는 모듈식이다	scripts/run_integrated_preprocess.sh
+7	WGS: 입력에서 개인 HAP 모델 입력까지	GUIDE.md
+7	WGS: 입력에서 개인 HAP 모델 입력까지	PIPELINE_DIAGRAM.md
+7	WGS: 입력에서 개인 HAP 모델 입력까지	단계별_문헌근거.md
+8	네 가지 입력 형식, 하나의 canonical BAM	01_prepare_analysis_bam.sh
+8	네 가지 입력 형식, 하나의 canonical BAM	src/integrate_wgs_rna/input_manifest.py
+8	네 가지 입력 형식, 하나의 canonical BAM	prepare_alignment.py
+9	WGS 본선: 조건 분기까지 포함한 실제 흐름	run_wgs_sample.sh
+9	WGS 본선: 조건 분기까지 포함한 실제 흐름	PIPELINE.md
+10	WGS 01–06: reference 좌표에서 HAP tag까지	01_prepare_analysis_bam.sh
+10	WGS 01–06: reference 좌표에서 HAP tag까지	02_preflight.sh
+10	WGS 01–06: reference 좌표에서 HAP tag까지	03_prepare_vcf.sh
+10	WGS 01–06: reference 좌표에서 HAP tag까지	04_call_longread_clair3.sh
+10	WGS 01–06: reference 좌표에서 HAP tag까지	05_clair3_qc.sh
+10	WGS 01–06: reference 좌표에서 HAP tag까지	06_haplotag.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	07_denovo_assembly.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	08_anchor_assembly.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	09_personal_fasta.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	10_realign_wgs.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	11_windows.sh
+11	WGS 07–12: 개인 HAP 좌표와 모델 입력 생성	12_compact_zarr.sh
+12	Short와 long read는 왜 다른 aligner를 쓰는가	prepare_alignment.py
+12	Short와 long read는 왜 다른 aligner를 쓰는가	personal_realign.py
+12	Short와 long read는 왜 다른 aligner를 쓰는가	단계별_문헌근거.md R1/R3/R7
+13	Stage 02: 잘못된 입력은 계산 전에 멈춘다	02_preflight.sh
+13	Stage 02: 잘못된 입력은 계산 전에 멈춘다	tests/test_preflight_22contig.sh
+13	Stage 02: 잘못된 입력은 계산 전에 멈춘다	LIBRARY_PROVENANCE.md
+14	VCF 경로는 ‘있으면 사용’이 아니라 계약으로 선택	03_prepare_vcf.sh
+14	VCF 경로는 ‘있으면 사용’이 아니라 계약으로 선택	public_vcf.py
+14	VCF 경로는 ‘있으면 사용’이 아니라 계약으로 선택	config_v2.sh
+15	HP/PS는 무엇을 말해 주는가	06_haplotag.sh
+15	HP/PS는 무엇을 말해 주는가	WhatsHap
+15	HP/PS는 무엇을 말해 주는가	단계별_문헌근거.md R5/R15
+16	개인 HAP FASTA와 chain: 좌표계가 달라진다	09_personal_fasta.sh
+16	개인 HAP FASTA와 chain: 좌표계가 달라진다	personal_fasta.py
+16	개인 HAP FASTA와 chain: 좌표계가 달라진다	bcftools consensus
+17	Stage 10 이전: 어떤 read를 어느 HAP로 보낼까	10_realign_wgs.sh
+17	Stage 10 이전: 어떤 read를 어느 HAP로 보낼까	personal_realign.py
+17	Stage 10 이전: 어떤 read를 어느 HAP로 보낼까	cli.py --hap-read-mode
+18	Stage 10: 같은 read를 개인 HAP 좌표에서 다시 해석	10_realign_wgs.sh
+18	Stage 10: 같은 read를 개인 HAP 좌표에서 다시 해석	personal_realign.py
+18	Stage 10: 같은 read를 개인 HAP 좌표에서 다시 해석	HIGH_PARALLEL_POLICY.md
+19	Short와 long read의 filter가 다른 이유	12_compact_zarr.sh
+19	Short와 long read의 filter가 다른 이유	full_preprocess.py
+19	Short와 long read의 filter가 다른 이유	단계별_문헌근거.md R11/R14/R16
+20	PCR 사용 여부와 duplicate 처리는 같은 질문이 아니다	LIBRARY_PROVENANCE.md
+20	PCR 사용 여부와 duplicate 처리는 같은 질문이 아니다	library_provenance.py
+20	PCR 사용 여부와 duplicate 처리는 같은 질문이 아니다	prepare_alignment.py
+21	Stage 12: 모델이 읽을 구조로 압축·검증	12_compact_zarr.sh
+21	Stage 12: 모델이 읽을 구조로 압축·검증	full_preprocess.py
+21	Stage 12: 모델이 읽을 구조로 압축·검증	direct_compact_writer.py
+22	RNA: WGS 개인 유전체 위에서 ASE를 계산	RNASEQ_ALLELESEQ2_REVIEW.md
+22	RNA: WGS 개인 유전체 위에서 ASE를 계산	run_rna_sample.sh
+22	RNA: WGS 개인 유전체 위에서 ASE를 계산	13_rna_to_fastq.py
+22	RNA: WGS 개인 유전체 위에서 ASE를 계산	21_allelic_counts.py
+23	RNA 13~26 단계의 전체 흐름	run_rna_sample.sh
+23	RNA 13~26 단계의 전체 흐름	PIPELINE.md
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	13_rna_to_fastq.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	14_lift_annotation.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	15_star_index.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	16_star_align.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	17_mark_duplicates.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	18_coverage_zarr.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	19_rna_realign_qc.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	20_hap_variants.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	21_allelic_counts.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	22_cnv_filter.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	23_ase_qc.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	24_stamp_rna_metadata.py
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	25_validate_sample_package.sh
+24	RNA 13–26: 개인 좌표 signal에서 ASE label·최종 검증까지	26_cleanup_intermediates.sh
+25	Stage 14: annotation도 HAP 좌표에 맞춘다	14_lift_annotation.py
+25	Stage 14: annotation도 HAP 좌표에 맞춘다	RNASEQ_ALLELESEQ2_REVIEW.md
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	13_rna_to_fastq.py
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	15_star_index.py
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	16_star_align.py
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	17_mark_duplicates.py
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	18_coverage_zarr.py
+26	Stage 13–18: FASTQ 복원부터 HAP별 coverage까지	TOPMed RNA pipeline
+27	Stage 21: AS는 절대 cutoff보다 HAP 간 상대 비교	21_allelic_counts.py
+27	Stage 21: AS는 절대 cutoff보다 HAP 간 상대 비교	RNASEQ_ALLELESEQ2_REVIEW.md
+27	Stage 21: AS는 절대 cutoff보다 HAP 간 상대 비교	단계별_문헌근거.md
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	20_hap_variants.py
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	21_allelic_counts.py
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	22_cnv_filter.py
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	23_ase_qc.py
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	24_stamp_rna_metadata.py
+28	Stage 20–24: 검증된 variant와 CNV를 반영해 ASE label을 만든다	AlleleSeq2
+29	RNA QC는 ‘몇 개 남았는지’를 단계별로 설명한다	13_rna_to_fastq.py
+29	RNA QC는 ‘몇 개 남았는지’를 단계별로 설명한다	14_lift_annotation.py
+29	RNA QC는 ‘몇 개 남았는지’를 단계별로 설명한다	16_star_align.py
+29	RNA QC는 ‘몇 개 남았는지’를 단계별로 설명한다	17_mark_duplicates.py
+29	RNA QC는 ‘몇 개 남았는지’를 단계별로 설명한다	21_allelic_counts.py
+30	운영: 한 번에 돌리되 sample 단위로 안전하게	PORTABLE_GUIDE.md
+30	운영: 한 번에 돌리되 sample 단위로 안전하게	HIGH_PARALLEL_POLICY.md
+30	운영: 한 번에 돌리되 sample 단위로 안전하게	SHARDED_HANDOFF.md
+31	Stage 23–27: 최종 검증·cleanup·cohort 집계	23_validate_sample_package.sh
+31	Stage 23–27: 최종 검증·cleanup·cohort 집계	24_cleanup_intermediates.sh
+31	Stage 23–27: 최종 검증·cleanup·cohort 집계	25_validate_sample_package.sh
+31	Stage 23–27: 최종 검증·cleanup·cohort 집계	26_cleanup_intermediates.sh
+31	Stage 23–27: 최종 검증·cleanup·cohort 집계	27_make_catalog.py
+32	대표 실행 명령은 하나	run_pipeline.sh
+32	대표 실행 명령은 하나	PORTABLE_GUIDE.md
+33	실패는 즉시 기록하되 batch는 멈추지 않는다	runner_local.sh
+33	실패는 즉시 기록하되 batch는 멈추지 않는다	run_wgs_phased.sh
+33	실패는 즉시 기록하되 batch는 멈추지 않는다	HIGH_PARALLEL_POLICY.md
+34	72-core 정책: sample 수 × 내부 thread를 함께 제한	HIGH_PARALLEL_POLICY.md
+34	72-core 정책: sample 수 × 내부 thread를 함께 제한	run_wgs_phased.sh
+34	72-core 정책: sample 수 × 내부 thread를 함께 제한	config_v2.sh
+35	외부 전달은 37개 stratified shard로 나눈다	SHARDED_HANDOFF.md
+35	외부 전달은 37개 stratified shard로 나눈다	scripts/build_stratified_shards.py
+36	검증은 결과 파일 존재 확인보다 훨씬 깊다	tests/
+36	검증은 결과 파일 존재 확인보다 훨씬 깊다	HIGH_PARALLEL_POLICY.md
+36	검증은 결과 파일 존재 확인보다 훨씬 깊다	RESULTS_2026-09-18.md
+37	모델 설계자가 실제로 받아야 하는 것	output/README.md
+37	모델 설계자가 실제로 받아야 하는 것	GUIDE.md
+37	모델 설계자가 실제로 받아야 하는 것	LIBRARY_PROVENANCE.md
+38	운영 체크리스트와 다음 읽을 문서	README.md
+38	운영 체크리스트와 다음 읽을 문서	GUIDE.md
+38	운영 체크리스트와 다음 읽을 문서	PORTABLE_GUIDE.md
+38	운영 체크리스트와 다음 읽을 문서	단계별_문헌근거.md

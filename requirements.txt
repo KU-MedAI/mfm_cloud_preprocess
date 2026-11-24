@@ -1,0 +1,10 @@
+# Python 패키지만 관리한다. STAR/samtools/Clair3 등은 Conda 환경 파일을 사용한다.
+# 00_environment.sh는 Conda 설치 후 이 목록을 --no-deps로 확인·보강한다.
+numpy==2.4.6
+pandas==3.0.5
+pysam==0.24.0
+zarr==2.18.7
+numcodecs==0.15.1
+biopython==1.88
+pyBigWig==0.3.25
+pytest>=8,<10

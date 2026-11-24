@@ -1,0 +1,38 @@
+{
+  "cohort": {
+    "in_1kgp_3202_panel": 3202,
+    "outside_1kgp_panel": 10,
+    "platform": {
+      "Illumina_30x": 2918,
+      "PacBio_HiFi": 294
+    },
+    "project": {
+      "1KGP_ILLUMINA": 2918,
+      "HGSVC2": 1,
+      "HGSVC3": 60,
+      "HPRC_R1": 1,
+      "HPRC_R2": 232
+    },
+    "unique_samples": 3212
+  },
+  "generated_date": "2026-09-29",
+  "historical_predecessor": "../260826/3202_sample_share_package",
+  "package_schema": "mfm_share_package_3212_20260929_v3",
+  "readiness": {
+    "historical_pacbio_freeze_donors": 295,
+    "historical_pacbio_read_files": 511,
+    "illumina_file_urls_identified": 2918,
+    "pacbio_donors_frozen_active": 294,
+    "pacbio_read_files_frozen_active": 507,
+    "public_vcf_files_frozen": 704,
+    "reference_files_frozen": 3
+  },
+  "rna": {
+    "pair_platform": {
+      "Illumina_30x": 416,
+      "PacBio_HiFi": 33
+    },
+    "strict_bam_pairs": 449,
+    "wgs_only": 2763
+  }
+}

@@ -1,0 +1,8 @@
+project	source_cohort_donors	selected_unique_donors	status	read_type	read_format	small_variant_vcf	preprocessing
+HPRC_R1	47	1	cohort·read·VCF file freeze 완료	PacBio HiFi	unaligned CCS BAM; Winnowmap aligned BAM	Minigraph-Cactus v1.0 vcfbub+vcfwave	HG03492 donor subset; small SNP/indel 제한·multiallelic 분해·REF 검사; aligned BAM reference 일치 후 haplotag
+HPRC_R2	232	232	cohort·read·VCF file freeze 완료	PacBio HiFi 또는 DeepConsensus HiFi	unaligned BAM; DeepConsensus FASTQ.gz; aligned BAM 공개	longcallD v0.0.4 phased joint; DeepVariant v1.6.1 small variant	exact reference 확인 후 aligned BAM 사용; longcallD VCF subset/정규화; 필요 시 HP/PS 복원 또는 WhatsHap haplotag
+HPRC_R3	345	0	제외	PacBio HiFi	uBAM/BAM/FASTQ.gz	release 갱신 가능성 때문에 이번 목록에서 미사용	HPRC R3는 release tracker와 파일 구성이 갱신될 수 있고 사용자가 preprint 단계 자료를 첫 production freeze에서 제외하기로 결정했으므로 선택 source에서 제외
+HGSVC1	9	0	미선택	PacBio CLR 중심	raw/subreads BAM 및 archive FASTQ/BAM	Phased-SV/MS-PAC structural-variant 중심	선택 donor 0명; 필요하면 raw CLR 정렬 후 small-variant calling/phasing
+HGSVC2	32	2	cohort·read·VCF file freeze 완료	HG03125 PacBio CLR; NA12878 PacBio HiFi	HG03125 FASTQ.gz 4개; NA12878 GRCh38 aligned BAM+BAI	PAV Freeze4 phased SNV/indel VCF.gz; 공개 TBI 없음	CLR은 map-pb; VCF checksum 검증 후 bcftools index -t; donor subset·정규화·REF 검사; WhatsHap haplotag
+HGSVC3	65	60	cohort·read·VCF file freeze 완료	PacBio HiFi	uBAM/BAM 또는 archive FASTQ.gz	PAV v2.4.0.1 assembly-derived phased SNV/indel	모든 raw HiFi run 병합/정렬; SNV+indel VCF donor subset·정규화; exact reference와 BAM M5 일치 확인; WhatsHap haplotag
+1KGP_ILLUMINA	3202	2917	cohort 선택 확정·checksum preflight 필요	Illumina PCR-free 30x	GRCh38 aligned CRAM+CRAI	NYGC phased SNV/indel/SV panel	CRAM decode reference 확인; panel donor subset; SNP/indel 제한; WhatsHap haplotag

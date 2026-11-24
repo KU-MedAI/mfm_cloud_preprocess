@@ -1,0 +1,7 @@
+# CUDA13.x용 선택 의존성임. CPU core requirements와 분리함.
+# CUDA12.x 서버는 기존 CuPy와 중복 설치하지 않고 cupy-cuda12x의 같은 버전을 사용함.
+cupy-cuda13x==14.2.0
+cuda-pathfinder==1.8.4
+
+# GPU BGZF 압축·CRAM IEEE CRC32용 C API6 ABI를 고정함.
+nvidia-libnvcomp-cu13==6.0.0.12

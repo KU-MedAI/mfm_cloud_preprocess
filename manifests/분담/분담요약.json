@@ -1,0 +1,23 @@
+{
+  "sample_count": 3212,
+  "lab_counts": {
+    "MedAI": 964,
+    "TGIL": 2248
+  },
+  "max_samples": 220,
+  "target_model_bytes": 10000000000000,
+  "batch_counts": {
+    "MedAI": 5,
+    "TGIL": 11
+  },
+  "batching_strategy": "MedAI:long_pair_first_v1;TGIL:deterministic_stratified_best_fit_v2",
+  "batch_assignment_seed": "MedAI:mfm-long-pair-first-261027;TGIL:mfm-stratified-batches-v2",
+  "batch_strata": [
+    "project_id",
+    "platform",
+    "data_group"
+  ],
+  "batch_composition": "batch_composition.tsv",
+  "capacity_note": "10TB는 모델 입력의 목표다. 다운로드·중간 산출물·동시 진행 작업은 별도 공간이 필요하다.",
+  "priority_note": "MedAI long89명은001에배정, 그중pair10명먼저. 기관배정과각배치인원보존함."
+}

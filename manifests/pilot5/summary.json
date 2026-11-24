@@ -1,0 +1,29 @@
+{
+  "execution_order": [
+    "HG03492",
+    "NA20503",
+    "NA12878",
+    "HG00096",
+    "HG00281"
+  ],
+  "formats": {
+    "HG00096": "ubam",
+    "HG00281": "cram",
+    "HG03492": "fastq_gz+ubam",
+    "NA12878": "bam",
+    "NA20503": "bam"
+  },
+  "rna_input_bytes": 13526327419,
+  "sample_count": 5,
+  "samples": [
+    "HG03492",
+    "NA20503",
+    "NA12878",
+    "HG00096",
+    "HG00281"
+  ],
+  "schema": "mfm_pilot5_manifest_v1",
+  "wgs_input_bytes": 418893620978,
+  "wgs_only": 2,
+  "wgs_rna_pair": 3
+}

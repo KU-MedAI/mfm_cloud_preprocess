@@ -1,0 +1,7 @@
+package	version	build
+clair3	2.0.2	py311hbc58adc_0
+htslib	1.24	ha79157c_0
+parallel	20260722	hd8ed1ab_0
+python	3.11.16	h8ab3286_0_cpython
+samtools	1.24	h9dcdb79_1
+whatshap	2.8	py311he264feb_0

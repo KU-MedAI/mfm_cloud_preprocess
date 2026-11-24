@@ -1,0 +1,11 @@
+name: clair3_v2
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - clair3=2.0.2
+  - whatshap=2.8
+  - samtools=1.24
+  - parallel=20260722
+  - htslib=1.24

@@ -1,0 +1,6 @@
+phase	samples	estimated_download_bytes	estimated_download_tib	post_training_wgs_rna_pair	pre_training_wgs_only	HiFi_CCS	ONT	Illumina_30x	max_sample_gib	balance_mode	include_rna	include_bigwig
+01	640	10413672812730	9.471	91	549	49	194	397	54.996	aligned_ready_fallback	1	0
+02	641	10414996472041	9.472	82	559	49	188	404	54.853	aligned_ready_fallback	1	0
+03	640	10413891217539	9.471	90	550	49	193	398	54.433	aligned_ready_fallback	1	0
+04	640	10413850939924	9.471	93	547	47	190	403	53.577	aligned_ready_fallback	1	0
+05	641	10414991201874	9.472	93	548	49	190	402	53.572	aligned_ready_fallback	1	0
