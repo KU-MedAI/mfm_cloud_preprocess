@@ -531,13 +531,13 @@ sample_read_type() { field_or_default "$1" 3 "$DEFAULT_READ_TYPE"; }
 
 # 서열전용은 short-read에만 적용하며 long-read의 기존 경로를 유지함.
 sample_sequence_only() {
-  local mode=${MFM_SHORT_READ_OUTPUT_MODE:-full}
-  [[ "$(sample_read_type "$1")" != long_read ]] || mode=${MFM_LONG_READ_OUTPUT_MODE:-full}
+  local mode=${MFM_SHORT_READ_OUTPUT_MODE:-pileup_feature}
+  [[ "$(sample_read_type "$1")" != long_read ]] || mode=${MFM_LONG_READ_OUTPUT_MODE:-pileup_feature}
   [[ "$mode" == sequence_only ]]
 }
 sample_output_mode() {
-  local mode=${MFM_SHORT_READ_OUTPUT_MODE:-full}
-  [[ "$(sample_read_type "$1")" != long_read ]] || mode=${MFM_LONG_READ_OUTPUT_MODE:-full}
+  local mode=${MFM_SHORT_READ_OUTPUT_MODE:-pileup_feature}
+  [[ "$(sample_read_type "$1")" != long_read ]] || mode=${MFM_LONG_READ_OUTPUT_MODE:-pileup_feature}
   printf '%s\n' "$mode"
 }
 sample_pileup_feature() { [[ "$(sample_output_mode "$1")" == pileup_feature ]]; }
@@ -555,15 +555,15 @@ sample_wgs_reads_required() {
 apply_sample_payload() {
   local sample=$1
   case "${MFM_SEQUENCE_DEFER_RNA:-0}" in 0|1) ;; *) die "invalid MFM_SEQUENCE_DEFER_RNA" ;; esac
-  case "${MFM_SHORT_READ_OUTPUT_MODE:-full}" in full|sequence_only|pileup_feature) ;; *) die "invalid MFM_SHORT_READ_OUTPUT_MODE" ;; esac
-  case "${MFM_LONG_READ_OUTPUT_MODE:-full}" in full|sequence_only|pileup_feature) ;; *) die "invalid MFM_LONG_READ_OUTPUT_MODE" ;; esac
+  case "${MFM_SHORT_READ_OUTPUT_MODE:-pileup_feature}" in full|sequence_only|pileup_feature) ;; *) die "invalid MFM_SHORT_READ_OUTPUT_MODE" ;; esac
+  case "${MFM_LONG_READ_OUTPUT_MODE:-pileup_feature}" in full|sequence_only|pileup_feature) ;; *) die "invalid MFM_LONG_READ_OUTPUT_MODE" ;; esac
   case "${MFM_RNA_OUTPUT_MODE:-full}" in full|coverage_only) ;; *) die "invalid MFM_RNA_OUTPUT_MODE" ;; esac
   case "${MFM_PILEUP_BENCHMARK_REALIGN:-0}" in 0|1) ;; *) die "invalid MFM_PILEUP_BENCHMARK_REALIGN" ;; esac
   if [[ "${MFM_RNA_OUTPUT_MODE:-full}" == coverage_only ]] && sample_rna_deferred "$sample"; then die "RNA coverage_only와RNA보류는동시설정할수없음"; fi
   if sample_pileup_feature "$sample"; then
     [[ "$(sequence_source_for_sample "$sample")" == vcf_consensus ]] || die "pileup_feature requires vcf_consensus chain"
     export MFM_WGS_PAYLOAD=pileup_feature
-    export COMPACT_LAYOUT_NAME=hap_sequence_reference_pileup_v1
+    export COMPACT_LAYOUT_NAME=hap_sequence_reference_pileup_v2
   elif sample_sequence_only "$sample"; then
     [[ "$(sequence_source_for_sample "$sample")" == vcf_consensus ]] || die "sequence_only requires vcf_consensus"
     local expected_vcf=illumina_panel

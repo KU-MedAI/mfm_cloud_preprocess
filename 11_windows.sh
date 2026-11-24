@@ -43,6 +43,7 @@ elif sample_pileup_feature "$S"; then
   "$PYTHON" -m integrate_wgs_rna.pileup_features.export --check-inputs \
     --root "$ROOT/$S" --alignment "$(sample_haplotagged_alignment "$S")" \
     --reference "$(sample_sequence_reference "$S")" --alignment-reference "$(sample_decode_reference "$S")" \
+    --variants "$(sample_persample_vcf_dir "$S")/$S.seq.vcf.gz" --variant-sample "$(sample_source_sample_id "$S")" \
     --read-type "$(sample_read_type "$S")" --contigs "$(chroms_space "$CHROMS")"
 fi
 

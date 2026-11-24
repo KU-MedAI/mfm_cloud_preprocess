@@ -16,8 +16,8 @@ import zarr
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT),str(ROOT/'src'),str(ROOT/'vendor/MFM-DNARNAFM')]
 from integrate_wgs_rna.pileup_features.compute import calculate, ReferenceCache, projected
-from integrate_wgs_rna.pileup_features.export import export, validate_contig, filter_config
-from integrate_wgs_rna.pileup_features import LAYOUT
+from integrate_wgs_rna.pileup_features.legacy_export import export, validate_contig, filter_config
+from integrate_wgs_rna.pileup_features.schema import LEGACY_LAYOUT as LAYOUT
 from integrate_wgs_rna.personal_fasta import reference_fingerprint
 from integrate_wgs_rna.window_index import WindowIndexConfig,run_window_index_generation
 from integrate_wgs_rna.window_reader import WindowReader
@@ -75,7 +75,9 @@ class CountsTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as raw:
             root=Path(raw);(root/'qc').mkdir();q=root/'qc/final_package_validation.json'
             q.write_text(json.dumps({'wgs_payload':'sequence_only'}));self.assertFalse(payload_matches(config,row,root))
-            q.write_text(json.dumps({'wgs_payload':'pileup_feature'}));self.assertTrue(payload_matches(config,row,root))
+            q.write_text(json.dumps({'wgs_payload':'pileup_feature'}));self.assertFalse(payload_matches(config,row,root))
+            from integrate_wgs_rna.pileup_features.schema import FEATURE_SET
+            q.write_text(json.dumps({'wgs_payload':'pileup_feature','pileup_feature_set':FEATURE_SET}));self.assertTrue(payload_matches(config,row,root))
             pair=dict(row,data_group='wgs_rna_pair',rna_path='rna/S.bam')
             config['pipeline_env']['MFM_SEQUENCE_DEFER_RNA']='1'
             self.assertEqual(completion_mode(config,pair),'wgs');self.assertTrue(needs_wgs(config,pair))
@@ -145,7 +147,7 @@ class PileupPackageTest(unittest.TestCase):
             self.assertEqual(validate_contig(self.directory,source=True,metrics=metrics)['HAP1']['status'],'pass')
         self.assertEqual(metrics['source_backend'],'aligned_pairs')
         group=zarr.open_group(str(self.directory/'pileup.zarr'),mode='r')
-        from integrate_wgs_rna.pileup_features.export import ARRAYS
+        from integrate_wgs_rna.pileup_features.legacy_export import ARRAYS
         expected_bytes=sum(group[hap][name].size*group[hap][name].dtype.itemsize for hap in ('HAP1','HAP2') for name in ARRAYS)
         self.assertEqual(metrics['pileup_array_bytes_read'],expected_bytes)
         q=self.root/'qc/final_package_validation.json';q.write_text(json.dumps(dict(sample='S1',status='pass',failed_checks=[])))
@@ -170,7 +172,7 @@ class PileupPackageTest(unittest.TestCase):
         events=[dict(schema='mfm_execution_provenance_v1',sample_id='S1',branch='WGS',stage=f'{i:02d}',event='skip',status='skipped',reason='실제 BAM/FASTA fixture 준비됨') for i in range(1,13)]
         (self.root/'metadata/execution_provenance.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in events))
         cmd=[sys.executable,str(ROOT/'scripts/validate_sample_package.py'),'--sample','S1','--root',str(self.root),'--mode','wgs',
-             '--layout',LAYOUT,'--chroms','chr1','--hap-read-mode','all_to_both','--wgs-payload','pileup_feature',
+             '--layout',self.directory.parent.name,'--chroms','chr1','--hap-read-mode','all_to_both','--wgs-payload','pileup_feature',
              '--output',str(self.root/'qc/final_package_validation.json'),'--completeness-tsv',str(self.root/'metadata/completeness.tsv')]
         proc=subprocess.run(cmd,capture_output=True,text=True)
         self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
@@ -203,7 +205,7 @@ class PileupPackageTest(unittest.TestCase):
         def fail_publish(source,destination):
             if Path(destination).name=='pileup.zarr':raise RuntimeError('시험용 공개 직전 중단')
             return rename(source,destination)
-        with patch('integrate_wgs_rna.pileup_features.export.os.rename',side_effect=fail_publish):
+        with patch('integrate_wgs_rna.pileup_features.legacy_export.os.rename',side_effect=fail_publish):
             with self.assertRaisesRegex(RuntimeError,'중단'):self.run_export()
         self.assertFalse((self.directory/'pileup.zarr').exists())
         self.run_export()
@@ -249,6 +251,17 @@ class PileupPackageTest(unittest.TestCase):
                  work_root=str(self.base/'_work/test/S1'),common_vcf_dir='',persample_vcf_dir='',rna_bigwigs='',data_group='wgs',
                  source_decode_reference_fasta=str(self.ref),analysis_reference_fasta=str(self.ref),vcf_reference_fasta=str(self.ref),
                  vcf_source='illumina_panel',phase_source='provided')
+        variants=self.base/'persample_vcf';variants.mkdir()
+        row['persample_vcf_dir']=str(variants)
+        vcf=variants/'S1.seq.vcf'
+        pos=next(i for i,b in enumerate(self.sequence) if b in 'ACGT')
+        ref=self.sequence[pos];alt='C' if ref=='A' else 'A'
+        vcf.write_text('##fileformat=VCFv4.2\n##contig=<ID=chr1,length='+str(len(self.sequence))+'>\n'
+                       '##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">\n'
+                       '#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\tS1\n'
+                       'chr1\t'+str(pos+1)+'\t.\t'+ref+'\t'+alt+'\t60\tPASS\t.\tGT\t0|0\n')
+        pysam.tabix_compress(str(vcf),str(vcf)+'.gz',force=True)
+        pysam.tabix_index(str(vcf)+'.gz',preset='vcf',force=True)
         manifest=self.base/'manifest.tsv';planner.write_tsv(manifest,[row])
         (self.root/'metadata').mkdir(exist_ok=True);(self.root/'metadata/download_inputs.json').write_text('[]')
         (self.root/'qc').mkdir(exist_ok=True)

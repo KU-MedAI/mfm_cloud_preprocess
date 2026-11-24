@@ -1,5 +1,12 @@
 # original 변경 이력 참고본
 
+## 2026-11-25 — 기본 pileup36채널
+
+- 최신 기본: 공통12+HP1별9+HP2별9+공통BAF3+non-ref2+공통reverse1임. 신규 Short/Long 기본 출력은 pileup_feature임. readset full/sequence_only는 명시 선택함.
+- read 필터·HAP/window·RNA/ASE/CNV 정책은 유지함. 단일 native 순회로 HP를 함께 집계하고 독립 HTSlib로 전수 대조함.
+- 새 layout/schema v2를 사용하며 구버전12채널은 읽기 호환을 유지함. 신규 완료 판정은36 feature_set까지 확인함. [현행 상세](pileup_36채널.md)를 참조함. 아래 날짜별 절은 당시 이력임.
+
+
 이 문서는 복사 시점 original README의 근거/과거 이력임. 클라우드의 실제 경로·기본 설정·실행법은 최상위 README와 docs/클라우드_실행.md를 우선함.
 
 # MFM WGS·RNA 전처리 v2

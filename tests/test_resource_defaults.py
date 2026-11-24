@@ -45,6 +45,7 @@ class ResourceDefaultsTest(unittest.TestCase):
                           'output_root': str(root / 'output'), 'run_id': 'cpu-test',
                           'resource_profile': 'balanced', 'local_jobs': 2, 'sample_cpus': 8,
                           'cpu_utilization': mode, 'resource_resolution': {},
+                          'pipeline_env': {'MFM_SHORT_READ_OUTPUT_MODE': 'full', 'MFM_LONG_READ_OUTPUT_MODE': 'full'},
                           'remove_owned_raw_inputs': False}
                 row = {'sample_id': 'S', 'data_group': 'wgs_only', 'platform': 'hifi', 'rna_path': ''}
                 def launch(*args, **kwargs):

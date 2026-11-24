@@ -21,6 +21,12 @@ REQUIRED = {
     'src/integrate_wgs_rna/pileup_features/export.py',
     'src/integrate_wgs_rna/native/pileup_counts.cpp',
     'src/integrate_wgs_rna/native/pileup_oracle.cpp',
+    'src/integrate_wgs_rna/pileup_features/schema.py',
+    'src/integrate_wgs_rna/pileup_features/complete_export.py',
+    'src/integrate_wgs_rna/pileup_features/variants.py',
+    'src/integrate_wgs_rna/native/pileup_complete.hpp',
+    'src/integrate_wgs_rna/native/pileup_counts_complete.cpp',
+    'src/integrate_wgs_rna/native/pileup_oracle_complete.cpp',
 }
 
 

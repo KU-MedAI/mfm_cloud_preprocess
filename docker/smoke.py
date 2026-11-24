@@ -15,10 +15,16 @@ def main():
     from integrate_wgs_rna.record_stats_parallel import native_tool
     names = ['record_stats', 'gpu_fastq', 'restore_tags', 'trace_hash', 'rna_depth', 'rna_fastq',
              'rna_ase_partition', 'rna_primary', 'rna_variant_support', 'rna_cnv_sum',
-             'rna_ase_read', 'pileup_oracle', 'pileup_counts']
+             'rna_ase_read', 'pileup_oracle', 'pileup_counts', 'pileup_counts_complete', 'pileup_oracle_complete']
     built = {name: str(native_tool(name)) for name in names}
     suite = unittest.TestLoader().loadTestsFromNames([
         'test_pileup_native',
+        'test_pileup_complete',
+        # 전체 단계 실행은 실제 작업 RAM 예약이 필요하므로 작은 계산/패키지만 검사함.
+        'test_pileup_feature.CountsTest',
+        'test_pileup_feature.PileupPackageTest.test_export_preserves_windows_insertion_sequence_trace_reader_resume_cleanup',
+        'test_pileup_feature.PileupPackageTest.test_pileup_reader_keeps_rna_window_signal',
+        'test_pileup_feature.PileupPackageTest.test_interrupted_publication_is_resumable',
         'test_rna_native.NativeTests.test_fastq_copy_counts_gzip_and_corruption',
         'test_rna_window_package.RnaWindowPackageTest.test_legacy_coordinates_produce_identical_depth',
         'test_align_resources.SortBufferPlans',

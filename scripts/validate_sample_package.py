@@ -196,6 +196,16 @@ def validate_compact(a: argparse.Namespace, audit: Audit, contigs: set[str]) -> 
         manifest = read_json(manifest_path)
         payload=getattr(a,'wgs_payload','full')
         if manifest.get('wgs_payload','full')!=payload:raise ValueError('요청한 WGS payload와 산출물 불일치')
+        if payload=='pileup_feature':
+            from integrate_wgs_rna.pileup_features.schema import SCHEMA, CHANNELS, FEATURE_SET, LEGACY_SCHEMA, LEGACY_CHANNELS
+            if manifest.get('schema')==SCHEMA and manifest.get('channels')==list(CHANNELS) and manifest.get('feature_set')==FEATURE_SET:
+                a.pileup_feature_set=FEATURE_SET
+            elif manifest.get('schema')==LEGACY_SCHEMA and manifest.get('channels')==list(LEGACY_CHANNELS):
+                a.pileup_feature_set='legacy_reference12_v1'
+            else:raise ValueError('알 수 없는 pileup 채널 계약')
+            metadata=read_json(a.root/'metadata/sample.json')
+            if manifest.get('schema')==SCHEMA and (metadata.get('pileup_feature_set')!=FEATURE_SET or metadata.get('pileup_feature_schema')!=SCHEMA):
+                raise ValueError('pileup metadata/실제 채널 계약 불일치')
         passed = completed_contigs(manifest, layout, a.sample)
         ok = (
             manifest.get("status") == "complete"
@@ -537,6 +547,7 @@ def main() -> int:
         "checks": audit.checks,
         "failed_checks": [item["name"] for item in audit.checks if item["status"] == "fail"],
     }
+    if args.wgs_payload=='pileup_feature':result['pileup_feature_set']=getattr(args,'pileup_feature_set',None)
     if metadata.get('rna_processing_status')=='deferred':result['completion_scope']=metadata['completion_scope']
     if args.mode=='rna' and args.rna_payload=='coverage_only':
         signal=args.root/'rna_personal'/args.rna_label/'rna_signal_manifest.json'

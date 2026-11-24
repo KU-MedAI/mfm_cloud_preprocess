@@ -5,7 +5,7 @@
 ## 1. 판정
 
 - 공통: HAP 서열 생성, window 선택, read의 MAPQ·SAM flag 제외 기준을 유지함.
-- 변경: WGS readset 대신 reference에서 집계한 12채널 pileup을 HAP window에 투영해 저장함.
+- 변경: WGS readset 대신 reference에서 집계한 36채널 pileup을 HAP window에 투영해 저장함.
 - 해석: **필터 기준이 같아도 정렬 대상이 다르므로 최종 read 집합과 depth가 같다고 보장할 수 없음.** 단순 파일 형식 변환으로 보지 않음.
 - 현재 생물학 소스: `src/integrate_wgs_rna`와 `vendor`의 배포 파일175개가 점검 시점의 `original`과 바이트 단위로 동일함. 이번 준비에서는 필터·정렬·feature 수식을 수정하지 않음.
 
@@ -40,7 +40,7 @@
 | 항목 | readset full | pileup_feature |
 |---|---|---|
 | WGS 관측 정렬 | 개인 HAP1·HAP2 재정렬 결과 | Stage06 reference haplotag BAM |
-| 저장 | HAP별 read sequence·정렬/CIGAR 메타데이터와 depth | HAP 서열과 reference 기반 12채널 feature·보조 배열 |
+| 저장 | HAP별 read sequence·정렬/CIGAR 메타데이터와 depth | HAP 서열과 reference 기반 36채널 feature·보조 배열 |
 | HAP1/2 관측 구분 | 기본 `all_to_both`로 각각 재정렬한 결과를 사용함 | 동일 reference 위치의 관측을 두 HAP에 투영함. HP 태그로 나눈 allele별 pileup이 아님 |
 | HAP 삽입 위치 | HAP 재정렬 read의 실제 염기 관측을 사용 가능함 | 삽입 DNA는 그대로 보존함. reference 대응이 없어 base ratio·depth·BQ는 만들지 않고 왼쪽 anchor의 generic insertion 비율만 전달함 |
 | HAP 삭제 위치 | 개인 HAP의 존재하는 위치에서 관측함 | HAP에 없는 reference 위치는 HAP 입력의 염기 위치로 저장되지 않음 |
@@ -50,7 +50,7 @@ reference에서 MAPQ29였던 read가 HAP 재정렬에서 MAPQ60이 되거나 그
 
 pileup 삽입 위치의 `depth=0`은 관측 read가 실제로 전혀 없다는 뜻과 구분해야 함. `mapping_kind=2`는 reference 비대응 삽입임. `mapping_kind=0`은 padding,1은 reference 대응 위치임.
 
-12채널은 `log1p_depth`, `mean_mapq`, `mean_baseq`, `strand_forward_ratio`, `read_A/C/G/T/N_ratio`, `insertion_ratio`, `deletion_after_event_ratio`, `deletion_after_max_len`임. 삽입 allele 일치율·삽입 각 염기의 관측은 산출하지 않으며 DNA 서열과 삽입 사건 지지를 함께 제공함.
+36채널은 과거 기본30+공통 BAF3+non-reference 비율2+공통 reverse1임. [전체 정의·HP/BAF 분모와 mask](pileup_36채널.md)를 참조함. 삽입 allele 일치율·삽입 각 염기의 관측은 산출하지 않으며 DNA 서열과 삽입 사건 지지를 함께 제공함.
 
 ## 4. window·N·blacklist는 같은가
 

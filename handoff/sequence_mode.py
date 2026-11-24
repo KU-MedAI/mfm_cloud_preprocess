@@ -8,7 +8,7 @@ def output_mode(config,row):
     from .resume import sample_environment
     env=sample_environment(config,row.get('sample_id',''))
     key='MFM_LONG_READ_OUTPUT_MODE' if row.get('read_type')=='long_read' else 'MFM_SHORT_READ_OUTPUT_MODE'
-    value=env.get(key,'full')
+    value=env.get(key,'pileup_feature')
     if value not in {'full','sequence_only','pileup_feature'}:raise ValueError(f'{key}의 출력 모드 오류: {value}')
     return value
 
@@ -50,7 +50,8 @@ def validate_selection(config,rows):
 def runtime_environment(config,row):
     mode=output_mode(config,row)
     if mode=='full':return {}
-    layout=LAYOUT if mode=='sequence_only' else 'hap_sequence_reference_pileup_v1'
+    from integrate_wgs_rna.pileup_features.schema import LAYOUT as PILEUP_LAYOUT
+    layout=LAYOUT if mode=='sequence_only' else PILEUP_LAYOUT
     return dict(MFM_WGS_PAYLOAD=mode,COMPACT_LAYOUT_NAME=layout,
                 MFM_SEQUENCE_DEFER_RNA='1' if defer_rna(config,row) else '0')
 
@@ -93,4 +94,8 @@ def payload_matches(config,row,root):
     from rna_signal import output_mode as rna_output_mode
     if rna_required(config,row) and report.get('rna_payload','full')!=rna_output_mode(sample_environment(config,row['sample_id'])):return False
     observed=report.get('wgs_payload','full')
-    return observed==output_mode(config,row)
+    requested=output_mode(config,row)
+    if requested=='pileup_feature':
+        from integrate_wgs_rna.pileup_features.schema import FEATURE_SET
+        if report.get('pileup_feature_set')!=FEATURE_SET:return False
+    return observed==requested

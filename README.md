@@ -1,13 +1,13 @@
 # MFM 전처리 · Docker
 
-Docker 엔진이 설치된 Linux x86_64 VM에서 Bash로 실행함. 기본 출력은 WGS pileup feature와 RNA full(ASE/CNV 포함)임.
+Docker 엔진이 설치된 Linux x86_64 VM에서 Bash로 실행함. 기본 출력은 WGS pileup36채널과 RNA full(ASE/CNV 포함)임.
 
 ## 1. 이미지 빌드
 
 ```bash
 git clone https://github.com/KU-MedAI/mfm_cloud_preprocess.git
 cd mfm_cloud_preprocess
-docker build --platform linux/amd64 -f docker/Dockerfile -t mfm-preprocess:261124-cpu .
+docker build --platform linux/amd64 -f docker/Dockerfile -t mfm-preprocess:261125-cpu .
 ```
 
 ## 2. 저장 경로·실행 설정
@@ -35,20 +35,20 @@ MFM_DOCKER_ARGS=(
 
 ```bash
 # 사전 점검과 처리 계획 확인
-docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261124-cpu \
+docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261125-cpu \
   doctor --config /config/job.json
-docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261124-cpu \
+docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261125-cpu \
   dry-run --target azure_poc --sample HG00308 --config /config/job.json
 
 # 실제 다운로드·전처리 실행
-docker run "${MFM_DOCKER_ARGS[@]}" --name mfm-hg00308 mfm-preprocess:261124-cpu \
+docker run "${MFM_DOCKER_ARGS[@]}" --name mfm-hg00308 mfm-preprocess:261125-cpu \
   run --target azure_poc --sample HG00308 --config /config/job.json
 ```
 
 ## 4. 대상 전체 전처리
 
 ```bash
-docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261124-cpu \
+docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261125-cpu \
   run --target azure_poc --config /config/job.json
 ```
 
@@ -60,3 +60,5 @@ docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261124-cpu \
 
 - [Docker 설정·중단/재개·이미지 전달](docs/Docker_실행.md)
 - [환경·자원·출력 모드·전처리 정책](docs/전처리_상세.md)
+
+- [Pileup36채널·BAF·HP별 관측](docs/pileup_36채널.md)

@@ -1,7 +1,7 @@
 {
   "schema": "mfm_cloud_package_v1",
-  "source": "original",
-  "created_at": "2026-11-24T17:17:46.671940+09:00",
+  "source": "original; pileup36 기본화와 Docker 검사 연결",
+  "created_at": "2026-11-25T02:46:47.838263+09:00",
   "files": [
     {
       "path": ".dockerignore",
@@ -90,13 +90,13 @@
     },
     {
       "path": "11_windows.sh",
-      "size_bytes": 3443,
-      "sha256": "ed40c1986f7b85fd4ae78bc37e3e648275182a43acb80148cf13dbb685a71043"
+      "size_bytes": 3560,
+      "sha256": "b923ca34e3f5f6d4502cb2224280c326913426e5a582b355d80c42c7e0c87dee"
     },
     {
       "path": "12_compact_zarr.sh",
-      "size_bytes": 5556,
-      "sha256": "3733f70001c00395220361093bc0890256710b2cda3f10ff83cfa1e211056f04"
+      "size_bytes": 5673,
+      "sha256": "5e69b484fe5ce4d0f09387f0cbeaa1911117d52df11c7262ff3cf21ef9455475"
     },
     {
       "path": "13_lift_annotation.py",
@@ -280,8 +280,8 @@
     },
     {
       "path": "GUIDE.md",
-      "size_bytes": 21301,
-      "sha256": "c8166d9584d213cea0405122b9c83043b93b1b953c8eaa6a191fc9a70a9f189d"
+      "size_bytes": 21338,
+      "sha256": "adb8e7d00cc4d14626ee241100274b60a10e2ef2dfb8f253498d25ef8865d88a"
     },
     {
       "path": "HANDOFF.md",
@@ -320,8 +320,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 2358,
-      "sha256": "324ba7fdc0486a52e0cbdd6dad7f74962c917918e478b5b2130a2e5bc343b0ee"
+      "size_bytes": 2422,
+      "sha256": "6696995e60f71a134c4e3a89055d863873a27f5869f957744810998b94677525"
     },
     {
       "path": "RESULTS_2026-09-18.md",
@@ -400,8 +400,8 @@
     },
     {
       "path": "config_v2.sh",
-      "size_bytes": 70077,
-      "sha256": "e4e12975853633b9e2ec8fd27a276e5a866798ac9905f34fa780aaadc5e1af9f"
+      "size_bytes": 70137,
+      "sha256": "b079670cc963d703534be89eae3e87d7b4977077b9b1a7f0b2b44f4c4eb04eaf"
     },
     {
       "path": "docker/Dockerfile",
@@ -420,8 +420,8 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 2066,
-      "sha256": "bb5f65379d5ee87d18dc32974c8272e3207e720e1644c99c30440ba2d72fce35"
+      "size_bytes": 2617,
+      "sha256": "899ca267dcf3b1bad61078054ad974704efcb3266b3a57c387e97106f5369819"
     },
     {
       "path": "docs/Docker_실행.md",
@@ -440,13 +440,18 @@
     },
     {
       "path": "docs/original_변경이력.md",
-      "size_bytes": 197069,
-      "sha256": "340b06d85c8be0a842c4d78a6f26cb070c0cbb332bdbf0be81c69dfcbfce3979"
+      "size_bytes": 197675,
+      "sha256": "de9832e19cad8e49ed05edcb44a6dd002ba213cd5b39f3ff38dcee8d1e0ca300"
+    },
+    {
+      "path": "docs/pileup_36채널.md",
+      "size_bytes": 7025,
+      "sha256": "5b0f93e220e88ff699f5a27437a7cb9d0febc14acf0a174edb48a9bc2407cd43"
     },
     {
       "path": "docs/pileup_필터_비교.md",
-      "size_bytes": 10533,
-      "sha256": "515c699b5e5a3c37a3b825f0286af418ad4b445fae90ee7c27cc4752c095f43f"
+      "size_bytes": 10508,
+      "sha256": "1de8f9f985e9f71d19863da1afa13200fee5e65a72d7d0abb14679ff90b1030b"
     },
     {
       "path": "docs/pilot5_복구가이드.md",
@@ -460,18 +465,18 @@
     },
     {
       "path": "docs/단계별_입출력_상세.md",
-      "size_bytes": 74730,
-      "sha256": "634a499f6d5b8872128c894c320f566f3ef05c19a4e8c34501ff4cab472e94c3"
+      "size_bytes": 74724,
+      "sha256": "1f443951bfb24256563afd6b031905437d8ffce574c487e0d1716d568d5b4cac"
     },
     {
       "path": "docs/실행과_출력구조.md",
-      "size_bytes": 7616,
-      "sha256": "90471e0106e75e1b7c03bd0bd26cfb0f18d54757465c16254ec55c3d9b13be85"
+      "size_bytes": 7446,
+      "sha256": "82ece514a6fa1d0538ce7aa5519a51badd35f9c336b266debd74747555396019"
     },
     {
       "path": "docs/전처리_상세.md",
-      "size_bytes": 15531,
-      "sha256": "a75cb8a86346a80bb48e11d620dc80094eb6b18bc0dad0ce875908c4be52d35c"
+      "size_bytes": 14561,
+      "sha256": "442273fc3a8934e84f5030ac12d9bb90ac5b69cbf48f258f0e982f0f583a7674"
     },
     {
       "path": "docs/전처리_파이프라인_가이드.md",
@@ -920,8 +925,8 @@
     },
     {
       "path": "handoff/sequence_mode.py",
-      "size_bytes": 5830,
-      "sha256": "848390c2bdc44db0d73201071ce494a5cf72ef11264f0073e4dd6ac43f88c977"
+      "size_bytes": 6103,
+      "sha256": "6945d38afddf28205944fc8b924216ecd12b3ada3b5e792b3fc6d218d915fd27"
     },
     {
       "path": "handoff/slurm.py",
@@ -960,8 +965,8 @@
     },
     {
       "path": "handoff_config.example.json",
-      "size_bytes": 1524,
-      "sha256": "a4b5e0154ba7663aa0db99689abb19e9cea55161266e0fb95f60add703c0dee5"
+      "size_bytes": 1544,
+      "sha256": "5b3e216de1dcd570634fc12233d5b5be5a7d8eedd611cc004a5cbf493d6acc09"
     },
     {
       "path": "legacy/18_window_coverage_zarr.py",
@@ -2470,8 +2475,8 @@
     },
     {
       "path": "scripts/validate_sample_package.py",
-      "size_bytes": 29749,
-      "sha256": "3bce203c5487fd7d83ddb98f513e557f526ebf146cb32c13f5f6c64081a59d26"
+      "size_bytes": 30748,
+      "sha256": "da9ddd9def12e8df635b2b18bae5fc0214c76bba10fb7483cc647c8683cf5fca"
     },
     {
       "path": "share_package/CHANGELOG.md",
@@ -3094,14 +3099,29 @@
       "sha256": "0a8aeb3e273c52fb0ff4a4e658c2a86bf6cbc08812d78b07cbaa267e3965ae64"
     },
     {
+      "path": "src/integrate_wgs_rna/native/pileup_complete.hpp",
+      "size_bytes": 7295,
+      "sha256": "7ffba1d6fa3703dbec0c43449dd15e54a0eb17702a3291e67574473780189361"
+    },
+    {
       "path": "src/integrate_wgs_rna/native/pileup_counts.cpp",
       "size_bytes": 7560,
       "sha256": "df6a651d87b0e9cbd28cee5264818f593ac74a297ccb781cc314a1819a053c90"
     },
     {
+      "path": "src/integrate_wgs_rna/native/pileup_counts_complete.cpp",
+      "size_bytes": 1389,
+      "sha256": "3e12111781701d77fd6bf995f6ff99b999d6c463f18b60925da61a1ff870b623"
+    },
+    {
       "path": "src/integrate_wgs_rna/native/pileup_oracle.cpp",
       "size_bytes": 8508,
       "sha256": "84e2056a723a23a7c44e62d31c81500d4371551b67f5292fcb356507240400a4"
+    },
+    {
+      "path": "src/integrate_wgs_rna/native/pileup_oracle_complete.cpp",
+      "size_bytes": 2698,
+      "sha256": "0cdf3b448ca64c10fb3d3411be97a361304b3faba336e9f22be0896bc8cf7ceb"
     },
     {
       "path": "src/integrate_wgs_rna/native/record_stats.cpp",
@@ -3180,8 +3200,23 @@
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/__init__.py",
-      "size_bytes": 450,
-      "sha256": "eb754f50938e2810f422af3ffc515a782bf46e9076fd536c482c9b352802fc5b"
+      "size_bytes": 175,
+      "sha256": "4793b4dd3266ea2bdc2575699cc32991205b837b94a23cf3193ec3a6152fb09f"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/complete_compute.py",
+      "size_bytes": 12132,
+      "sha256": "38b57f4c7327c170a08f5fd72b6b9b58a62f60e22f045af005b5acb1931e7177"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/complete_export.py",
+      "size_bytes": 18830,
+      "sha256": "19e804dab9d3d50867723d11c1beee13c3f0b775d9fcc3b9e8c9189c27ad2748"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/complete_native.py",
+      "size_bytes": 2865,
+      "sha256": "348df4ae7101a57362433a9767c18d2fb4736a4f8d59d7b68c4e111011066bbd"
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/compute.py",
@@ -3190,8 +3225,13 @@
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/export.py",
-      "size_bytes": 22200,
-      "sha256": "b69620f2039a54289956bc5ef2df08a85faf6b996134f185bcece3fbd5954e42"
+      "size_bytes": 2991,
+      "sha256": "136fd9c1dd092bd561669941e400fccca2190ebc535d83bf9581ee2dec5150cf"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/legacy_export.py",
+      "size_bytes": 22272,
+      "sha256": "8b23bad8e87ea18059864ed8476b42f3e8732b30b31c91cb2f9a6b0dbd82d2f4"
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/native_oracle.py",
@@ -3202,6 +3242,16 @@
       "path": "src/integrate_wgs_rna/pileup_features/projection.py",
       "size_bytes": 2868,
       "sha256": "f48d2ddf9c3db1d616885f511e1b1eb737e937c1f2f924325a635d835033fb6e"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/schema.py",
+      "size_bytes": 2810,
+      "sha256": "50a2aac3be97d8b8a4f1aa124ef0deef4cfed06d54cd665e17d3891b26015cce"
+    },
+    {
+      "path": "src/integrate_wgs_rna/pileup_features/variants.py",
+      "size_bytes": 2232,
+      "sha256": "822b398a263262e44d8efe62230183027fc6d2ac58957b8800ff610878566735"
     },
     {
       "path": "src/integrate_wgs_rna/pipeline/__init__.py",
@@ -3375,8 +3425,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/record_stats_parallel.py",
-      "size_bytes": 5003,
-      "sha256": "5e40a4f1447078edaf3d0c933c673c4fc1f193d04ce827c226b32341d869c0dc"
+      "size_bytes": 5243,
+      "sha256": "0e5f83eada9d980658c55ed7a9f7ba9c763d19a6aede2affeb301987e776d35c"
     },
     {
       "path": "src/integrate_wgs_rna/resource_fairness.py",
@@ -3520,8 +3570,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/window_reader.py",
-      "size_bytes": 11708,
-      "sha256": "80c170e127b5b8de1f73f27c4e012cecb760dcabaec2573a0e1e8f4fceb8ca4f"
+      "size_bytes": 13183,
+      "sha256": "8a1de04712e23dd896cf734c3de208c06358193829ae15f2eedd48de26e8064a"
     },
     {
       "path": "tests/run_all.sh",
@@ -4034,9 +4084,14 @@
       "sha256": "320fbb6b666c8e99763e4ae20718270d70a9cf14234ed3b5cedbcc4d2e04382e"
     },
     {
+      "path": "tests/test_pileup_complete.py",
+      "size_bytes": 14665,
+      "sha256": "5088b23abef914459c0bd9b69bb6abd8a03e0d6760e4c2f96c993dc6dfce6875"
+    },
+    {
       "path": "tests/test_pileup_feature.py",
-      "size_bytes": 20281,
-      "sha256": "26615138b30484f07ed6e8e19b39a12179d576f1868b2301e9b83d203cf44890"
+      "size_bytes": 21349,
+      "sha256": "48b6b216af18f1ad768fb5eeba19bce043380981f6f9497341a6c4d09a6dd73b"
     },
     {
       "path": "tests/test_pileup_native.py",
@@ -4200,8 +4255,8 @@
     },
     {
       "path": "tests/test_resource_defaults.py",
-      "size_bytes": 11538,
-      "sha256": "fb0be3461e91acfb87df8e2333851b66548d93e2a6b0817703b6f5ed0b5913d1"
+      "size_bytes": 11657,
+      "sha256": "1a29b7b1e5676b490decd4083ddf6754b187a4105116a469b76322e22519992a"
     },
     {
       "path": "tests/test_resource_efficiency.py",
@@ -4505,8 +4560,8 @@
     },
     {
       "path": "tools/check_cloud_package.py",
-      "size_bytes": 5479,
-      "sha256": "1adbaca38fb951ebe592a1789a813d260d70d180418926bc3efff9639c47d605"
+      "size_bytes": 5837,
+      "sha256": "3180960564383e8f1549265458d53478663cb91feb56f74b3f0248f098d89df4"
     },
     {
       "path": "tools/check_model_input.py",

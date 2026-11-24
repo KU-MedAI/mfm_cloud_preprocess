@@ -18,7 +18,7 @@ WGS 출력과 RNA 출력은 별개 설정임. JSON의 `pipeline_env`에 값을 �
 | `sequence_only` | HAP 서열 + window 주석·좌표 매핑 | 비적용임 | 불필요함 |
 | `pileup_feature` | HAP 서열 + reference 기준 pileup tensor·depth·mask | **비적용임** | 필요함 |
 
-- 선택 키: `MFM_SHORT_READ_OUTPUT_MODE`, `MFM_LONG_READ_OUTPUT_MODE`임. 둘 다 코드 기본값은 `full`이며 pileup은 명시 선택함.
+- 선택 키: `MFM_SHORT_READ_OUTPUT_MODE`, `MFM_LONG_READ_OUTPUT_MODE`임. 둘 다 코드 기본값은 `pileup_feature`임. readset은 `full`로 명시함.
 - 기본 pileup은 **reference 정렬 read → feature 집계 → consensus chain으로 HAP1/2 좌표 투영**임. Stage10 개인 HAP CRAM을 feature 계산에 사용하지 않음. Stage01의 reference 정렬·표준화와 Stage06 haplotagging은 필요함.
 - `sequence_only`·`pileup_feature`는 `vcf_consensus`를 사용함. 서열 전용 short는 제공 phased Illumina panel, long은 제공 phased public VCF를 사용함. assembly 직접입력과 혼용하지 않음.
 - 모드를 바꿀 때 기존 완료본을 덮어쓰지 않도록 별도 `output_root`·`state_root`·`run_id`를 사용함.
@@ -61,9 +61,9 @@ cp handoff_config.example.json my_pileup.json
 ```json
 {
   "data_root": "/data/mfm/raw",
-  "output_root": "/data/mfm/output/pileup_v1",
-  "state_root": "/data/mfm/state/pileup_v1",
-  "run_id": "pileup_v1",
+  "output_root": "/data/mfm/output/pileup_v2",
+  "state_root": "/data/mfm/state/pileup_v2",
+  "run_id": "pileup_v2",
   "cpu_allocation_mode": "fixed_sample",
   "cpu_utilization": "maximum",
   "cpu_pool_limit": 68,
@@ -170,7 +170,7 @@ bash run_pipeline.sh run   --selection manifests/리드별/medai/001/long_read.t
 - Pileup은 HP별/allele별 지지 tensor가 아님. 같은 reference 위치에 대응하는 HAP1/2는 같은 관측을 사용함. HAP 서열은 각 allele을 보존함.
 - HAP insertion은 서열에 그대로 있고 `mapping_kind=2`임. 왼쪽 reference anchor의 generic insertion 사건 지지를 전달함. 삽입 allele 일치율이나 삽입 염기별 실제 depth/BQ/base ratio로 해석하지 않음.
 - DNA 복원 정답에서는 N/padding P를 제외하고 유효 정답 수로 정규화함. RNA/WGS 실제 관측값은 N·blacklist 위치라는 이유만으로0으로 덮어쓰지 않음. 이 계약은 window metadata에 기록하며 학습 코드가 적용함.
-- 저장: HAP DNA 4bit ACGTNP, pileup 12채널 float32, count/depth uint32, zstd level5임. MAPQ·primary/supplementary·duplicate 정책은 플랫폼의 기존 필터를 따름. 상세 배열/채널은 [pileup 상세 설명](docs/전처리_상세.md#reference-pileup-선택-모드-2026-11-23)에 있음.
+- 저장: HAP DNA 4bit ACGTNP, pileup36채널 float32, count/depth uint32, zstd level5임. MAPQ·primary/supplementary·duplicate 정책은 플랫폼의 기존 필터를 따름. 상세 배열/채널은 [pileup 상세 설명](docs/전처리_상세.md#reference-pileup-선택-모드-2026-11-23)에 있음.
 
 ## 7. 검증·재개·정리
 
@@ -204,7 +204,7 @@ bash run_pipeline.sh resume   --selection manifests/리드별/medai/001/long_rea
 |---|---|
 | 고정 샘플 CPU·단계별 재배분 | `src/integrate_wgs_rna/sample_cpu.py`, `scripts/resource_runner.py`, `lib/stage_runner.sh`임. 소유CPU·도구 합산·메모리 보호를 유지함 |
 | HAP 재정렬 CPU/RAM 계산 | `src/integrate_wgs_rna/realign/align_resources.py`, `align_memory.py`, `phases.py`임. 실행 중 정렬기 강제 변경 없이 경계에서 자원을 재확보함 |
-| Pileup 생성·독립 검증 | `pileup_features/compute.py`, `native_oracle.py`, `projection.py`, `export.py`임. 필터·12채널·삽입 투영·전수 source 대조 유지함 |
+| Pileup 생성·독립 검증 | `pileup_features/complete_compute.py`, `complete_native.py`, `variants.py`, `projection.py`, `export.py`임. 필터·36채널·삽입 투영·전수 source 대조 유지함 |
 | Pileup worker 메모리 보호 | `export.py::_worker_memory_limits`임. RSS와 주소공간을 구분해 기본예약4GiB/주소8GiB 사용함 |
 | 완료 compact 크기 집계 | `handoff/metrics.py`임. 완료 manifest/contig 지문이 같을 때 집계를 재사용하며 전수 QC나 삭제 승인으로 대체하지 않음 |
 | RNA 병렬화·입력/검증 재사용 | `lib/rna_dag.sh`, `rna_cache.py`, `rna_profile.py`임. 실제 grant·입력/설정 지문·ASE/CNV 의존 관계를 유지함 |
