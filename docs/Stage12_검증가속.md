@@ -68,4 +68,4 @@ Stage12를 이미 실행 중인 프로세스는 로드한 이전 코드를 유�
 
 ## 2026-10-20 갱신
 
-기본 multiset을 `auto`의 bounded 분할 정렬로 갱신함. SQLite는 임시 공간 부족 시 fallback 또는 명시 선택으로 보존함. read batch 4bit 해제·canonical digest 최적화, chunk 캐시64MiB, packed batch16MiB, scratch 사전 계산과 tmpfs RAM 계상을 추가함. SHA256 원값·중복 수·전수 depth 대조 기준을 유지함. 설정·재개·자원 한도는 [README의 현재 가속 정책](../README.md#rna-hap-병렬-처리독립-source-trace-가속-2026-10-20)에 통합함. 위의 10월1일 SQLite 측정은 과거 구성의 실측임.
+기본 multiset을 `auto`의 bounded 분할 정렬로 갱신함. SQLite는 임시 공간 부족 시 fallback 또는 명시 선택으로 보존함. read batch 4bit 해제·canonical digest 최적화, chunk 캐시64MiB, packed batch16MiB, scratch 사전 계산과 tmpfs RAM 계상을 추가함. SHA256 원값·중복 수·전수 depth 대조 기준을 유지함. 설정·재개·자원 한도는 [변경이력의 가속 정책](original_변경이력.md#rna-hap-병렬-처리독립-source-trace-가속-2026-10-20)에 통합함. 위의 10월1일 SQLite 측정은 과거 구성의 실측임.
