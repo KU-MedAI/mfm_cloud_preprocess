@@ -340,8 +340,8 @@
     },
     {
       "path": "SOURCE_MANIFEST.json",
-      "size_bytes": 187456,
-      "sha256": "668cda2d238514a9c79527c261bf9a8b5b5ab63214619dcb98819caee976695c"
+      "size_bytes": 188682,
+      "sha256": "4d5889e96e9a98cc2412fe0c6e6c475ac7601db4b1d4b35b60ca6f6dd597ba17"
     },
     {
       "path": "TOOL_VERSIONS.tsv",
@@ -400,8 +400,8 @@
     },
     {
       "path": "config_v2.sh",
-      "size_bytes": 69859,
-      "sha256": "3c38ba763c931befc13b1d43a8e1e95000c42272e412dade4d2819caa049fba8"
+      "size_bytes": 70077,
+      "sha256": "e4e12975853633b9e2ec8fd27a276e5a866798ac9905f34fa780aaadc5e1af9f"
     },
     {
       "path": "docker/Dockerfile",
@@ -420,8 +420,8 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 1785,
-      "sha256": "08efcce81f2298b29519c531d1cd4e401d7a580d05637fca0c1a9bcdb99ef9de"
+      "size_bytes": 1958,
+      "sha256": "e02cd349a6688bc0f7610ece5379621950ee53046c1bf3cab42fc3e02354f65c"
     },
     {
       "path": "docs/Docker_실행.md",
@@ -470,8 +470,8 @@
     },
     {
       "path": "docs/전처리_상세.md",
-      "size_bytes": 11958,
-      "sha256": "a30bc87ddc751a3f344efece85fe453af51f02645dedc7c1d03bb0274d539f99"
+      "size_bytes": 15560,
+      "sha256": "ede7a9b512878447c916b82d0121e7a0aec18b7a24cf73ae39271cc88fc39482"
     },
     {
       "path": "docs/전처리_파이프라인_가이드.md",
@@ -3345,8 +3345,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/realign/phases.py",
-      "size_bytes": 18812,
-      "sha256": "b238a2078f06c1cc83a4a39b26cc85d37145551190c02464fb3b5c447578f255"
+      "size_bytes": 19335,
+      "sha256": "5e66e7d4263be84c024fbfc8b2e3abee9248f86dc5b53217ab645ebfc6a13543"
     },
     {
       "path": "src/integrate_wgs_rna/realign/policy.py",
@@ -3535,8 +3535,8 @@
     },
     {
       "path": "tests/test_align_resources.py",
-      "size_bytes": 7051,
-      "sha256": "1357a6cf345b7aa09e274129b1e4a04973b6f51ff62bb6f3c0832120d4f572d7"
+      "size_bytes": 9419,
+      "sha256": "efbde42ec8d68070efe9ffa00c9f083d6406af0af594703e5748c0ff1284ca56"
     },
     {
       "path": "tests/test_alignment_provenance.py",
@@ -3750,8 +3750,8 @@
     },
     {
       "path": "tests/test_fixed_sample_cpu.py",
-      "size_bytes": 14057,
-      "sha256": "ba5e19758624d303ba728060469faddb85427532fb549822e26eac6a048f4099"
+      "size_bytes": 15126,
+      "sha256": "29ab5cb0040c3d607611af7d290f6a778ab11a5fd225c9c0317953255e2f8eb2"
     },
     {
       "path": "tests/test_forecast_memory.py",
@@ -3900,8 +3900,8 @@
     },
     {
       "path": "tests/test_hifi_utilization.py",
-      "size_bytes": 9677,
-      "sha256": "374326df65b3da16d85358efdfa5ee6c26344b841ac060052a4583b2d4e82173"
+      "size_bytes": 10510,
+      "sha256": "8586b72cba4280763f7bd5c40f386651334cd7bcc2b282a776d4c47882e5b176"
     },
     {
       "path": "tests/test_http_integrity.py",
@@ -4894,6 +4894,6 @@
       "sha256": "5199dd9f1e8aca86ebe8ac0f7ed0b4c8369aa4c69bb27354b6d007f4f8702f6b"
     }
   ],
-  "updated_at": "2026-11-24T02:11:12+09:00",
+  "updated_at": "2026-11-24T18:10:21.986597+09:00",
   "packaging_note": "cloud 전달 코드 전체를 저장소 루트에 배치함. 설명서·회귀검사·Git 배포 설정만 보완하며 생물학 소스는 변경하지 않음."
 }

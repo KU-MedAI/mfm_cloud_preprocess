@@ -104,13 +104,20 @@ class RealignPhases:
 
     def alignment_plan(self, config, lengths, cpus, ram):
         baseline = alignment_plan(config, lengths, cpus, ram)
-        if self.path and os.environ.get('MFM_WGS_BACKEND', 'cpu') == 'cpu':
-            policy = json.loads((self.path.parent.parent / 'policy.json').read_text()) if (self.path.parent.parent / 'policy.json').exists() else {}
+        if os.environ.get('MFM_WGS_BACKEND', 'cpu') == 'cpu':
+            policy_path = self.path.parent.parent / 'policy.json' if self.path else None
+            policy = json.loads(policy_path.read_text()) if policy_path and policy_path.exists() else {}
             buffer = int(policy.get('realign_sort_memory_bytes', 0))
+            # CPU/HAP 병렬도를 유지할 RAM이 있을 때만 기본 sort 버퍼를 확대함.
+            if (not buffer and os.environ.get('MFM_WGS_SORT_MEM_REQUESTED') == 'auto'
+                    and os.environ.get('WGS_AUTO_THREADS', '1') == '1'
+                    and os.environ.get('MFM_MEMORY_PROFILE_RESOLVED',
+                        os.environ.get('MFM_MEMORY_PROFILE', 'balanced')) == 'balanced'):
+                buffer = 8 * GIB
             while buffer > parse_memory(config.sort_mem):
                 larger = replace(config, sort_mem=str(buffer))
                 plan = alignment_plan(larger, lengths, cpus, ram)
-                if plan is not None and (baseline is None or (plan['hap_jobs'] >= baseline['hap_jobs'] and plan['reserved_cpus'] >= baseline['reserved_cpus'] and plan['sort_threads'] >= baseline['sort_threads'])):
+                if plan is not None and (baseline is None or (plan['hap_jobs'] >= baseline['hap_jobs'] and plan['reserved_cpus'] >= baseline['reserved_cpus'] and plan['threads'] >= baseline['threads'] and plan['sort_threads'] >= baseline['sort_threads'])):
                     return dict(plan, sort_mem=larger.sort_mem)
                 buffer //= 2
         return dict(baseline, sort_mem=config.sort_mem) if baseline is not None else None

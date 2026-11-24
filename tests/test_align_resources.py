@@ -5,15 +5,51 @@ import tempfile
 import threading
 import time
 import unittest
+from dataclasses import replace
 from pathlib import Path
 from unittest.mock import patch
 from integrate_wgs_rna.memory_policy import GIB
 from integrate_wgs_rna.realign.config import PersonalRealignConfig
-from integrate_wgs_rna.realign.align_resources import alignment_plan
+from integrate_wgs_rna.realign.align_resources import alignment_plan, parse_memory
 from integrate_wgs_rna.realign.phases import RealignPhases, _atomic
 
 AUTO = {'MFM_WGS_ALIGN_REQUESTED': 'auto', 'MFM_WGS_SORT_REQUESTED': 'auto',
         'MFM_WGS_HAP_REQUESTED': 'auto'}
+
+
+class SortBufferPlans(unittest.TestCase):
+    def test_자동버퍼는_RAM안에서확대하며_CPU와HAP병렬도를유지(self):
+        config = PersonalRealignConfig(cohort='test', output_root=Path('/tmp'),
+            sample_list=None, samples=['S'], chroms=['chr1'],
+            sequence_variant_policy='snv_indel', dataset_role='pre_training',
+            platform='hifi', threads=6, sort_threads=2, hap_jobs=2, sort_mem='2G')
+        lengths = {1: 3_000_000_000, 2: 3_000_000_000}
+        phases = object.__new__(RealignPhases)
+        phases.path = None
+        environment = dict(AUTO, MFM_WGS_SORT_MEM_REQUESTED='auto')
+        with patch.dict(os.environ, environment, clear=True):
+            for cpus, haps in [(16, 1), (32, 2)]:
+                base = alignment_plan(config, lengths, cpus, 900*GIB)
+                large = phases.alignment_plan(config, lengths, cpus, 900*GIB)
+                self.assertEqual(int(large['sort_mem']), 8*GIB)
+                self.assertEqual((large['hap_jobs'], large['threads']), (haps, 10))
+                self.assertEqual(large['reserved_cpus'], cpus)
+                for buffer in ['4G', '2G']:
+                    limit = alignment_plan(replace(config, sort_mem=buffer), lengths,
+                                           cpus, 900*GIB)['reserved_memory_bytes']
+                    fit = phases.alignment_plan(config, lengths, cpus, limit)
+                    self.assertEqual(parse_memory(fit['sort_mem']), parse_memory(buffer))
+                    self.assertLessEqual(fit['reserved_memory_bytes'], limit)
+                    self.assertEqual((fit['hap_jobs'], fit['threads'], fit['sort_threads'],
+                                      fit['reserved_cpus']),
+                                     (base['hap_jobs'], base['threads'], base['sort_threads'], cpus))
+            os.environ['MFM_WGS_SORT_MEM_REQUESTED'] = '2G'
+            explicit = phases.alignment_plan(config, lengths, 32, 900*GIB)
+            self.assertEqual(explicit['sort_mem'], '2G')
+            os.environ.update(MFM_WGS_SORT_MEM_REQUESTED='auto',
+                              MFM_MEMORY_PROFILE_RESOLVED='low_memory')
+            conservative = phases.alignment_plan(config, lengths, 32, 900*GIB)
+            self.assertEqual(conservative['sort_mem'], '2G')
 
 
 class Plans(unittest.TestCase):
@@ -31,7 +67,7 @@ class Plans(unittest.TestCase):
             p=config.output_root / 'TEST/qc/TEST.stage11_timing.json'
             if p.exists():measured.append(json.loads(p.read_text()))
             return result
-        with patch.dict(os.environ, dict(AUTO, MFM_CPU_BUDGET='12')), \
+        with patch.dict(os.environ, dict(AUTO, MFM_CPU_BUDGET='12', MFM_WGS_SORT_MEM_REQUESTED='auto')), \
              patch.object(module, 'run_personal_realign_generation', side_effect=observe):
             Stage22BwaIntegrationTest('test_pair_singleton_duplicate_and_chain_contract').debug()
         self.assertEqual(measured[0]['effective_threads']['hap_jobs'],1)
