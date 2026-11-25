@@ -4,7 +4,7 @@
 
 - 구성: 공통 18개 + HP1 전용 9개 + HP2 전용 9개 = **36채널**임.
 - 저장 순서: 공통 13개(forward·reverse 포함) → HP1 9개 → HP2 9개 → BAF 3개 → non-ref 2개임. 의미별 묶음인 ‘공통 18개’가 배열에서 모두 연속된 것은 아님.
-- 이 문서의 그림은 설명을 위해 새로 생성한 교육용 그림임. 8-read 염기 예시와 3-read indel 예시의 수치는 실제 계산 코드·HTSlib 검증 경로로 확인함. 실제 donor의 측정값이 아님.
+- 그림은 개요 4장과 [전체 36채널의 상세 그림 18장](#feature-atlas)으로 구성함. 개요는 8-read/3-read, 상세는 별도의 12-read/8-read 예시임. 모든 수치는 실제 계산 코드·HTSlib 검증 경로로 확인한 교육용 합성값이며 실제 donor의 측정값이 아님.
 - 채널 번호는 **0부터 시작하는 배열 열 번호**임. 숫자 0의 해석에는 depth·좌표·BAF 보조 배열이 필요함.
 
 ## 1. Readset과 달라지는 부분
@@ -360,3 +360,279 @@ compact/
 - 저장 배열·자료형의 형식은 같으므로 container schema와 layout 이름은 v2를 유지함. **Feature set 버전은 채널 순서 구분용**임. 채널 수·계산식·분모·필터는 변경하지 않음.
 - 기존 결과 파일을 재배열하거나 덮어쓰지 않음. Reader가 반환하는 `pileup_channels`와 `pileup_feature_set`으로 그 파일의 실제 순서를 확인함. 버전이 다른 파일을 섞을 때는 채널 이름을 기준으로 대응해야 함.
 - 새 기본 순서의 완료 판정은 새 feature_set만 인정함. 이전 완료 파일과 같은 output/state에 새 순서를 덮어쓰려 하면 manifest를 변경하기 전에 거부함. 새 전처리는 별도 출력에서 실행함.
+
+<a id="feature-atlas"></a>
+
+## 11. 전체 36채널 상세 그림
+
+아래 18장은 36개 채널을 빠짐없이 설명함. 같은 종류의 공통·HP1·HP2 지표는 한 그림의 세 계산으로 비교함. 단순히 채널 이름만 나열한 그림이 아니라 **관측 선택 → 분모 선택 → 계산 → 저장값**을 보여주는 예시임.
+
+**이 절의 12-read 예제는 앞 절의 8-read 개요와 다른 입력임.** 염기 관측은 A4·C2·G3·T2·N1, HP1 5개·HP2 4개·HP 없음3개임. 품질/방향 그림도 같은 관측 예제의 값임. 그림의 소수는 소수점 넷째 자리로 반올림함.
+
+| Read | 관측 | HP | MAPQ | BQ | 방향 |
+|---|---|---|---:|---:|---|
+| R1 | A | 1 | 60 | 40 | forward |
+| R2 | A | 1 | 60 | 30 | forward |
+| R3 | A | 1 | 50 | 20 | reverse |
+| R4 | C | 1 | 50 | 10 | forward |
+| R5 | G | 1 | 40 | 30 | reverse |
+| R6 | G | 2 | 40 | 30 | reverse |
+| R7 | G | 2 | 30 | 20 | forward |
+| R8 | T | 2 | 30 | 없음 | forward |
+| R9 | N | 2 | 30 | 0 | reverse |
+| R10 | A | 없음 | 60 | 40 | forward |
+| R11 | C | 없음 | 50 | 없음 | reverse |
+| R12 | T | 없음 | 40 | 20 | forward |
+
+Indel 그림은 별도 8-read 입력의 reference C anchor를 사용함. `D`는 이 위치의 염기 관측 수, `S`는 이 위치를 결실로 지나가는 수임. C 뒤에서 시작한 삽입·결실 사건 및 최대 길이를 다음과 같이 검산함.
+
+| 집단 | D | S | 삽입 I | 결실 시작 E | 최대 결실 길이 |
+|---|---:|---:|---:|---:|---:|
+| 공통 | 6 | 2 | 3 | 2 | 3 bp |
+| HP1 | 2 | 1 | 1 | 0 | 0 bp |
+| HP2 | 3 | 0 | 2 | 1 | 1 bp |
+
+### 채널과 그림 대응
+
+| 번호 | 채널 | 상세 그림 |
+|---:|---|---|
+| 0 | `log1p_depth` | [Depth를 로그로 압축하기](figures/pileup36_details/01_depth_log.png) |
+| 1 | `mean_mapq` | [정렬 위치의 평균 품질](figures/pileup36_details/02_mean_mapq.png) |
+| 2 | `mean_baseq` | [BQ가 있는 관측만 평균에 사용](figures/pileup36_details/03_mean_baseq.png) |
+| 3 | `strand_forward_ratio` | [Forward 방향의 관측 비율](figures/pileup36_details/04_forward_ratio.png) |
+| 4 | `strand_reverse_ratio` | [Reverse 방향의 관측 비율](figures/pileup36_details/05_reverse_ratio.png) |
+| 5 | `read_A_ratio` | [A 관측 비율: 전체와 HP별 비교](figures/pileup36_details/06_base_A.png) |
+| 6 | `read_C_ratio` | [C 관측 비율: 전체와 HP별 비교](figures/pileup36_details/07_base_C.png) |
+| 7 | `read_G_ratio` | [G 관측 비율: 전체와 HP별 비교](figures/pileup36_details/08_base_G.png) |
+| 8 | `read_T_ratio` | [T 관측 비율: 전체와 HP별 비교](figures/pileup36_details/09_base_T.png) |
+| 9 | `read_N_ratio` | [N 관측 비율: 전체와 HP별 비교](figures/pileup36_details/10_base_N.png) |
+| 10 | `insertion_ratio` | [삽입은 염기 길이가 아닌 사건 수](figures/pileup36_details/11_insertion.png) |
+| 11 | `deletion_after_event_ratio` | [이 anchor 뒤에서 시작한 결실만 세기](figures/pileup36_details/12_deletion_event.png) |
+| 12 | `deletion_after_max_len` | [결실 길이의 최댓값: 합계가 아님](figures/pileup36_details/13_deletion_length.png) |
+| 13 | `hp1_log1p_depth` | [Depth를 로그로 압축하기](figures/pileup36_details/01_depth_log.png) |
+| 14 | `hp1_read_A_ratio` | [A 관측 비율: 전체와 HP별 비교](figures/pileup36_details/06_base_A.png) |
+| 15 | `hp1_read_C_ratio` | [C 관측 비율: 전체와 HP별 비교](figures/pileup36_details/07_base_C.png) |
+| 16 | `hp1_read_G_ratio` | [G 관측 비율: 전체와 HP별 비교](figures/pileup36_details/08_base_G.png) |
+| 17 | `hp1_read_T_ratio` | [T 관측 비율: 전체와 HP별 비교](figures/pileup36_details/09_base_T.png) |
+| 18 | `hp1_read_N_ratio` | [N 관측 비율: 전체와 HP별 비교](figures/pileup36_details/10_base_N.png) |
+| 19 | `hp1_insertion_ratio` | [삽입은 염기 길이가 아닌 사건 수](figures/pileup36_details/11_insertion.png) |
+| 20 | `hp1_deletion_after_event_ratio` | [이 anchor 뒤에서 시작한 결실만 세기](figures/pileup36_details/12_deletion_event.png) |
+| 21 | `hp1_deletion_after_max_len` | [결실 길이의 최댓값: 합계가 아님](figures/pileup36_details/13_deletion_length.png) |
+| 22 | `hp2_log1p_depth` | [Depth를 로그로 압축하기](figures/pileup36_details/01_depth_log.png) |
+| 23 | `hp2_read_A_ratio` | [A 관측 비율: 전체와 HP별 비교](figures/pileup36_details/06_base_A.png) |
+| 24 | `hp2_read_C_ratio` | [C 관측 비율: 전체와 HP별 비교](figures/pileup36_details/07_base_C.png) |
+| 25 | `hp2_read_G_ratio` | [G 관측 비율: 전체와 HP별 비교](figures/pileup36_details/08_base_G.png) |
+| 26 | `hp2_read_T_ratio` | [T 관측 비율: 전체와 HP별 비교](figures/pileup36_details/09_base_T.png) |
+| 27 | `hp2_read_N_ratio` | [N 관측 비율: 전체와 HP별 비교](figures/pileup36_details/10_base_N.png) |
+| 28 | `hp2_insertion_ratio` | [삽입은 염기 길이가 아닌 사건 수](figures/pileup36_details/11_insertion.png) |
+| 29 | `hp2_deletion_after_event_ratio` | [이 anchor 뒤에서 시작한 결실만 세기](figures/pileup36_details/12_deletion_event.png) |
+| 30 | `hp2_deletion_after_max_len` | [결실 길이의 최댓값: 합계가 아님](figures/pileup36_details/13_deletion_length.png) |
+| 31 | `vcf_ref_allele_fraction` | [VCF REF allele의 관측 비율](figures/pileup36_details/14_vcf_ref_fraction.png) |
+| 32 | `baf` | [BAF: VCF ALT를 지지한 비율](figures/pileup36_details/15_baf.png) |
+| 33 | `minor_allele_fraction` | [Minor allele은 관측이 적은 쪽](figures/pileup36_details/16_minor_allele.png) |
+| 34 | `read_supports_variant_ratio` | [가장 많은 non-reference 한 종류](figures/pileup36_details/17_max_nonref.png) |
+| 35 | `base_diff_from_ref_ratio` | [Reference와 다른 관측을 모두 합하기](figures/pileup36_details/18_all_nonref.png) |
+
+### 11.1 Depth를 로그로 압축하기
+
+![Depth를 로그로 압축하기 — 채널 0, 13, 22](figures/pileup36_details/01_depth_log.png)
+
+같은 위치의 원시 depth 12·5·4를 자연로그로 바꾸는 과정임. 원시 정수 개수는 보조 depth 배열에 별도 보존함.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 0 `log1p_depth` | `ln(1+12)` | 2.5649 |
+| 13 `hp1_log1p_depth` | `ln(1+5)` | 1.7918 |
+| 22 `hp2_log1p_depth` | `ln(1+4)` | 1.6094 |
+
+### 11.2 정렬 위치의 평균 품질
+
+![정렬 위치의 평균 품질 — 채널 1](figures/pileup36_details/02_mean_mapq.png)
+
+MAPQ는 정렬 위치의 품질임. 이 위치에 염기를 제공한 read 12개의 MAPQ 합은 540이며, 평균은 45임. 0–1 정규화를 하지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 1 `mean_mapq` | `540/12` | 45.0000 |
+
+### 11.3 BQ가 있는 관측만 평균에 사용
+
+![BQ가 있는 관측만 평균에 사용 — 채널 2](figures/pileup36_details/03_mean_baseq.png)
+
+BQ는 관측 염기의 품질임. BQ 없음 2개는 평균 분모에서만 제외하며 base depth는 12로 유지함. BQ 0인 N 관측도 유효한 BQ 1개로 셈. 따라서 Dq=10·BQ 합240·평균24임. BQ 결측이라고 관측 염기를 N으로 바꾸지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 2 `mean_baseq` | `240/10` | 24.0000 |
+
+### 11.4 Forward 방향의 관측 비율
+
+![Forward 방향의 관측 비율 — 채널 3](figures/pileup36_details/04_forward_ratio.png)
+
+Forward read 관측 7개를 전체 12개로 나눈 비율임. 염색체 길이나 염기 종류의 개수가 아닌, 한 위치에서 read 정렬 방향을 세는 것임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 3 `strand_forward_ratio` | `7/12` | 0.5833 |
+
+### 11.5 Reverse 방향의 관측 비율
+
+![Reverse 방향의 관측 비율 — 채널 4](figures/pileup36_details/05_reverse_ratio.png)
+
+Reverse read 관측 5개를 전체 12개로 나눈 비율임. Depth가 양수일 때 forward와 reverse의 합이 1임. 유전자 전사 방향을 뜻하지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 4 `strand_reverse_ratio` | `5/12` | 0.4167 |
+
+### 11.6 A 관측 비율: 전체와 HP별 비교
+
+![A 관측 비율: 전체와 HP별 비교 — 채널 5, 14, 23](figures/pileup36_details/06_base_A.png)
+
+A는 공통4개·HP1 3개·HP2 0개임. HP 미지정 A 1개는 공통에만 포함함. HP2의 0/4는 관측이 없다는 뜻이 아니라 HP2 관측 안에 A가 없다는 뜻임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 5 `read_A_ratio` | `4/12` | 0.3333 |
+| 14 `hp1_read_A_ratio` | `3/5` | 0.6000 |
+| 23 `hp2_read_A_ratio` | `0/4` | 0.0000 |
+
+### 11.7 C 관측 비율: 전체와 HP별 비교
+
+![C 관측 비율: 전체와 HP별 비교 — 채널 6, 15, 24](figures/pileup36_details/07_base_C.png)
+
+C는 공통2개·HP1 1개·HP2 0개임. HP 미지정 C 1개가 공통에 포함됨. HP별 분모를 전체 12로 나누지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 6 `read_C_ratio` | `2/12` | 0.1667 |
+| 15 `hp1_read_C_ratio` | `1/5` | 0.2000 |
+| 24 `hp2_read_C_ratio` | `0/4` | 0.0000 |
+
+### 11.8 G 관측 비율: 전체와 HP별 비교
+
+![G 관측 비율: 전체와 HP별 비교 — 채널 7, 16, 25](figures/pileup36_details/08_base_G.png)
+
+G는 공통3개·HP1 1개·HP2 2개임. 이 값은 VCF ALT 비율인 BAF와 분모가 다름. 해당 HP에 속한 모든 A/C/G/T/N이 HP별 분모임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 7 `read_G_ratio` | `3/12` | 0.2500 |
+| 16 `hp1_read_G_ratio` | `1/5` | 0.2000 |
+| 25 `hp2_read_G_ratio` | `2/4` | 0.5000 |
+
+### 11.9 T 관측 비율: 전체와 HP별 비교
+
+![T 관측 비율: 전체와 HP별 비교 — 채널 8, 17, 26](figures/pileup36_details/09_base_T.png)
+
+T는 공통2개·HP1 0개·HP2 1개임. HP 미지정 T 1개가 공통에 포함됨. HP1은 depth5가 존재하지만 T가 없어 0임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 8 `read_T_ratio` | `2/12` | 0.1667 |
+| 17 `hp1_read_T_ratio` | `0/5` | 0.0000 |
+| 26 `hp2_read_T_ratio` | `1/4` | 0.2500 |
+
+### 11.10 N 관측 비율: 전체와 HP별 비교
+
+![N 관측 비율: 전체와 HP별 비교 — 채널 9, 18, 27](figures/pileup36_details/10_base_N.png)
+
+Read에서 N으로 관측한 것은 공통1개·HP1 0개·HP2 1개임. N도 base depth 분모에 포함함. HAP DNA의 N 함량과 별개의 관측 지표임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 9 `read_N_ratio` | `1/12` | 0.0833 |
+| 18 `hp1_read_N_ratio` | `0/5` | 0.0000 |
+| 27 `hp2_read_N_ratio` | `1/4` | 0.2500 |
+
+### 11.11 삽입은 염기 길이가 아닌 사건 수
+
+![삽입은 염기 길이가 아닌 사건 수 — 채널 10, 19, 28](figures/pileup36_details/11_insertion.png)
+
+C anchor의 삽입 사건은 공통3개·HP1 1개·HP2 2개임. 삽입 길이가 2bp인 TT도 사건은 1개임. 분모는 base depth와 해당 위치를 결실로 지나가는 관측 수의 합임. 이 지지는 HAP 삽입 allele과의 정확한 서열 일치율이 아님.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 10 `insertion_ratio` | `3/(6+2)` | 0.3750 |
+| 19 `hp1_insertion_ratio` | `1/(2+1)` | 0.3333 |
+| 28 `hp2_insertion_ratio` | `2/(3+0)` | 0.6667 |
+
+### 11.12 이 anchor 뒤에서 시작한 결실만 세기
+
+![이 anchor 뒤에서 시작한 결실만 세기 — 채널 11, 20, 29](figures/pileup36_details/12_deletion_event.png)
+
+C 바로 뒤에서 시작한 결실은 HP2의 1bp 사건과 HP 미지정의 3bp 사건, 총2개임. HP1의 결실은 더 앞에서 시작하므로 C anchor의 사건 수는 0임. C 자체를 결실로 지나가는 S와 C 뒤에서 시작하는 E를 구분함.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 11 `deletion_after_event_ratio` | `2/(6+2)` | 0.2500 |
+| 20 `hp1_deletion_after_event_ratio` | `0/(2+1)` | 0.0000 |
+| 29 `hp2_deletion_after_event_ratio` | `1/(3+0)` | 0.3333 |
+
+### 11.13 결실 길이의 최댓값: 합계가 아님
+
+![결실 길이의 최댓값: 합계가 아님 — 채널 12, 21, 30](figures/pileup36_details/13_deletion_length.png)
+
+C anchor 뒤에서 시작한 결실 길이만 비교함. 공통은 1bp·3bp 중 최댓값3bp, HP1은 해당 사건이 없어0bp, HP2는1bp임. 길이의 합4bp나 평균2bp를 저장하는 채널이 아님.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 12 `deletion_after_max_len` | `max(1,3) bp` | 3.0000 |
+| 21 `hp1_deletion_after_max_len` | `사건 없음 → 0 bp` | 0.0000 |
+| 30 `hp2_deletion_after_max_len` | `max(1) bp` | 1.0000 |
+
+### 11.14 VCF REF allele의 관측 비율
+
+![VCF REF allele의 관측 비율 — 채널 31](figures/pileup36_details/14_vcf_ref_fraction.png)
+
+VCF REF=A·ALT=G를 사용함. A4개와 G3개, 총7개만 이 계산의 분모임. C2·T2·N1은 관측 데이터에 남지만 이 분모에는 포함하지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 31 `vcf_ref_allele_fraction` | `4/(4+3)` | 0.5714 |
+
+### 11.15 BAF: VCF ALT를 지지한 비율
+
+![BAF: VCF ALT를 지지한 비율 — 채널 32](figures/pileup36_details/15_baf.png)
+
+VCF ALT인 G3개를 REF A4개+ALT G3개로 나누므로 BAF=3/7임. read_G_ratio=3/12와 구분함. HP2 read 비율이나 최대 non-ref 비율을 BAF로 정의하지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 32 `baf` | `3/(4+3)` | 0.4286 |
+
+### 11.16 Minor allele은 관측이 적은 쪽
+
+![Minor allele은 관측이 적은 쪽 — 채널 33](figures/pileup36_details/16_minor_allele.png)
+
+기본 사례에서는 REF4·ALT3이므로 ALT 쪽3/7이 작은 값임. 별도 사례 REF2·ALT6에서는 BAF=0.75이지만 minor fraction=0.25로 REF 쪽이 선택됨. 집단 population MAF가 아닌 한 위치의 read 관측 지표임.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 33 `minor_allele_fraction` | `min(4/7, 3/7)` | 0.4286 |
+
+그림 오른쪽의 별도 사례는 REF2·ALT6으로, 실제 코드에서도 BAF=0.75·minor fraction=0.25를 확인함.
+
+### 11.17 가장 많은 non-reference 한 종류
+
+![가장 많은 non-reference 한 종류 — 채널 34](figures/pileup36_details/17_max_nonref.png)
+
+Reference A와 다른 A/C/G/T 후보 C2·G3·T2 중 가장 많은 G3만 분자임. N1은 후보에서 제외하되 전체 depth12에는 포함함. VCF ALT 지정 여부와 무관함.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 34 `read_supports_variant_ratio` | `max(2,3,2)/12` | 0.2500 |
+
+### 11.18 Reference와 다른 관측을 모두 합하기
+
+![Reference와 다른 관측을 모두 합하기 — 채널 35](figures/pileup36_details/18_all_nonref.png)
+
+Reference A와 다른 C2+G3+T2+N1을 전부 더하면8개임. N까지 분자에 들어가므로 이 수치 전체를 확정된 변이 지지로 해석하지 않음.
+
+| 채널 | 계산 예시 | 저장값 예시 |
+|---|---|---:|
+| 35 `base_diff_from_ref_ratio` | `(12−4)/12` | 0.6667 |
+
+비율의 분모가 0인 경우·BQ 결측·BAF 미지원 site·HAP 삽입·padding의 0은 8절의 보조 배열로 구분함. 이 그림을 추가하면서 채널 수·계산식·필터·저장 정책을 바꾸지 않음.
+
+그림 생성에는 imagegen 내장 도구를 사용함. [생성·교정 요청문 기록](figures/pileup36_details/prompts.json)을 함께 보존함.

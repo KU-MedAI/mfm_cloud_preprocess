@@ -439,6 +439,101 @@
       "sha256": "5497890eec1c9795b40288b9e824df67a2e83a717f8c724739d7c5f2d8e40e0a"
     },
     {
+      "path": "docs/figures/pileup36_details/01_depth_log.png",
+      "size_bytes": 1487335,
+      "sha256": "0e93e6a9751e77f0481a395b6de82158896b6b8727d8689445bcfe4419fd967d"
+    },
+    {
+      "path": "docs/figures/pileup36_details/02_mean_mapq.png",
+      "size_bytes": 1768822,
+      "sha256": "13fc80bf9e6253fda2d4dd1934aec5581e2792ad49bbd0d3b2df0cc5cd16a51b"
+    },
+    {
+      "path": "docs/figures/pileup36_details/03_mean_baseq.png",
+      "size_bytes": 1391686,
+      "sha256": "c3af531ae83d22a3475e9d97f4e66ad5bc1def209149d2a57522093ece6f0670"
+    },
+    {
+      "path": "docs/figures/pileup36_details/04_forward_ratio.png",
+      "size_bytes": 1375229,
+      "sha256": "eef3dc0d09033e630a405372eeca3770e14cdfe1393775fd43248423ceaccbdc"
+    },
+    {
+      "path": "docs/figures/pileup36_details/05_reverse_ratio.png",
+      "size_bytes": 1378489,
+      "sha256": "6b3a7c5d14a8a63147c2e1732ff42eb249fb08994ba240aeeffcc0632c6c8672"
+    },
+    {
+      "path": "docs/figures/pileup36_details/06_base_A.png",
+      "size_bytes": 1455560,
+      "sha256": "dfcabe832770d8865f2c918932f826f01d3d78f05a601e00140654b7726510f2"
+    },
+    {
+      "path": "docs/figures/pileup36_details/07_base_C.png",
+      "size_bytes": 1409226,
+      "sha256": "18bd7496bdd2ceef97129beb8c743426898a1b8a1c9f696355e2bcc08f2edfa7"
+    },
+    {
+      "path": "docs/figures/pileup36_details/08_base_G.png",
+      "size_bytes": 1436544,
+      "sha256": "641ddbb969511acb841d5a4d2c48bcee0015ecf391fdab3e5feae860c3a60d54"
+    },
+    {
+      "path": "docs/figures/pileup36_details/09_base_T.png",
+      "size_bytes": 1398608,
+      "sha256": "ac880804f7709566470ed67d408439b2645573c566f846c73716ceff60da786b"
+    },
+    {
+      "path": "docs/figures/pileup36_details/10_base_N.png",
+      "size_bytes": 1485036,
+      "sha256": "5832827f84988fe947ceacaeac29caf2048b34511418cebe707acf3953a0481f"
+    },
+    {
+      "path": "docs/figures/pileup36_details/11_insertion.png",
+      "size_bytes": 1434756,
+      "sha256": "593dd45a4cfd8f719b5c5f55108a2677e4a12761c91a882314ee3c9d040725fe"
+    },
+    {
+      "path": "docs/figures/pileup36_details/12_deletion_event.png",
+      "size_bytes": 1738983,
+      "sha256": "baa55de7a2a3169f86651bd30b60347e8cb4024211d483bd4514a3344b444d1f"
+    },
+    {
+      "path": "docs/figures/pileup36_details/13_deletion_length.png",
+      "size_bytes": 1685957,
+      "sha256": "1edaea82cfcd544b04dc0e22b78eea1ab3a3af5f645778cb371ece74bfbebeda"
+    },
+    {
+      "path": "docs/figures/pileup36_details/14_vcf_ref_fraction.png",
+      "size_bytes": 1373738,
+      "sha256": "7b382a4d5a6b9fbb1332f842d7add5884fd9898b9c7d9bb9a3fdacd86d9f9432"
+    },
+    {
+      "path": "docs/figures/pileup36_details/15_baf.png",
+      "size_bytes": 1465763,
+      "sha256": "3851e86ea67e717cf03746a2313a844d31ec6c7c40c3a816eb86c5ec84b20609"
+    },
+    {
+      "path": "docs/figures/pileup36_details/16_minor_allele.png",
+      "size_bytes": 1350521,
+      "sha256": "81423d9be13ac872fa5c249061949df06d5ffcd312bc29ab13ff67c62430d27c"
+    },
+    {
+      "path": "docs/figures/pileup36_details/17_max_nonref.png",
+      "size_bytes": 1586627,
+      "sha256": "87020b24965570cc9b93cd517c9f75629268c97f028a6f849f1781b0f469719d"
+    },
+    {
+      "path": "docs/figures/pileup36_details/18_all_nonref.png",
+      "size_bytes": 1373227,
+      "sha256": "86dd40c457b237aef0256a9dac975845d857e7a9f1c7ba3031b6a7603c5201a6"
+    },
+    {
+      "path": "docs/figures/pileup36_details/prompts.json",
+      "size_bytes": 56812,
+      "sha256": "f814186541f8dd9488f2b6ea7dec06b7f55191fbd86b7eae5b08fdb1c10cb5aa"
+    },
+    {
       "path": "docs/figures/pileup36_easy/01_read_관측.png",
       "size_bytes": 1319682,
       "sha256": "c08ec28f9ce297ac39b0d8225cd50e27e36c7d6d9ad41e9e767225c132f43f44"
@@ -465,8 +560,8 @@
     },
     {
       "path": "docs/pileup_36채널.md",
-      "size_bytes": 29483,
-      "sha256": "a283372bfe244688361e2fbd1308a3127cede1c04516cb0dc86a468403e9d60b"
+      "size_bytes": 44846,
+      "sha256": "89656f2262425efc5fe606f32debeee198ef17c749e281265a0d77f993c19b25"
     },
     {
       "path": "docs/pileup_필터_비교.md",
