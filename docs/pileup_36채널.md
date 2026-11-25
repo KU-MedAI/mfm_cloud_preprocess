@@ -231,7 +231,7 @@ HP별 base depth가 0이면 그 집단의 base 비율·로그 depth는 0임. 유
 - 뜻: Reference와 다른 염기 관측을 **N까지 포함해 모두 합친 비율**임.
 - 계산: `(D − reference와 같은 염기 관측 수) / D`임.
 - 예시: Reference A에 대해 `(8−4)/8 = 0.5`임. G 2개 + T 1개 + N 1개가 분자에 들어감.
-- 해석: 여러 대안 염기를 합하므로 예시에서는 채널 33보다 큼. N 관측도 포함하므로 이 값 전체를 진짜 변이 allele 지지라고 해석하면 안 됨. 삽입·결실 사건 수를 더한 비율도 아님.
+- 해석: 여러 대안 염기를 합하므로 예시에서는 `read_supports_variant_ratio`보다 큼. N 관측도 포함하므로 이 값 전체를 진짜 변이 allele 지지라고 해석하면 안 됨. 삽입·결실 사건 수를 더한 비율도 아님.
 
 | 같은 8-read 위치의 지표 | 분자 / 분모 | 값 |
 |---|---|---:|
@@ -240,7 +240,7 @@ HP별 base depth가 0이면 그 집단의 base 비율·로그 depth는 0임. 유
 | `read_supports_variant_ratio` | 가장 많은 non-ref A/C/G/T인 G / 전체 base 관측 | `2/8 = 0.25` |
 | `base_diff_from_ref_ratio` | non-ref G+T+N / 전체 base 관측 | `4/8 = 0.5` |
 
-이 예시에서 `read_G_ratio`와 채널 33이 같은 것은 G가 최대 non-ref이기 때문임. 모든 위치에서 같은 채널은 아님.
+이 예시에서 `read_G_ratio`와 `read_supports_variant_ratio`의 값이 같은 것은 G가 최대 non-ref이기 때문임. 모든 위치에서 같은 채널은 아님.
 
 ## 7. Reference에서 계산한 feature를 HAP 위치에 어떻게 넣는가?
 
