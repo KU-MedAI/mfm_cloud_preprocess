@@ -75,8 +75,8 @@
     },
     {
       "path": "10_realign_wgs.sh",
-      "size_bytes": 3130,
-      "sha256": "4c5e159ab8dbbcc9c573e6df08016b714da8b7498cfd6468b56300fd6975317b"
+      "size_bytes": 3191,
+      "sha256": "e720ecdefbf82fb502631fe215a94c2fccffb5eae7a6529e28da612666a657ad"
     },
     {
       "path": "10_windows.sh",
@@ -400,8 +400,8 @@
     },
     {
       "path": "config_v2.sh",
-      "size_bytes": 70137,
-      "sha256": "b079670cc963d703534be89eae3e87d7b4977077b9b1a7f0b2b44f4c4eb04eaf"
+      "size_bytes": 70326,
+      "sha256": "645eedb4647429cd701df32b05c2c995bbd9d13c6551117980e8c19f50bb1a35"
     },
     {
       "path": "docker/Dockerfile",
@@ -420,13 +420,13 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 2617,
-      "sha256": "899ca267dcf3b1bad61078054ad974704efcb3266b3a57c387e97106f5369819"
+      "size_bytes": 2679,
+      "sha256": "42676418dc381d13deca67aeab1591171db39fef7e050c17937b527e63c8311f"
     },
     {
       "path": "docs/Docker_실행.md",
-      "size_bytes": 11329,
-      "sha256": "58d01228764bc60c8e8c2c4f0aa158b0696c7f73f8a0d78612208eb7c690692e"
+      "size_bytes": 12485,
+      "sha256": "0f28de14788daaa8f0ecdd84947ddc16eafa8023092f64e6e460dc503ed642d5"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -560,8 +560,8 @@
     },
     {
       "path": "docs/pileup_36채널.md",
-      "size_bytes": 44846,
-      "sha256": "89656f2262425efc5fe606f32debeee198ef17c749e281265a0d77f993c19b25"
+      "size_bytes": 46625,
+      "sha256": "ed7fd6abade1254aa14fcaebe10c7d00d295d4f619595dfc52744024298738de"
     },
     {
       "path": "docs/pileup_필터_비교.md",
@@ -885,8 +885,8 @@
     },
     {
       "path": "handoff/cleanup.py",
-      "size_bytes": 8709,
-      "sha256": "6c9a21d879a66f6f62c987ad7cbec1d138f081db7f8734d9be4c6441de86649d"
+      "size_bytes": 11354,
+      "sha256": "022a36ff305f3bda1d6c5dfad5a5d00a6285a461ea152d9fcb1a38b9d33712eb"
     },
     {
       "path": "handoff/cli.py",
@@ -930,8 +930,8 @@
     },
     {
       "path": "handoff/final_check.py",
-      "size_bytes": 5477,
-      "sha256": "89bb8d113d3dac0247864ec18c0e4cca4b09024d2916a07581ca6bf2b0a8a2fc"
+      "size_bytes": 5403,
+      "sha256": "3bce8d38419cd9c8aa1481350170189798334197d18a89f22825c092c758dc92"
     },
     {
       "path": "handoff/host_limits.py",
@@ -980,8 +980,8 @@
     },
     {
       "path": "handoff/metrics.py",
-      "size_bytes": 8441,
-      "sha256": "ed7e1d6a080432b039ca53042ad62411cc6495060a971afd250aea0d199585db"
+      "size_bytes": 7867,
+      "sha256": "5bdf3edf29bab477261d8c43006feebb6dc25c49dd05a7883add6e8034169399"
     },
     {
       "path": "handoff/planner.py",
@@ -3310,8 +3310,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/personal_realign.py",
-      "size_bytes": 77600,
-      "sha256": "0f6ccb3a1e64f86bdcbd29bf1aec801c0b0420e3754b213410a209f4b45de11f"
+      "size_bytes": 77990,
+      "sha256": "6d571ed690f212f7f7589f60c3f044d8034219e08d2f422181a7032b5d95344c"
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/__init__.py",
@@ -3325,8 +3325,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/complete_export.py",
-      "size_bytes": 19640,
-      "sha256": "ff94a5d2dea091b98ff7c91b06f8a06daeb9444c2796f8737ab5d1f74cfa2537"
+      "size_bytes": 20199,
+      "sha256": "17ec6c64388083aacb5b62abf8ef4e759565febc380321cdbd966f4987279bc3"
     },
     {
       "path": "src/integrate_wgs_rna/pileup_features/complete_native.py",
@@ -3685,8 +3685,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/window_reader.py",
-      "size_bytes": 13369,
-      "sha256": "b32bfb8f98f6c37ade37ad18d6186e9419ce251d9c021db3a77b05ce9dc69aaa"
+      "size_bytes": 13391,
+      "sha256": "c0316b503ed354140ed76dee57abd0857fc4d1bfc2ab30fa13ae49fcc4c2c45f"
     },
     {
       "path": "tests/run_all.sh",
@@ -3867,6 +3867,11 @@
       "path": "tests/test_cpu_work_conservation.py",
       "size_bytes": 9672,
       "sha256": "7792578a572cbd8cecb316a03d04733ef871ddea19f47410e2e86ed2c28e2a66"
+    },
+    {
+      "path": "tests/test_cram_output.py",
+      "size_bytes": 3391,
+      "sha256": "92efcfd987177e0d35368b3c54acfdd50d6648618c496a742c6590d8b60ef54a"
     },
     {
       "path": "tests/test_cram_unplaced.py",
@@ -4174,6 +4179,11 @@
       "sha256": "491006ac63bb5534855ec926de2ab2d6ccb44a6f166af80fd1d1ee05861ef1cc"
     },
     {
+      "path": "tests/test_package_inventory.py",
+      "size_bytes": 3397,
+      "sha256": "5eaecf3008e0dcf437925dc9667c93d0853c0b49b700bea29684d6206c1d647a"
+    },
+    {
       "path": "tests/test_pair_first_preprocess.sh",
       "size_bytes": 1437,
       "sha256": "3f6485b147cfcfa2e16f7eebd81986f4932456079343306baea7c4bb2b8dec94"
@@ -4200,8 +4210,8 @@
     },
     {
       "path": "tests/test_pileup_complete.py",
-      "size_bytes": 19822,
-      "sha256": "a4ea6fbe864ba575712da5cced2431138e8dde6fa38bbd205375d6f695fe0433"
+      "size_bytes": 20507,
+      "sha256": "f126a95a299ecc263bce0e8d9292f929ba83f4ac6e51774511b55c696bbbf9fa"
     },
     {
       "path": "tests/test_pileup_feature.py",

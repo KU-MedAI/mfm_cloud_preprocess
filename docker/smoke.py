@@ -20,6 +20,8 @@ def main():
     suite = unittest.TestLoader().loadTestsFromNames([
         'test_pileup_native',
         'test_pileup_complete',
+        'test_package_inventory',
+        'test_cram_output',
         # 전체 단계 실행은 실제 작업 RAM 예약이 필요하므로 작은 계산/패키지만 검사함.
         'test_pileup_feature.CountsTest',
         'test_pileup_feature.PileupPackageTest.test_export_preserves_windows_insertion_sequence_trace_reader_resume_cleanup',

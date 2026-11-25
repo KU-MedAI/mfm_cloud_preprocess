@@ -1,7 +1,7 @@
 """BAM/FASTA 정리 이후 모델 입력 패키지와 보존 파일의 구조를 다시 확인한다."""
 from pathlib import Path
 import json
-from .cleanup import KEEP_DIRS,KEEP_RNA,RAW_SUFFIXES,model_bytes
+from .cleanup import KEEP_DIRS,KEEP_RNA,package_inventory
 from tools.compact_manifest import completed_contigs
 from integrate_wgs_rna.validation_parallel import sequence_checks
 
@@ -10,20 +10,20 @@ def validate(root,sample,mode):
     root=Path(root);errors=[];arrays=0
     for p in root.iterdir():
         if p.name not in KEEP_DIRS:errors.append('불필요한 최상위 산출물: '+str(p))
-    for p in root.rglob('*'):
-        if p.is_symlink():errors.append('외부 symlink: '+str(p))
-        if p.is_file() and p.name.lower().endswith(RAW_SUFFIXES):errors.append('제거되지 않은 BAM/FASTA: '+str(p))
-        if p.is_dir() and p.name.endswith('.zarr'):
-            try:
-                g=zarr.open_group(str(p),mode='r')
-                # 모든 배열의 메타데이터를 읽는다. 데이터 내용은 정리 전 full/source trace가 검사했다.
-                counts=[]
-                def visit(name,obj):
-                    if isinstance(obj,zarr.Array):counts.append(obj.size)
-                g.visititems(visit)
-                if not counts:errors.append('빈 Zarr: '+str(p))
-                arrays+=len(counts)
-            except Exception as e:errors.append(str(p)+': '+str(e))
+    inventory=package_inventory(root)
+    errors.extend('외부 symlink: '+str(p) for p in inventory['symlinks'])
+    errors.extend('제거되지 않은 BAM/FASTA: '+str(p) for p in inventory['raw_files'])
+    for p in inventory['zarr_dirs']:
+        try:
+            g=zarr.open_group(str(p),mode='r')
+            # 데이터 내용은 정리 전 full/source trace가 검사했고 메타데이터는 모두 다시 읽음.
+            counts=[]
+            def visit(name,obj):
+                if isinstance(obj,zarr.Array):counts.append(obj.size)
+            g.visititems(visit)
+            if not counts:errors.append('빈 Zarr: '+str(p))
+            arrays+=len(counts)
+        except Exception as e:errors.append(str(p)+': '+str(e))
     manifests=list((root/'compact').glob('*/manifest.json'))
     if len(manifests)!=1:errors.append('compact manifest 개수 오류')
     else:
@@ -76,7 +76,7 @@ def validate(root,sample,mode):
     except (OSError,ValueError,KeyError,TypeError) as error:
         errors.append('정리 후 window 주석·reference mapping 검증 실패: '+str(error))
     result={'schema':'mfm_delivery_final_validation_v1','sample':sample,'mode':mode,'status':'fail' if errors else 'pass',
-      'errors':errors,'zarr_array_metadata_checked':arrays,'model_input_bytes':model_bytes(root),
+      'errors':errors,'zarr_array_metadata_checked':arrays,'model_input_bytes':inventory['model_bytes'],
       'validation_scope':'정리 전 full+source trace PASS에 이어 정리 후 보존 구조/Zarr array 메타데이터 확인'}
     if annotations is not None:result['window_annotations_and_mapping']=annotations
     (root/'qc/delivery_final_validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

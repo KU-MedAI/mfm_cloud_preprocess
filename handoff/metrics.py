@@ -2,21 +2,7 @@
 from __future__ import annotations
 import argparse, csv, fcntl, hashlib, json, os, tempfile, time
 from pathlib import Path
-from .cleanup import KEEP_RNA
-
-
-def _tree_bytes(directory, *, rna=False):
-    total=0;pending=[(Path(directory),not rna)]
-    while pending:
-        path,keep=pending.pop()
-        if not path.is_dir():continue
-        with os.scandir(path) as entries:
-            for entry in entries:
-                if entry.is_dir(follow_symlinks=False):
-                    pending.append((Path(entry.path),keep or entry.name in KEEP_RNA))
-                elif entry.is_file(follow_symlinks=False) and (keep or entry.name.endswith('.tsv')):
-                    total+=entry.stat(follow_symlinks=False).st_size
-    return total
+from .cleanup import KEEP_RNA,_tree_bytes
 
 
 def _compact_contract(root):

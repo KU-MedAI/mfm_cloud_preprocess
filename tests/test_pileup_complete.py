@@ -235,6 +235,11 @@ class CompletePackageTest(unittest.TestCase):
         self.assertEqual(before,(self.root/'windows/windows.tsv').read_bytes())
         group=zarr.open_group(str(self.directory/'pileup.zarr'),mode='r')
         self.assertEqual(group['HAP1/features'].shape[1],36)
+        self.assertEqual(group['HAP1/features'].order,'F')
+        self.assertEqual(group['HAP1/features'].chunks,(16,36))
+        self.assertEqual(group['HAP1/depth'].chunks,(16,))
+        self.assertFalse(group['HAP1/baf_heterozygous'][:].any())
+        self.assertEqual(group['HAP1/baf_heterozygous'].nchunks_initialized,0)
         self.assertTrue(group['HAP1/hp1_depth'][:].any())
         self.assertTrue(group['HAP1/hp2_depth'][:].any())
         path=self.directory/'pileup.zarr/HAP1/features/0.0';mtime=path.stat().st_mtime_ns
@@ -247,6 +252,7 @@ class CompletePackageTest(unittest.TestCase):
         try:
             value=reader.load('chr1','HAP2',0)
             self.assertEqual(value['pileup_features'].shape,(16,36))
+            self.assertTrue(value['pileup_features'].flags.c_contiguous)
             self.assertEqual(tuple(value['pileup_channels']),CHANNELS)
             self.assertEqual(value['pileup_channels'][4],'strand_reverse_ratio')
         finally:reader.close()
@@ -276,7 +282,11 @@ class CompletePackageTest(unittest.TestCase):
         fingerprint=digest(provenance)
         metadata['pileup']['fingerprint_sha256']=fingerprint
         for hap in ('HAP1','HAP2'):
-            array=group[hap]['features'];array[:]=array[:][:,order]
+            # 이전 C-order·작은 chunk 저장도 그대로 읽고 source 검증해야 함.
+            previous=group[hap]['features']
+            values=previous[:][:,order];codec=previous.compressor
+            del group[hap]['features']
+            array=group[hap].create_dataset('features',data=values,chunks=(8,36),order='C',compressor=codec)
             metadata['pileup']['content_sha256'][hap]['features']=hashlib.sha256(array[:].tobytes()).hexdigest()
         path.write_text(json.dumps(metadata))
         group.attrs.update(channels=list(PREVIOUS_CHANNELS),feature_set=PREVIOUS_FEATURE_SET,policy=policy,fingerprint_sha256=fingerprint)

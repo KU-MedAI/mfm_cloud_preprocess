@@ -854,6 +854,15 @@ def build_target_fasta(config: PersonalRealignConfig, hap_fasta_dir: Path, targe
     stamp.write_text(chromset)
 
 
+def cram_output_options(config, target_fa):
+    """중간 CRAM의 무손실 압축 비용만 낮추며 명시한 level은 유지함."""
+    if config.output_format != 'cram':return ''
+    try:level=int(os.environ.get('MFM_WGS_CRAM_LEVEL','1'))
+    except ValueError:raise ValueError('MFM_WGS_CRAM_LEVEL은 0–9 정수여야 함') from None
+    if not 0 <= level <= 9:raise ValueError('MFM_WGS_CRAM_LEVEL은 0–9 정수여야 함')
+    return f'--output-fmt cram,level={level} --reference {q(target_fa)}'
+
+
 def write_realign_script(
     config: PersonalRealignConfig,
     sample: str,
@@ -882,9 +891,7 @@ def write_realign_script(
         view_ref = f"VIEW_REF=(-T {q(config.reference_fasta)})"
     else:
         view_ref = "VIEW_REF=()"
-    fmt = ""
-    if config.output_format == "cram":
-        fmt = f"--output-fmt cram --reference {q(target_fa)}"
+    fmt = cram_output_options(config,target_fa)
     read_group = (
         f"@RG\\tID:{sample}\\tSM:{sample}\\tPL:{sam_rg_platform(config.platform)}"
         f"\\tDS:realigned_to_personal_HAP{hap};routing={config.read_routing_policy};unknown={config.unknown_read_policy}"
@@ -963,7 +970,7 @@ def write_illumina_paired_realign_script(
     """
     part = output.with_suffix(output.suffix + ".part")
     prepared_alignment = prepared_input.path
-    fmt = f"--output-fmt cram --reference {q(target_fa)}" if config.output_format == "cram" else ""
+    fmt = cram_output_options(config,target_fa)
     read_group = (
         f"@RG\\tID:{sample}\\tSM:{sample}\\tPL:ILLUMINA"
         f"\\tDS:realigned_to_personal_HAP{hap};routing={config.read_routing_policy};unknown={config.unknown_read_policy};paired=preserved"

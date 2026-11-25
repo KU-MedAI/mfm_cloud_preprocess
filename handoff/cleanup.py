@@ -10,14 +10,69 @@ KEEP_DIRS={'compact','metadata','qc','logs','rna_personal'}
 KEEP_RNA={'coverage.zarr','coverage_windows.zarr'}
 RAW_SUFFIXES=('.bam','.cram','.sam','.fa','.fasta','.fna','.fastq','.fq','.bam.bai','.cram.crai','.fa.fai','.fasta.fai','.fa.gz','.fasta.gz','.fastq.gz','.fq.gz','.fa.gz.fai','.fa.gz.gzi')
 
+
+def _walk_entries(directory):
+    """DirEntry의 종류 정보를 재사용하며 외부 링크는 따라가지 않음."""
+    directory=Path(directory)
+    if directory.is_symlink() or not directory.is_dir():return
+    pending=[directory]
+    while pending:
+        with os.scandir(pending.pop()) as entries:
+            for entry in entries:
+                yield entry
+                if entry.is_dir(follow_symlinks=False):pending.append(entry.path)
+
+
+def _tree_bytes(directory, *, rna=False):
+    total=0
+    for entry in _walk_entries(directory):
+        if entry.is_file(follow_symlinks=False):
+            if not rna or entry.name.endswith('.tsv') or any(x in KEEP_RNA for x in Path(entry.path).parts):
+                total+=entry.stat(follow_symlinks=False).st_size
+    return total
+
+
 def model_files(root):
     root=Path(root)
     for base in ('compact','rna_personal'):
-        for p in (root/base).rglob('*') if (root/base).is_dir() else []:
-            if p.is_file() and not p.is_symlink():
+        for entry in _walk_entries(root/base):
+            if entry.is_file(follow_symlinks=False):
+                p=Path(entry.path)
                 if base=='compact' or any(x in KEEP_RNA for x in p.parts) or p.suffix=='.tsv':yield p
 
-def model_bytes(root):return sum(p.stat().st_size for p in model_files(root))
+def model_bytes(root):
+    root=Path(root)
+    return _tree_bytes(root/'compact')+_tree_bytes(root/'rna_personal',rna=True)
+
+
+def package_inventory(root):
+    """삭제 전후 각각 한 번의 최신 순회로 검사 근거와 실제 용량을 수집함."""
+    root=Path(root)
+    result=dict(model_bytes=0,newest_compact={},symlinks=[],raw_files=[],rna_extras=[],zarr_dirs=[])
+    for base in sorted(KEEP_DIRS):
+        directory=root/base
+        if directory.is_symlink():
+            result['symlinks'].append(directory)
+            continue
+        for entry in _walk_entries(directory):
+            if entry.is_symlink():
+                result['symlinks'].append(Path(entry.path))
+            elif entry.is_dir(follow_symlinks=False):
+                if entry.name.endswith('.zarr'):result['zarr_dirs'].append(Path(entry.path))
+            elif entry.is_file(follow_symlinks=False):
+                if base=='compact':
+                    stat=entry.stat(follow_symlinks=False)
+                    result['model_bytes']+=stat.st_size
+                    layout=os.path.relpath(entry.path,directory).split(os.sep,1)[0]
+                    result['newest_compact'][layout]=max(result['newest_compact'].get(layout,0),stat.st_mtime_ns)
+                elif base=='rna_personal':
+                    path=Path(entry.path)
+                    if any(x in KEEP_RNA for x in path.parts) or path.suffix=='.tsv':
+                        result['model_bytes']+=entry.stat(follow_symlinks=False).st_size
+                    if not any(x.endswith('.zarr') for x in path.parts) and path.suffix not in {'.json','.tsv','.log','.txt'}:
+                        result['rna_extras'].append(path)
+                if entry.name.lower().endswith(RAW_SUFFIXES):result['raw_files'].append(Path(entry.path))
+    return result
 
 def _write_json_atomic(path, payload):
     """진행·실패·완료 보고서를 같은 디렉터리에서 원자적으로 기록한다."""
@@ -52,10 +107,12 @@ def cleanup_complete(root, sample, mode, *, external=True):
         return False
 
 def cleanup(root, sample, mode, work=None, output_root=None, dry_run=False):
+    started=time.monotonic();phase=started;timings={}
     root=Path(root).absolute()
     if root.is_symlink() or root.name!=sample or root==Path('/'):raise ValueError('샘플 루트 경로 불일치')
     # 예전 PASS JSON만 신뢰하지 않고 삭제 직전 현재 RNA 근거의 schema/hash/freshness를 직접 본다.
     predelete_guard=validate_predelete(root,sample,mode)
+    timings['predelete_guard_seconds']=time.monotonic()-phase;phase=time.monotonic()
     layouts=list((root/'compact').glob('*/manifest.json'))
     if len(layouts)!=1:raise ValueError('compact manifest는 하나여야 합니다.')
     m=json.loads(layouts[0].read_text())
@@ -67,22 +124,21 @@ def cleanup(root, sample, mode, work=None, output_root=None, dry_run=False):
     if not expected or t.get('status')!='pass' or {k for k,v in t.get('contigs',{}).items() if v=='pass'}!=expected:
         raise ValueError('source trace contig 불일치')
     if Path(t.get('compact_root','')).resolve()!=layouts[0].parent.resolve():raise ValueError('source trace 경로 불일치')
-    if any(p.is_file() and p.stat().st_mtime_ns>traces[0].stat().st_mtime_ns for p in layouts[0].parent.rglob('*')):
+    timings['contract_seconds']=time.monotonic()-phase;phase=time.monotonic()
+    inventory=package_inventory(root)
+    timings['inventory_seconds']=time.monotonic()-phase
+    if inventory['newest_compact'].get(layouts[0].parent.name,0)>traces[0].stat().st_mtime_ns:
         raise ValueError('source trace 이후 compact가 변경되었습니다.')
     # symlink를 따라 외부 파일을 삭제하거나 보존 검사에서 빠뜨리지 않는다.
-    if any((root/base).is_symlink() for base in KEEP_DIRS) or any(p.is_symlink() for base in KEEP_DIRS for p in (root/base).rglob('*') if (root/base).exists()):
+    if inventory['symlinks']:
         raise ValueError('최종 보존 파일에 외부 symlink가 있습니다.')
     meta=root/'metadata';meta.mkdir(exist_ok=True)
     remove=[]; snapshots=[]
     for p in sorted(root.iterdir()):
         if p.name not in KEEP_DIRS:remove.append(p)
-    for p in (root/'rna_personal').rglob('*') if (root/'rna_personal').exists() else []:
-        if p.is_file() and not any(x.endswith('.zarr') for x in p.parts):
-            if p.suffix not in {'.json','.tsv','.log','.txt'}:remove.append(p)
+    remove.extend(inventory['rna_extras'])
     # BAM/FASTA는 QC/logs 하위에 잘못 들어간 경우에도 모델 전용 패키지에서 제거한다.
-    for base in KEEP_DIRS:
-        for p in (root/base).rglob('*') if (root/base).exists() else []:
-            if p.is_file() and p.name.lower().endswith(RAW_SUFFIXES):remove.append(p)
+    remove.extend(inventory['raw_files'])
     fasta=root/'individual_fasta'
     for name in ['permanent_assets.json','personal_fasta_qc.json']:
         if (fasta/name).is_file():snapshots.append((fasta/name,meta/name))
@@ -99,7 +155,8 @@ def cleanup(root, sample, mode, work=None, output_root=None, dry_run=False):
         if not any(parent in targets for parent in p.parents):targets.append(p)
     payload={'schema':'mfm_delivery_cleanup_v1','sample':sample,'mode':mode,'dry_run':dry_run,
       'time':time.strftime('%Y-%m-%dT%H:%M:%S%z'),'policy':'모델 입력/QC/metadata/logs 보존; sample BAM/CRAM/FASTA/chain 제거',
-      'remove':[str(p) for p in targets],'model_bytes':model_bytes(root),
+      'remove':[str(p) for p in targets],'model_bytes':inventory['model_bytes'],
+      'timings_seconds':timings,
       'predelete_guard':predelete_guard,
       'resume_note':'정리 후 RNA만 재실행할 수 없다. 원본 다운로드와 WGS부터 별도 실행해야 한다.'}
     if (meta/'sample.json').is_file() and json.loads((meta/'sample.json').read_text()).get('rna_processing_status')=='deferred':
@@ -113,12 +170,16 @@ def cleanup(root, sample, mode, work=None, output_root=None, dry_run=False):
     payload['status']='running'
     _write_json_atomic(progress,payload)
     try:
+        phase=time.monotonic()
         for a,b in snapshots:shutil.copy2(a,b)
         for p in targets:
             if p.is_symlink() or p.is_file():p.unlink()
             elif p.exists():shutil.rmtree(p)
         from .final_check import validate
+        timings['remove_seconds']=time.monotonic()-phase;phase=time.monotonic()
         payload['post_cleanup_validation']=validate(root,sample,mode)
+        timings['post_validation_seconds']=time.monotonic()-phase
+        timings['total_before_external_seconds']=time.monotonic()-started
         payload['status']='complete'
         _write_json_atomic(meta/'cleanup_completed.json',payload)
         progress.unlink()

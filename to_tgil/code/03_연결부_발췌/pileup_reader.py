@@ -19,7 +19,7 @@ if self.pileup:
 # 원본: src/integrate_wgs_rna/window_reader.py:178-197
 if self.pileup:
     g=entry['pileup']
-    features=g['features'][a:b]
+    features=np.ascontiguousarray(g['features'][a:b])
     kind=self._chunks.read(g['mapping_kind'],a,b)
     quality=self._chunks.read(g['baseq_depth'],a,b)
     if features.shape!=(padded,len(self.pileup_channels)) or features.dtype!=np.dtype('float32') or not np.isfinite(features).all():raise ValueError('pileup feature shape/dtype/값 오류')

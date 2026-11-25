@@ -78,23 +78,29 @@ def _contig(root, layout, contig, rows, window_size, alignment, reference, align
                 producer_backend = cache.backend
                 projections = {h: _projection(root, contig, h, cache.length) for h in ('HAP1', 'HAP2')}
                 pending = []
+                destinations = {}
                 for hap in ('HAP1', 'HAP2'):
                     chosen = [r for r in compact_rows if r['haplotype'] == hap]
                     g = group.create_group(hap)
                     offsets = np.arange(len(chosen)+1, dtype=np.int64)*window_size
                     g.create_dataset('offsets', data=offsets, compressor=codec)
                     g.create_dataset('lengths', data=np.full(len(chosen), window_size, dtype=np.int32), compressor=codec)
+                    destinations[hap] = {}
                     for name, dtype in ARRAYS.items():
                         shape = (int(offsets[-1]), len(CHANNELS)) if name == 'features' else (int(offsets[-1]),)
-                        chunks = (16384, len(CHANNELS)) if name == 'features' else (65536,)
-                        g.create_dataset(name, shape=shape, chunks=chunks, dtype=dtype, compressor=codec)
+                        # 같은 채널을 이어 압축하고 window 단위로 읽어 작은 파일과 재해독을 줄임.
+                        block = min(window_size, 1 << 20)
+                        chunks = (block, len(CHANNELS)) if name == 'features' else (block,)
+                        destinations[hap][name] = g.create_dataset(name, shape=shape, chunks=chunks, dtype=dtype,
+                                                                   order='F' if name == 'features' else 'C', compressor=codec,
+                                                                   write_empty_chunks=False)
                     for i, row in enumerate(chosen):
                         pending.append((int(row['raw_start']), hap, i, int(row['actual_length'])))
                 # 양 HAP의 인접 reference block을 재사용함. 전체 염색체 배열은 만들지 않음.
                 for start, hap, index, actual in sorted(pending):
                     values = projected(cache, projections[hap], start, actual, window_size)
                     for name, value in values.items():
-                        group[hap][name][index*window_size:(index+1)*window_size] = value
+                        destinations[hap][name][index*window_size:(index+1)*window_size] = value
                 # 독립 검증의 배열·해독기와 생산 버퍼가 동시에 남지 않도록 반환함.
                 cache.close()
                 projections.clear()
@@ -107,8 +113,9 @@ def _contig(root, layout, contig, rows, window_size, alignment, reference, align
                 hashes[hap] = {}
                 for name in ARRAYS:
                     a = group[hap][name];h = hashlib.sha256()
-                    for start in range(0, a.shape[0], 65536):
-                        h.update(a[start:start+65536].tobytes())
+                    block = a.chunks[0]
+                    for start in range(0, a.shape[0], block):
+                        h.update(np.ascontiguousarray(a[start:start+block]))
                     hashes[hap][name] = h.hexdigest()
             metadata['pileup'] = dict(fingerprint_sha256=fingerprint, provenance=provenance,
                                      reference=contract, content_sha256=hashes)
@@ -190,11 +197,11 @@ def validate_contig(directory, *, source=False, metrics=None):
         values_read = 0
         for start, hap, i, actual, padded in pending:
             a, offsets = views[hap]
-            observed = {name:a[name][offsets[i]:offsets[i+1]] for name in ARRAYS}
+            observed = {name:np.ascontiguousarray(a[name][offsets[i]:offsets[i+1]]) for name in ARRAYS}
             for name, values in observed.items():
                 if name == 'features' and not np.isfinite(values).all():
                     raise ValueError('pileup NaN/inf')
-                hashes[hap][name].update(values.tobytes())
+                hashes[hap][name].update(values)
                 values_read += values.nbytes
             kinds = observed['mapping_kind']
             if np.any((kinds[:actual] != 1) & (kinds[:actual] != 2)) or np.any(kinds[actual:] != 0):

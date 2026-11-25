@@ -370,6 +370,9 @@ case "$STAGE22_ILLUMINA_DUPLICATE_MODE" in
   *) echo "[FATAL] STAGE22_ILLUMINA_DUPLICATE_MODE must be preserve_source|none: $STAGE22_ILLUMINA_DUPLICATE_MODE" >&2; exit 1 ;;
 esac
 WGS_REALIGN_FORMAT=${WGS_REALIGN_FORMAT:-cram}
+MFM_WGS_CRAM_LEVEL=${MFM_WGS_CRAM_LEVEL:-1}
+[[ "$MFM_WGS_CRAM_LEVEL" =~ ^[0-9]$ ]] || { echo '[FATAL] MFM_WGS_CRAM_LEVEL은 0–9 정수여야 함' >&2; exit 1; }
+export MFM_WGS_CRAM_LEVEL
 if [[ "$WGS_REALIGN_FORMAT" != cram ]]; then
   echo "[FATAL] WGS_REALIGN_FORMAT must be cram: Stage 12(legacy Stage70)가 personal target.fa와 CRAM @SQ M5를 검증합니다." >&2
   exit 1

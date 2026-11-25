@@ -36,6 +36,7 @@ if [[ "$STAGE11_BWA_INDEX_MODE" == shared ]]; then
 fi
 
 log "10 personal realignment: sample=$S platform=$PLATFORM memory_profile=$MFM_MEMORY_PROFILE_RESOLVED hap_read_mode=$HAP_READ_MODE illumina_aligner=$STAGE22_ILLUMINA_ALIGNER duplicate_mode=$STAGE22_ILLUMINA_DUPLICATE_MODE bwa_index_mode=$STAGE11_BWA_INDEX_MODE route_jobs=$WGS_ROUTE_JOBS hap_jobs=$WGS_HAP_JOBS align_threads=$WGS_REALIGN_THREADS sort_threads=$WGS_SORT_THREADS sort_mem=$WGS_SORT_MEM source=$BAM"
+log "중간 CRAM 무손실 압축 level=$MFM_WGS_CRAM_LEVEL"
 run_cli create-personal-realigned-alignments \
   --cohort "$COHORT" \
   --output-root "$ROOT" \

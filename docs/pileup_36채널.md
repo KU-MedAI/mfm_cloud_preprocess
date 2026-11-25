@@ -294,8 +294,16 @@ compact/
 - Schema: `mfm_reference_pileup_projected_v2`임.
 - Feature set: `reference_hp_baf_v3_36ch`임.
 - 압축: zstd level 5임. 한 window를 읽으면 `[window의 padded 길이, 36]` 배열을 얻음. Zarr에는 여러 window의 위치를 이어 저장하고 offsets/lengths로 구분함.
+- 새 저장 기본값: `features`는 **F-order(같은 채널을 이어 저장)**, chunk의 위치 축은 `min(window_size, 1,048,576)`임. 표준1M window에서는 `[1,048,576, 36]` 한 chunk임. 보조 배열도 같은 위치 길이의 chunk를 사용함. 기존 C-order·작은 chunk도 계속 읽고 검증함.
+- 모델 반환값: reader는 기존처럼 **C-contiguous float32 배열**을 반환함. 채널·shape·정밀도·계산식·필터는 그대로이며 float16/반올림/채널 삭제를 사용하지 않음.
+- 빈 chunk: 모든 값이 fill value인 chunk는 파일을 만들지 않으며, Zarr가 동일한 fill value를 복원함. 관측/window를 제거하는 필터가 아님. 그 외 chunk도 모두 무손실 압축함.
+- 검증: SHA는 물리 chunk를 한 번씩 읽어 기존 C 순서의 값으로 계산함. 정리 전·후에는 각각 현재 파일을 다시 확인하되, 같은 시점의 링크/mtime/삭제 대상/용량 정보를 한 번의 순회로 수집함. 무결성 검사나 source trace를 생략하지 않음.
 - 실제 채널 순서: `0–12` 공통 기본(forward=3, reverse=4) → `13–21` HP1 → `22–30` HP2 → `31–33` REF/BAF/minor → `34–35` non-ref 두 종류임. 본문의 각 행에 정확한 열 번호를 표시함.
 - 로그 depth 외의 품질 평균·결실 길이는 원래 수치 단위임. 이 저장 단계에서 모든 채널을 같은 0–1 범위로 정규화하지 않음.
+
+저장 전량 대조: HG00097의 기존36채널 결과를 별도 복사본에서 바꾸어 **91.84GB → 43.51GB(52.6% 감소)**를 확인함. 22개 염색체·양 HAP의 모든 pileup 배열에서 값과 내용 SHA가 일치함. 파일은 약160.9만개에서8.9만개로 줄었음. 이 대조는 이전 채널 순서(v2)를 유지한 저장 시험이며, 원본 read부터 다시 실행한 전체 전처리 실측이 아님. 빈 chunk 생략을 적용하기 전의 보수적인 용량임. 원본 완료본은 보존함.
+
+큰 chunk는 현재의1M window 읽기에 맞춘 구성임. 훨씬 짧은 구간만 자주 읽는 사용에서는 한 chunk를 더 많이 해독할 수 있으므로 별도 읽기 비용을 확인해야 함.
 
 ### 보조 배열: 36개 feature 채널과 별개임
 
