@@ -406,7 +406,10 @@ fi
 # pair 계약을 동결하고, Stage 13 진입 시 같은 contract와 새 HAP 자산을 재검증한다.
 RNA=$(sample_rna "$S" 2>/dev/null || true)
 RNA_PREFLIGHT_QC="$(sample_final_root "$S")/$S/qc/rna_preflight.json"
-if [[ -n "$RNA" && "$RNA" != "-" ]]; then
+if sample_rna_deferred "$S"; then
+  record rna_pair_status PASS "WGS_RNA_PAIR_RNA_DEFERRED"
+  record rna_input_contract PASS "DEFERRED"
+elif [[ -n "$RNA" && "$RNA" != "-" ]]; then
   mkdir -p "$(dirname "$RNA_PREFLIGHT_QC")"
   PUBLIC_ID=$(sample_public_vcf_sample_id "$S" 2>/dev/null || true)
   SOURCE_ID=$(sample_source_sample_id "$S" 2>/dev/null || true)

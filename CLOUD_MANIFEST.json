@@ -35,8 +35,8 @@
     },
     {
       "path": "02_preflight.sh",
-      "size_bytes": 23637,
-      "sha256": "365b11e2fb6b8e056938547687e650897229cabc2c4d883cf8b0a84daa3de405"
+      "size_bytes": 23775,
+      "sha256": "8a19a07c28b9dc485ae7ff5dfead053ee5c22ce7c0c9dd034f482ac84dc48f2d"
     },
     {
       "path": "03_prepare_vcf.sh",
@@ -580,8 +580,8 @@
     },
     {
       "path": "docs/고정CPU_재정렬.md",
-      "size_bytes": 5336,
-      "sha256": "2b84335c5a3cce7dc64f576d328d999ef2f637b9bf1dbf22dd5c9e95f35346e6"
+      "size_bytes": 5574,
+      "sha256": "26989e42fe6a0a6196b07939eaee6094c590e7c8ce0903ebdff7f1eca575da1a"
     },
     {
       "path": "docs/단계별_입출력_상세.md",
@@ -4560,8 +4560,8 @@
     },
     {
       "path": "tests/test_stage01_rna_defer.py",
-      "size_bytes": 1874,
-      "sha256": "6b54521e99cfcf2d23936c0c517beb55080982f15f0279667d324efb3ed6d73a"
+      "size_bytes": 5722,
+      "sha256": "441303575aaaf0f9a0ccc79a8f03350e6a08ed4ba22fbf0c32ac618efac8b50d"
     },
     {
       "path": "tests/test_stage04_entrypoint.sh",
