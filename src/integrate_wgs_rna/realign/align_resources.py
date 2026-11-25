@@ -18,6 +18,23 @@ def alignment_cpu_overhead(config):
     return 5 if platform in {'hifi','ont','pacbio_hifi','nanopore'} else 3
 
 
+def _fixed_cpu_ids(env, cpus):
+    """살아 있는 샘플 소유권과 실제 affinity가 같은 경우만 겹침을 허용함."""
+    if (env.get('MFM_CPU_ALLOCATION_MODE') != 'fixed_sample'
+            or not env.get('MFM_FIXED_SAMPLE_TOKEN')):
+        return None
+    from ..sample_cpu import owner, owner_alive
+    try:
+        _, row = owner(env['MFM_CPU_POOL_DIR'], env['MFM_FIXED_SAMPLE_TOKEN'])
+        ids = set(row['cpu_ids'])
+        if (int(row['cpus']) == cpus == len(ids) and owner_alive(row)
+                and os.sched_getaffinity(0) == ids):
+            return sorted(ids)
+    except (KeyError, OSError, ValueError, TypeError, AttributeError):
+        pass
+    return None
+
+
 def _alignment_candidate(config, lengths, available_cpus, available_memory, environment=None, *, sort_cap=None):
     env = os.environ if environment is None else environment
     cpu = max(0, int(available_cpus))
@@ -52,6 +69,10 @@ def _alignment_candidate(config, lengths, available_cpus, available_memory, envi
     if auto_haps and env.get('MFM_HAP_PARALLEL_ALLOWED', '1') == '0':
         max_haps = 1
     if env.get('MFM_WGS_BACKEND','cpu')=='parabricks':max_haps=min(max_haps,max(1,int(env.get('MFM_GPU_HAP_JOBS','2'))))
+    fixed_ids = (_fixed_cpu_ids(env, cpu)
+                 if cpu == 16 and auto_align and auto_sort and auto_haps
+                 and profile == 'mapping_more' and balance == 'auto'
+                 and env.get('MFM_MINIMAP_DECODE_THREADS', 'auto') == 'auto' else None)
     candidates = range(max_haps, 0, -1) if auto_haps else [max_haps]
     for haps in candidates:
         per_hap = cpu // haps
@@ -77,9 +98,14 @@ def _alignment_candidate(config, lengths, available_cpus, available_memory, envi
             threads = fixed_threads
             if fixed_sort is None:
                 auxiliary = min(auxiliary, max(0, per_hap - threads - overhead - decoder))
+        overlap = fixed_ids is not None and haps == 2
+        if overlap:
+            # 두 파이프라인의 유휴 구간을 같은 소유 CPU 집합에서 서로 채움.
+            threads, auxiliary, decoder = 8, min(1, sort_cap) if sort_cap is not None else 1, 1
         if threads < minimum_threads or auxiliary < 0:
             continue
-        cpus = haps * (threads + auxiliary + overhead + decoder)
+        logical = haps * (threads + auxiliary + overhead + decoder)
+        cpus = cpu if overlap else logical
         if cpus > cpu:
             continue
         memory_model = alignment_memory(config, lengths, haps, threads, auxiliary, dict(env,MFM_MINIMAP_DECODE_THREADS_EFFECTIVE=str(decoder)))
@@ -92,7 +118,10 @@ def _alignment_candidate(config, lengths, available_cpus, available_memory, envi
         if memory > available_memory:
             continue
         return {'hap_jobs': haps, 'threads': threads, 'sort_threads': auxiliary,
-                'fastq_threads': 0, 'input_decode_threads':decoder, 'cpu_balance': profile, 'reserved_cpus': cpus, 'reserved_memory_bytes': memory, 'memory_model': memory_model}
+                'fastq_threads': 0, 'input_decode_threads':decoder, 'cpu_balance': profile,
+                'reserved_cpus': cpus, 'reserved_memory_bytes': memory, 'memory_model': memory_model,
+                **({'cpu_execution_policy': 'fixed_affinity_overlap',
+                    'logical_pipeline_cpus': logical, 'cpu_affinity_ids': fixed_ids} if overlap else {})}
     return None
 
 
@@ -119,6 +148,8 @@ def alignment_plan(config, lengths, available_cpus, available_memory, environmen
     if plan is None:
         return None
     reason = 'RAM에 맞춘 sort/정렬 CPU 재배분' if rebalanced else '기존 선호 구성'
+    if plan.get('cpu_execution_policy') == 'fixed_affinity_overlap':
+        reason = '고정 16CPU 집합에서 HAP 파이프라인 겹침'
     if selected < available:
         reason = 'RAM에 맞춘 자동 CPU 축소; ' + reason
     return dict(plan, allocation_diagnostics={

@@ -20,3 +20,8 @@
 ![한 위치의 read를 세기](docs/figures/pileup36_easy/01_read_관측.png)
 
 이전 흐름도·SVG 원본은 `figures/`에 보존함.
+
+## 고정 CPU 활용 개선
+
+- `code/05_CPU배분`: 고정 16CPU에서 HAP 작업을 겹쳐 실행하는 자원 계획과 검사 원문임.
+- [적용 조건·스레드·RAM·검증 범위](docs/고정CPU_재정렬.md)에 정리함. 전체 실행 코드는 Cloud 저장소를 사용함.

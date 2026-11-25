@@ -420,8 +420,8 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 2679,
-      "sha256": "42676418dc381d13deca67aeab1591171db39fef7e050c17937b527e63c8311f"
+      "size_bytes": 2713,
+      "sha256": "d99713f7dd74693d8bedf1122618d9eef3857df262613755f85c9727d90ee460"
     },
     {
       "path": "docs/Docker_실행.md",
@@ -560,8 +560,8 @@
     },
     {
       "path": "docs/pileup_36채널.md",
-      "size_bytes": 46625,
-      "sha256": "ed7fd6abade1254aa14fcaebe10c7d00d295d4f619595dfc52744024298738de"
+      "size_bytes": 46858,
+      "sha256": "a2fbbb323b4ef99091ad160b5c91e40edbc185a48e93faeeabfcd62aa34ad8ac"
     },
     {
       "path": "docs/pileup_필터_비교.md",
@@ -577,6 +577,11 @@
       "path": "docs/검증결과.md",
       "size_bytes": 19063,
       "sha256": "3519bced4933a7b02552f40c082c0decf9b016657b549265ebd63f274bf0387e"
+    },
+    {
+      "path": "docs/고정CPU_재정렬.md",
+      "size_bytes": 5144,
+      "sha256": "d0f770d071705608d374fb3ac0ed712d34bfad3570ff69a2bee194be89e0cac0"
     },
     {
       "path": "docs/단계별_입출력_상세.md",
@@ -3460,8 +3465,8 @@
     },
     {
       "path": "src/integrate_wgs_rna/realign/align_resources.py",
-      "size_bytes": 7132,
-      "sha256": "5763da6e73e44ef0a7cacb04231ab1021b673708789672e23df78cd828a9644d"
+      "size_bytes": 8747,
+      "sha256": "5acad3c43951a201826dbc9bff53348921971c1e0394b36ce1a3057491a152b2"
     },
     {
       "path": "src/integrate_wgs_rna/realign/boundary_upgrade.py",
@@ -3919,6 +3924,11 @@
       "sha256": "f6693511cfde3151dd7a2027cbdd559d8bf567255c30511479f438e467c4528b"
     },
     {
+      "path": "tests/test_fixed_realign_cpu.py",
+      "size_bytes": 6657,
+      "sha256": "8d607d59e67b4f97dc5392109a8a36cabb54333aa5f3de7fa11c25bcd44f67ce"
+    },
+    {
       "path": "tests/test_fixed_sample_cpu.py",
       "size_bytes": 15126,
       "sha256": "29ab5cb0040c3d607611af7d290f6a778ab11a5fd225c9c0317953255e2f8eb2"
@@ -4070,8 +4080,8 @@
     },
     {
       "path": "tests/test_hifi_utilization.py",
-      "size_bytes": 10857,
-      "sha256": "3e7ac8d4a75958e0b1a1c8d7d22c7e15fa80ef82b268684a6382830fa0752166"
+      "size_bytes": 12062,
+      "sha256": "e961cbd84937951e53609a9a0a06924d3c3822a6aba56712642c86ab5fd30112"
     },
     {
       "path": "tests/test_http_integrity.py",

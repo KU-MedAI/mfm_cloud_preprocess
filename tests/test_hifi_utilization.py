@@ -3,6 +3,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 from dataclasses import replace
+from contextlib import nullcontext
 import json,os,random,shutil,tempfile,unittest
 import pysam
 from integrate_wgs_rna.realign.config import PersonalRealignConfig
@@ -14,6 +15,7 @@ from integrate_wgs_rna.personal_realign import run_personal_realign_generation
 from integrate_wgs_rna.memory_policy import GIB
 from handoff.stage_resources import longread_memory_plan,starting_memory
 from handoff.queue_resources import active_ram,full_ram
+from integrate_wgs_rna.sample_cpu import sample_slot
 
 class IndexedCounts(unittest.TestCase):
     def test_BAM_CRAM_배치미배치unmapped_HP이상값을기존과비교(self):
@@ -75,18 +77,29 @@ class ActualHiFi(unittest.TestCase):
             for hap in [1,2]:
                 folder=root/f'inputHAP{hap}';folder.mkdir();f=folder/'chr1.fa';f.write_text('>chr1\n'+sequence+'\n');pysam.faidx(str(f));(folder/'chr1.chain').write_text(f'chain 0 chr1 8000 + 0 8000 chr1 8000 + 0 8000 1\n8000\n');hapdirs[hap]=folder
             outputs=[]
-            for label,phase in [('old','0'),('new','1'),('pair16','1'),('pair32','1')]:
+            for label,phase in [('old','0'),('new','1'),('pair16','1'),('pair32','1'),('fixed16','1')]:
                 cfg=PersonalRealignConfig(cohort='T',output_root=root/label,sample_list=None,samples=['S'],chroms=['chr1'],sequence_variant_policy='snv_indel',dataset_role='pre_training',platform='hifi',realigned_subdir='realigned/all_to_both',alignment=source,hap1_fasta_dir=hapdirs[1],hap2_fasta_dir=hapdirs[2],reference_fasta=ref,hap_read_mode='all_to_both',threads=2,sort_threads=1,sort_mem='32M',hap_jobs=2,include_unmapped=False,inspect_reads=5)
                 env={'PATH':os.environ['PATH'],'MFM_REALIGN_PHASE_RESOURCES':phase,'MFM_CPU_BUDGET':'24','MFM_SAMPLE_CPU_BUDGET':'24','MFM_RAM_LIMIT_BYTES':str(500*GIB),'MFM_REALIGN_INPUT_BACKEND':'indexed','MFM_WGS_ALIGN_REQUESTED':'auto','MFM_WGS_SORT_REQUESTED':'auto','MFM_WGS_HAP_REQUESTED':'auto','OPENBLAS_NUM_THREADS':'1','OMP_NUM_THREADS':'1'}
                 env['PYTHONPATH']=os.environ.get('PYTHONPATH',str(Path(__file__).resolve().parents[1]/'src'))
-                if label in {'pair16','pair32'}:
+                if label in {'pair16','pair32','fixed16'}:
                     cfg.sort_mem='2G'
-                    cpus='16' if label=='pair16' else '32'
+                    cpus='32' if label=='pair32' else '16'
                     env.update(MFM_CPU_BUDGET=cpus, MFM_SAMPLE_CPU_BUDGET=cpus,
                                MFM_WGS_SORT_MEM_REQUESTED='auto')
                 if phase=='1':
-                    pool=root/f'pool_{label}';(pool/'leases').mkdir(parents=True);(pool/'waiters').mkdir();lease=pool/'leases/owner.json';_atomic(lease,{'manager_pid':os.getpid(),'child_pid':None,'cpus':4,'total_cpus':int(env['MFM_CPU_BUDGET']),'memory_bytes':4*GIB});env['MFM_CPU_POOL_LEASE_FILE']=str(lease)
-                with patch.dict(os.environ,env,clear=True):run_personal_realign_generation(cfg)
+                    pool=root/f'pool_{label}';(pool/'leases').mkdir(parents=True);(pool/'waiters').mkdir();lease=pool/'leases/owner.json';env['MFM_CPU_POOL_LEASE_FILE']=str(lease)
+                with patch.dict(os.environ,env,clear=True):
+                    fixed=dict(cpu_allocation_mode='fixed_sample',sample_cpus=16,cpu_pool_limit=16,
+                        memory_limit_bytes=500*GIB,state_root=str(root),run_id=label,
+                        pipeline_env={'MFM_CPU_POOL_DIR':str(root/f'pool_{label}')})
+                    with sample_slot(fixed,'S') if label=='fixed16' else nullcontext({}) as owned:
+                        with patch.dict(os.environ,owned):
+                            if phase=='1':
+                                row={'manager_pid':os.getpid(),'child_pid':None,'cpus':4,
+                                     'total_cpus':int(env['MFM_CPU_BUDGET']),'memory_bytes':4*GIB}
+                                if owned:row['fixed_sample_token']=owned['MFM_FIXED_SAMPLE_TOKEN']
+                                _atomic(lease,row)
+                            run_personal_realign_generation(cfg)
                 result=[]
                 for hap in [1,2]:
                     output=root/label/f'S/realigned/all_to_both/HAP{hap}/S.personal.HAP{hap}.cram';target=output.parent/'target.fa'
@@ -102,11 +115,15 @@ class ActualHiFi(unittest.TestCase):
                         self.assertEqual(set(timing['effective_threads_by_hap']),{'HAP1','HAP2'})
                     self.assertGreater(timing['effective_threads']['input_decode_per_hap'],0)
                     self.assertIn('view -@', (root/label/'S/logs/personal_realign/S.HAP1.realign.sh').read_text())
-                    if label in {'pair16','pair32'}:
+                    if label in {'pair16','pair32','fixed16'}:
                         self.assertEqual(timing['effective_threads']['hap_jobs'], 1 if label=='pair16' else 2)
+                        if label=='fixed16':
+                            plan=next(row for row in timing['resource_phases'] if row['phase']=='align_restore_sort_qc')
+                            self.assertEqual(plan['cpu_execution_policy'],'fixed_affinity_overlap')
+                            self.assertEqual(plan['reserved_cpus'],16)
                         for hap in [1,2]:
                             script=(root/label/f'S/logs/personal_realign/S.HAP{hap}.realign.sh').read_text()
-                            self.assertIn('-t 10', script)
+                            self.assertIn('-t '+('8' if label=='fixed16' else '10'), script)
                             self.assertIn('-m '+str(8*GIB), script)
             for output in outputs[1:]:
                 self.assertEqual(outputs[0],output)
