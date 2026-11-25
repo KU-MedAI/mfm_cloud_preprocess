@@ -3925,8 +3925,8 @@
     },
     {
       "path": "tests/test_fixed_realign_cpu.py",
-      "size_bytes": 6657,
-      "sha256": "8d607d59e67b4f97dc5392109a8a36cabb54333aa5f3de7fa11c25bcd44f67ce"
+      "size_bytes": 6992,
+      "sha256": "27bda8eb097177831354b0bca13dcbba35383c60ea120461567d34733840cafe"
     },
     {
       "path": "tests/test_fixed_sample_cpu.py",

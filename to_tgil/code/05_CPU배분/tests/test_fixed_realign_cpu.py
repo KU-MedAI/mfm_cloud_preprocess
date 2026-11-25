@@ -97,7 +97,11 @@ class FixedRealignCpuTests(unittest.TestCase):
         _atomic(lease,dict(plan,cpus=16,total_cpus=16,memory_bytes=plan['reserved_memory_bytes'],
             fixed_sample_token='A',manager_pid=os.getpid(),realign_phase='align_restore_sort_qc'))
         env=dict(self.env,MFM_CPU_POOL_LEASE_FILE=str(lease))
-        with patch.dict(os.environ,env,clear=True), patch('integrate_wgs_rna.pool_leases.cgroup_cpu_limit',return_value=None):
+        # CPU 장부의 가상 RAM을 작은 CI 호스트의 실제 RAM과 분리함. 도구는 실행하지 않음.
+        with (patch.dict(os.environ,env,clear=True),
+              patch('integrate_wgs_rna.pool_leases.cgroup_cpu_limit',return_value=None),
+              patch('integrate_wgs_rna.realign.phases.RealignPhases.ceiling',return_value=450*GIB),
+              patch('integrate_wgs_rna.realign.hap_resources.available_memory',return_value=450*GIB)):
             phase=RealignPhases();group=HaplotypeResources(phase,self.config,[1,2])
             before=json.loads(lease.read_text());sibling=before['hap_resources']['2'].copy()
             mapper_finished(1,1,lease)
