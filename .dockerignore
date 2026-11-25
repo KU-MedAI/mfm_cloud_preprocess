@@ -39,3 +39,6 @@ tools/gpu
 **/*.fq.gz
 **/*.vcf
 **/*.vcf.gz
+
+# TGIL 변경부 검토 자료는 실행 이미지에서 제외함.
+to_tgil

@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".dockerignore",
-      "size_bytes": 455,
-      "sha256": "cf44d557ecbaca3d91101cff34a5ff1448fe30d400fd85ea2d8bb25a8e61a971"
+      "size_bytes": 532,
+      "sha256": "6952a9c5cd65ea99aae925733c506de829652acd70e6bc6564fe0e283d422c35"
     },
     {
       "path": ".gitattributes",
