@@ -104,11 +104,11 @@
 
 | 채널 | 이름 | 계산 | 8-read 예시 | 해당 수치가 알려주는 것 |
 |---:|---|---|---:|---|
-| 4 | `read_A_ratio` | `A/D` | `4/8 = 0.5` | A 염기 관측의 비율임. A가 REF가 아닌 위치에서도 같은 계산임 |
-| 5 | `read_C_ratio` | `C/D` | `0/8 = 0` | C 염기 관측의 비율임. depth가 있는데 C만 없으면 0임 |
-| 6 | `read_G_ratio` | `G/D` | `2/8 = 0.25` | G 염기 관측의 비율임. VCF ALT가 G인 경우에도 BAF와는 분모가 다를 수 있음 |
-| 7 | `read_T_ratio` | `T/D` | `1/8 = 0.125` | T 염기 관측의 비율임. 예시의 T는 VCF REF·ALT 어느 쪽도 아니지만 이 채널에는 반영됨 |
-| 8 | `read_N_ratio` | `N/D` | `1/8 = 0.125` | **read에서 N으로 관측된 비율**임. HAP DNA sequence의 N 비율과 별개의 값임 |
+| 5 | `read_A_ratio` | `A/D` | `4/8 = 0.5` | A 염기 관측의 비율임. A가 REF가 아닌 위치에서도 같은 계산임 |
+| 6 | `read_C_ratio` | `C/D` | `0/8 = 0` | C 염기 관측의 비율임. depth가 있는데 C만 없으면 0임 |
+| 7 | `read_G_ratio` | `G/D` | `2/8 = 0.25` | G 염기 관측의 비율임. VCF ALT가 G인 경우에도 BAF와는 분모가 다를 수 있음 |
+| 8 | `read_T_ratio` | `T/D` | `1/8 = 0.125` | T 염기 관측의 비율임. 예시의 T는 VCF REF·ALT 어느 쪽도 아니지만 이 채널에는 반영됨 |
+| 9 | `read_N_ratio` | `N/D` | `1/8 = 0.125` | **read에서 N으로 관측된 비율**임. HAP DNA sequence의 N 비율과 별개의 값임 |
 
 각 값은 0–1 범위임. `D>0`이면 다섯 비율의 합은 1임. Deletion이나 soft-clipped 염기는 여섯 번째 염기처럼 이 분모에 추가하지 않음.
 
@@ -149,11 +149,11 @@
 | 채널 | 이름 | 계산 | 예시 | 해석 |
 |---:|---|---|---|---|
 | 13 | `hp1_log1p_depth` | `ln(1+D1)` | 8-read: `ln(5) ≈ 1.6094` | HP1 염기 관측량임. 전체 depth에 대한 HP1 비율은 아님 |
-| 13 | `hp1_read_A_ratio` | `A1/D1` | 8-read: `4/4 = 1` | HP1 관측 안에서 A가 차지하는 비율임 |
-| 14 | `hp1_read_C_ratio` | `C1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 C가 차지하는 비율임 |
-| 15 | `hp1_read_G_ratio` | `G1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 G가 차지하는 비율임 |
-| 16 | `hp1_read_T_ratio` | `T1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 T가 차지하는 비율임 |
-| 17 | `hp1_read_N_ratio` | `N1/D1` | 8-read: `0/4 = 0` | HP1 read의 N 관측 비율임. HAP1 DNA의 N 함량과 다름 |
+| 14 | `hp1_read_A_ratio` | `A1/D1` | 8-read: `4/4 = 1` | HP1 관측 안에서 A가 차지하는 비율임 |
+| 15 | `hp1_read_C_ratio` | `C1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 C가 차지하는 비율임 |
+| 16 | `hp1_read_G_ratio` | `G1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 G가 차지하는 비율임 |
+| 17 | `hp1_read_T_ratio` | `T1/D1` | 8-read: `0/4 = 0` | HP1 관측 안에서 T가 차지하는 비율임 |
+| 18 | `hp1_read_N_ratio` | `N1/D1` | 8-read: `0/4 = 0` | HP1 read의 N 관측 비율임. HAP1 DNA의 N 함량과 다름 |
 | 19 | `hp1_insertion_ratio` | `I1/(D1+S1)` | 3-read anchor: `1/2 = 0.5` | HP1 read의 삽입 사건 지지임. 예시에서 정상·삽입 read를 HP1로 둠 |
 | 20 | `hp1_deletion_after_event_ratio` | `E1/(D1+S1)` | 3-read anchor: `0/2 = 0` | HP1 read에서 anchor 바로 뒤에 시작한 결실 사건 지지임 |
 | 21 | `hp1_deletion_after_max_len` | `Lmax1` | 3-read anchor: `0 bp` | HP1 read에서 시작한 최대 결실 길이임. 예시에는 해당 사건이 없음 |
@@ -165,11 +165,11 @@
 | 채널 | 이름 | 계산 | 예시 | 해석 |
 |---:|---|---|---|---|
 | 22 | `hp2_log1p_depth` | `ln(1+D2)` | 8-read: `ln(3) ≈ 1.0986` | HP2 염기 관측량임. HAP2 서열의 길이나 전체 read 비율이 아님 |
-| 22 | `hp2_read_A_ratio` | `A2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 A가 차지하는 비율임 |
-| 23 | `hp2_read_C_ratio` | `C2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 C가 차지하는 비율임 |
-| 24 | `hp2_read_G_ratio` | `G2/D2` | 8-read: `2/2 = 1` | HP2 관측 안에서 G가 차지하는 비율임 |
-| 25 | `hp2_read_T_ratio` | `T2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 T가 차지하는 비율임 |
-| 26 | `hp2_read_N_ratio` | `N2/D2` | 8-read: `0/2 = 0` | HP2 read의 N 관측 비율임. HAP2 DNA의 N 함량과 다름 |
+| 23 | `hp2_read_A_ratio` | `A2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 A가 차지하는 비율임 |
+| 24 | `hp2_read_C_ratio` | `C2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 C가 차지하는 비율임 |
+| 25 | `hp2_read_G_ratio` | `G2/D2` | 8-read: `2/2 = 1` | HP2 관측 안에서 G가 차지하는 비율임 |
+| 26 | `hp2_read_T_ratio` | `T2/D2` | 8-read: `0/2 = 0` | HP2 관측 안에서 T가 차지하는 비율임 |
+| 27 | `hp2_read_N_ratio` | `N2/D2` | 8-read: `0/2 = 0` | HP2 read의 N 관측 비율임. HAP2 DNA의 N 함량과 다름 |
 | 28 | `hp2_insertion_ratio` | `I2/(D2+S2)` | 3-read anchor: `0/1 = 0` | HP2 read의 삽입 사건 지지임 |
 | 29 | `hp2_deletion_after_event_ratio` | `E2/(D2+S2)` | 3-read anchor: `1/1 = 1` | HP2 read에서 anchor 바로 뒤에 시작한 결실 사건 지지임 |
 | 30 | `hp2_deletion_after_max_len` | `Lmax2` | 3-read anchor: `2 bp` | HP2 read에서 시작한 가장 긴 결실의 길이임 |
