@@ -15,6 +15,7 @@
 - HAP 하나의 정렬이 끝나도 다른 HAP의 CPU/RAM은 반환하지 않음. 기존 HAP별 index·QC·완료 반환을 사용하고, 샘플의 CPU 소유권은 샘플 종료까지 유지함.
 - 동적 CPU 모드, GPU, 다른 CPU 예산과 ONT/Illumina는 기존 계획을 유지함. 정렬·sort·HAP 수·입력 해독 스레드를 명시했거나 `MFM_WGS_CPU_BALANCE`를 명시하면 해당 설정을 우선함.
 - 기본 고정 샘플 설정(`cpu_allocation_mode=fixed_sample`, `sample_cpus=16`)과 자동 스레드 설정이면 추가 인자 없이 적용함. 이미 생성한 정렬 script와 완료 결과는 자동으로 바꾸지 않음.
+- RNA를 보류한 WGS 실행에서는 Stage01의 미사용 RNA 입력 검사를 제외함. RNA를 처리하는 실행과 `full` 모드에서는 기존 전체 해독·quickcheck를 유지함.
 
 ## 구현 위치
 

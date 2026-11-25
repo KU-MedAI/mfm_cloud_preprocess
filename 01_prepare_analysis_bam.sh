@@ -8,7 +8,7 @@ export PYTHONPATH="$PIPELINE_DIR/src:$PIPELINE_DIR${PYTHONPATH:+:$PYTHONPATH}"
 S=${1:?사용법: $0 <sample>}
 # RNA quickcheck는 시간이 긴 WGS 정렬 전에 Stage 01에서 수행한다.
 RNA_INPUT=$(sample_rna "$S" 2>/dev/null || true)
-if [[ -n "$RNA_INPUT" && "$RNA_INPUT" != "-" ]]; then
+if [[ -n "$RNA_INPUT" && "$RNA_INPUT" != "-" ]] && ! sample_rna_deferred "$S"; then
   export PYTHONPATH="$PIPELINE_DIR:${PYTHONPATH:-}"
   "$PYTHON" -m handoff.input_check --rna "$RNA_INPUT" --sample "$S" --samtools "$SAMTOOLS_BIN" \
     --output "$(sample_final_root "$S")/$S/qc/stage01_rna_quickcheck.json"

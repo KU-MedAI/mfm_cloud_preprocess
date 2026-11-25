@@ -30,8 +30,8 @@
     },
     {
       "path": "01_prepare_analysis_bam.sh",
-      "size_bytes": 2898,
-      "sha256": "6b2250648cdac4658e55b468081ce932f93a9bf7dc36fb75e6d879f331603d8d"
+      "size_bytes": 2928,
+      "sha256": "5bb9795db8bd4ad0457c2a478eb27e67fca8b70ad2daf5d42da00e59a31474a7"
     },
     {
       "path": "02_preflight.sh",
@@ -420,8 +420,8 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 2713,
-      "sha256": "d99713f7dd74693d8bedf1122618d9eef3857df262613755f85c9727d90ee460"
+      "size_bytes": 2747,
+      "sha256": "ea2faf30fe84195ee1ab1596b12433d4073a8af6f2b41ba55aae0be610bd0ea4"
     },
     {
       "path": "docs/Docker_실행.md",
@@ -580,8 +580,8 @@
     },
     {
       "path": "docs/고정CPU_재정렬.md",
-      "size_bytes": 5144,
-      "sha256": "d0f770d071705608d374fb3ac0ed712d34bfad3570ff69a2bee194be89e0cac0"
+      "size_bytes": 5336,
+      "sha256": "2b84335c5a3cce7dc64f576d328d999ef2f637b9bf1dbf22dd5c9e95f35346e6"
     },
     {
       "path": "docs/단계별_입출력_상세.md",
@@ -4537,6 +4537,11 @@
       "path": "tests/test_signal_preflight.py",
       "size_bytes": 2171,
       "sha256": "fc1dd5604625dc3c7dacc3b53589683d454ad672ba99ae936b2edcce09c4e556"
+    },
+    {
+      "path": "tests/test_stage01_rna_defer.py",
+      "size_bytes": 1874,
+      "sha256": "6b54521e99cfcf2d23936c0c517beb55080982f15f0279667d324efb3ed6d73a"
     },
     {
       "path": "tests/test_stage04_entrypoint.sh",
