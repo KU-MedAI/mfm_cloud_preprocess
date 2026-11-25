@@ -2,15 +2,21 @@
 
 # 원본: src/integrate_wgs_rna/window_reader.py:50-57
 if self.pileup:
-    from .pileup_features.schema import SCHEMA, CHANNELS, LEGACY_SCHEMA, LEGACY_CHANNELS, FEATURE_SET
+    from .pileup_features.schema import SCHEMA, LEGACY_SCHEMA, LEGACY_CHANNELS, resolve_channels
     self.pileup_schema=manifest.get('schema')
-    expected={SCHEMA:list(CHANNELS),LEGACY_SCHEMA:list(LEGACY_CHANNELS)}.get(self.pileup_schema)
+    self.pileup_feature_set=manifest.get('feature_set','legacy_reference12_v1')
+    expected=(list(resolve_channels(manifest.get('channels'),self.pileup_feature_set))
+              if self.pileup_schema==SCHEMA else list(LEGACY_CHANNELS) if self.pileup_schema==LEGACY_SCHEMA else None)
     if expected is None or manifest.get('channels')!=expected:raise ValueError('pileup manifest schema/채널 불일치')
     self.pileup_channels=expected
-    self.pileup_feature_set=manifest.get('feature_set','legacy_reference12_v1')
-    if self.pileup_schema==SCHEMA and self.pileup_feature_set!=FEATURE_SET:raise ValueError('pileup feature set 불일치')
 
-# 원본: src/integrate_wgs_rna/window_reader.py:176-195
+# 원본: src/integrate_wgs_rna/window_reader.py:92-95
+if self.pileup:
+    if depth.attrs.get('schema')!=self.pileup_schema or depth.attrs.get('channels')!=self.pileup_channels:raise ValueError('pileup schema/채널 불일치')
+    from .pileup_features.schema import SCHEMA
+    if self.pileup_schema==SCHEMA and depth.attrs.get('feature_set')!=self.pileup_feature_set:raise ValueError('pileup feature set 불일치')
+
+# 원본: src/integrate_wgs_rna/window_reader.py:178-197
 if self.pileup:
     g=entry['pileup']
     features=g['features'][a:b]

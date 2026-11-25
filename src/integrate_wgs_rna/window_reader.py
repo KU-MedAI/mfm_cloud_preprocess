@@ -48,13 +48,13 @@ class WindowReader:
         self.sequence_only=manifest.get('wgs_payload')=='sequence_only'
         self.pileup=manifest.get('wgs_payload')=='pileup_feature'
         if self.pileup:
-            from .pileup_features.schema import SCHEMA, CHANNELS, LEGACY_SCHEMA, LEGACY_CHANNELS, FEATURE_SET
+            from .pileup_features.schema import SCHEMA, LEGACY_SCHEMA, LEGACY_CHANNELS, resolve_channels
             self.pileup_schema=manifest.get('schema')
-            expected={SCHEMA:list(CHANNELS),LEGACY_SCHEMA:list(LEGACY_CHANNELS)}.get(self.pileup_schema)
+            self.pileup_feature_set=manifest.get('feature_set','legacy_reference12_v1')
+            expected=(list(resolve_channels(manifest.get('channels'),self.pileup_feature_set))
+                      if self.pileup_schema==SCHEMA else list(LEGACY_CHANNELS) if self.pileup_schema==LEGACY_SCHEMA else None)
             if expected is None or manifest.get('channels')!=expected:raise ValueError('pileup manifest schema/채널 불일치')
             self.pileup_channels=expected
-            self.pileup_feature_set=manifest.get('feature_set','legacy_reference12_v1')
-            if self.pileup_schema==SCHEMA and self.pileup_feature_set!=FEATURE_SET:raise ValueError('pileup feature set 불일치')
         if manifest.get('wgs_payload','full') not in {'full','sequence_only','pileup_feature'}:raise ValueError('지원하지 않는 WGS payload')
         labels=[p for p in (self.root/'rna_personal').glob('*') if p.is_dir()]
         if len(labels)>1:raise ValueError('RNA label 개수 오류')
@@ -91,6 +91,8 @@ class WindowReader:
         depth=None if self.sequence_only else zarr.open_group(str(d/('pileup.zarr' if self.pileup else 'depth.zarr')),mode='r')
         if self.pileup:
             if depth.attrs.get('schema')!=self.pileup_schema or depth.attrs.get('channels')!=self.pileup_channels:raise ValueError('pileup schema/채널 불일치')
+            from .pileup_features.schema import SCHEMA
+            if self.pileup_schema==SCHEMA and depth.attrs.get('feature_set')!=self.pileup_feature_set:raise ValueError('pileup feature set 불일치')
         if sequence.attrs.get('sample')!=self.root.name:raise ValueError('DNA sample 불일치')
         estimated=sum(sequence[h]['lengths'].shape[0]*128+8192 for h in ('HAP1','HAP2'))
         self._reserve(estimated)

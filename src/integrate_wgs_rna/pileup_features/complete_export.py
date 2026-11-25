@@ -16,7 +16,7 @@ import zarr
 from numcodecs import Blosc, blosc
 from pre_training.preprocess_raw_readset.config import ExportConfig
 from . import MODE
-from .schema import LAYOUT, CHANNELS, SCHEMA, ARRAYS, POLICY, FEATURE_SET, INSERTION_CHANNELS
+from .schema import LAYOUT, CHANNELS, SCHEMA, ARRAYS, POLICY, FEATURE_SET, resolve_channels
 from .complete_compute import ReferenceCache, projected
 from .projection import Projection
 from .. import sequence_only
@@ -134,12 +134,19 @@ def validate_contig(directory, *, source=False, metrics=None):
     metadata = json.loads((directory/'contig_metadata.json').read_text())
     sequence = sequence_only.validate_contig(directory, source=source, payload=MODE)
     group = zarr.open_group(str(directory/'pileup.zarr'), mode='r')
-    if (group.attrs.get('schema') != SCHEMA or group.attrs.get('feature_set') != FEATURE_SET or group.attrs.get('sample') != metadata['sample_id']
-            or group.attrs.get('contig') != metadata['contig'] or group.attrs.get('channels') != list(CHANNELS)
-            or group.attrs.get('policy') != POLICY or group.attrs.get('fingerprint_sha256') != metadata['pileup']['fingerprint_sha256']):
+    feature_set = group.attrs.get('feature_set')
+    channels = resolve_channels(group.attrs.get('channels'), feature_set)
+    policy = dict(POLICY, feature_set=feature_set)
+    insertion_channels = [i for i, name in enumerate(channels) if name.endswith('insertion_ratio')]
+    source_order = [CHANNELS.index(name) for name in channels]
+    if (group.attrs.get('schema') != SCHEMA or group.attrs.get('sample') != metadata['sample_id']
+            or group.attrs.get('contig') != metadata['contig']
+            or group.attrs.get('policy') != policy or group.attrs.get('fingerprint_sha256') != metadata['pileup']['fingerprint_sha256']):
         raise ValueError('pileup schema/채널/정책/지문 불일치')
     source_config = metadata['pileup']['provenance']
-    if source_config.get('schema')!=SCHEMA or source_config.get('channels')!=list(CHANNELS) or source_config.get('producer')!=FEATURE_SET or digest(source_config)!=metadata['pileup']['fingerprint_sha256']:
+    if (source_config.get('schema')!=SCHEMA or source_config.get('channels')!=list(channels)
+            or source_config.get('producer')!=feature_set or source_config.get('policy')!=policy
+            or digest(source_config)!=metadata['pileup']['fingerprint_sha256']):
         raise ValueError('pileup provenance 계약/지문 불일치')
     bam = cache = None
     try:
@@ -198,10 +205,12 @@ def validate_contig(directory, *, source=False, metrics=None):
             for name in [key for key in ARRAYS if key not in {'features','mapping_kind','reference_base_code'}]:
                 if np.any(observed[name][missing] != 0):
                     raise ValueError('삽입/padding에 가짜 per-base 관측이 있음')
-            if np.any(observed['features'][missing][:, [k for k in range(len(CHANNELS)) if k not in INSERTION_CHANNELS]] != 0) or np.any(observed['features'][actual:] != 0):
+            if np.any(observed['features'][missing][:, [k for k in range(len(channels)) if k not in insertion_channels]] != 0) or np.any(observed['features'][actual:] != 0):
                 raise ValueError('비대응 feature 정책 위반')
             if source:
                 expected = projected(cache, projections[hap], start, actual, padded)
+                if channels != CHANNELS:
+                    expected['features'] = expected['features'][:, source_order]
                 for name in ARRAYS:
                     if not np.array_equal(observed[name], expected[name]):
                         raise ValueError('독립 reference source 대조 실패: '+name)
@@ -239,6 +248,11 @@ def export(root, alignment, reference, alignment_reference, *, contigs, read_typ
     layout = root/'compact'/LAYOUT
     if any(p.name != LAYOUT for p in (root/'compact').glob('*') if p.is_dir()):
         raise ValueError('다른 payload와 같은 출력 root를 사용하면 안 됨')
+    if (layout/'manifest.json').is_file():
+        previous = json.loads((layout/'manifest.json').read_text())
+        if (previous.get('schema') != SCHEMA or
+                resolve_channels(previous.get('channels'), previous.get('feature_set')) != CHANNELS):
+            raise ValueError('기존 pileup 채널 순서와 새 출력 계약이 다름; 별도 output/state가 필요함')
     layout.mkdir(parents=True, exist_ok=True)
     manifest = dict(schema=SCHEMA, sample=root.name, wgs_payload=MODE, status='running',
                     validation_level='full', channels=CHANNELS, feature_policy=POLICY, feature_set=FEATURE_SET, records={})

@@ -14,11 +14,22 @@ HAPLOTYPE_CHANNELS = (
 )
 ALLELE_CHANNELS = ('vcf_ref_allele_fraction', 'baf', 'minor_allele_fraction')
 EXTRA_CHANNELS = ('read_supports_variant_ratio', 'base_diff_from_ref_ratio', 'strand_reverse_ratio')
-CHANNELS = (LEGACY_CHANNELS + tuple('hp1_'+name for name in HAPLOTYPE_CHANNELS)
-            + tuple('hp2_'+name for name in HAPLOTYPE_CHANNELS) + ALLELE_CHANNELS + EXTRA_CHANNELS)
+PREVIOUS_CHANNELS = (LEGACY_CHANNELS + tuple('hp1_'+name for name in HAPLOTYPE_CHANNELS)
+                     + tuple('hp2_'+name for name in HAPLOTYPE_CHANNELS) + ALLELE_CHANNELS + EXTRA_CHANNELS)
+# 기존 36채널 결과는 기록된 순서로 읽고, 새 출력만 forward/reverse를 이웃하게 둠.
+CHANNELS = PREVIOUS_CHANNELS[:4] + ('strand_reverse_ratio',) + PREVIOUS_CHANNELS[4:-1]
 SCHEMA = 'mfm_reference_pileup_projected_v2'
 LAYOUT = 'hap_sequence_reference_pileup_v2'
-FEATURE_SET = 'reference_hp_baf_v2_36ch'
+PREVIOUS_FEATURE_SET = 'reference_hp_baf_v2_36ch'
+FEATURE_SET = 'reference_hp_baf_v3_36ch'
+
+
+def resolve_channels(channels, feature_set):
+    """같은 36열이라도 저장 순서와 feature_set의 쌍이 일치해야 함."""
+    expected = {FEATURE_SET: CHANNELS, PREVIOUS_FEATURE_SET: PREVIOUS_CHANNELS}.get(feature_set)
+    if expected is None or not isinstance(channels, (list, tuple)) or tuple(channels) != expected:
+        raise ValueError('pileup feature set/채널 순서 불일치')
+    return expected
 
 COUNT_FIELDS = (
     'A', 'C', 'G', 'T', 'N', 'baseq_n', 'forward', 'deletion', 'insertion',

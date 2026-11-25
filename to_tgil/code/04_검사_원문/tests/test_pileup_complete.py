@@ -77,10 +77,27 @@ class CompletePileupTest(unittest.TestCase):
             finally:
                 cache.close()
 
-    def test_schema_preserves_old_30_then_six_unique_common_channels(self):
+    def test_schema_places_reverse_after_forward_and_validates_both_orders(self):
+        from integrate_wgs_rna.pileup_features.schema import FEATURE_SET, PREVIOUS_FEATURE_SET, PREVIOUS_CHANNELS, resolve_channels
+        expected = ('log1p_depth','mean_mapq','mean_baseq','strand_forward_ratio','strand_reverse_ratio',
+                    'read_A_ratio','read_C_ratio','read_G_ratio','read_T_ratio','read_N_ratio',
+                    'insertion_ratio','deletion_after_event_ratio','deletion_after_max_len',
+                    'hp1_log1p_depth','hp1_read_A_ratio','hp1_read_C_ratio','hp1_read_G_ratio','hp1_read_T_ratio',
+                    'hp1_read_N_ratio','hp1_insertion_ratio','hp1_deletion_after_event_ratio','hp1_deletion_after_max_len',
+                    'hp2_log1p_depth','hp2_read_A_ratio','hp2_read_C_ratio','hp2_read_G_ratio','hp2_read_T_ratio',
+                    'hp2_read_N_ratio','hp2_insertion_ratio','hp2_deletion_after_event_ratio','hp2_deletion_after_max_len',
+                    'vcf_ref_allele_fraction','baf','minor_allele_fraction',
+                    'read_supports_variant_ratio','base_diff_from_ref_ratio')
+        self.assertEqual(CHANNELS,expected)
         self.assertEqual(len(CHANNELS),36)
         self.assertEqual(len(set(CHANNELS)),36)
-        self.assertEqual(CHANNELS[:12],LEGACY_CHANNELS)
+        self.assertEqual(tuple(name for name in CHANNELS if name in LEGACY_CHANNELS),LEGACY_CHANNELS)
+        self.assertEqual(PREVIOUS_CHANNELS[:12],LEGACY_CHANNELS)
+        self.assertEqual(PREVIOUS_CHANNELS[35],'strand_reverse_ratio')
+        for channels, feature_set in [(CHANNELS,FEATURE_SET),(PREVIOUS_CHANNELS,PREVIOUS_FEATURE_SET)]:
+            self.assertEqual(resolve_channels(list(channels),feature_set),channels)
+        for channels, feature_set in [(CHANNELS,PREVIOUS_FEATURE_SET),(PREVIOUS_CHANNELS,FEATURE_SET),(CHANNELS,'unknown')]:
+            with self.assertRaisesRegex(ValueError,'채널 순서'):resolve_channels(list(channels),feature_set)
         self.assertEqual(CHANNELS.count('strand_forward_ratio'),1)
         self.assertIn('strand_reverse_ratio',CHANNELS)
         self.assertNotIn('hp1_mean_baseq',CHANNELS)
@@ -146,7 +163,7 @@ class CompletePileupTest(unittest.TestCase):
             old = legacy.ReferenceCache(bam,'chr1',filter_config('long_read',30))
             try:expected = old.gather(np.arange(64))
             finally:old.close()
-        np.testing.assert_array_equal(values['features'][:,:12],expected['features'])
+        np.testing.assert_array_equal(values['features'][:,[CI[name] for name in LEGACY_CHANNELS]],expected['features'])
         for key in ('depth','baseq_depth','supplementary_depth','max_deletion_length'):
             np.testing.assert_array_equal(values[key],expected[key])
         self.assertEqual(int(values['baf_valid'][20]),0)
@@ -231,6 +248,7 @@ class CompletePackageTest(unittest.TestCase):
             value=reader.load('chr1','HAP2',0)
             self.assertEqual(value['pileup_features'].shape,(16,36))
             self.assertEqual(tuple(value['pileup_channels']),CHANNELS)
+            self.assertEqual(value['pileup_channels'][4],'strand_reverse_ratio')
         finally:reader.close()
         cleanup(self.root,'S1','wgs',output_root=self.base)
         self.assertFalse((self.root/'individual_fasta').exists())
@@ -238,6 +256,56 @@ class CompletePackageTest(unittest.TestCase):
         reader=WindowReader(self.root)
         try:self.assertEqual(reader.load('chr1','HAP1',0)['pileup_features'].shape[1],36)
         finally:reader.close()
+
+    def test_previous_36_order_reads_and_validates_without_relabel_or_overwrite(self):
+        import json,time,zarr
+        from integrate_wgs_rna.pileup_features.schema import PREVIOUS_CHANNELS, PREVIOUS_FEATURE_SET, POLICY
+        from integrate_wgs_rna.pileup_features.export import validate_contig
+        from integrate_wgs_rna.pipeline.checkpoints import digest
+        from integrate_wgs_rna.window_reader import WindowReader
+        from handoff.sequence_mode import payload_matches
+        self.run_export()
+        group=zarr.open_group(str(self.directory/'pileup.zarr'),mode='a')
+        order=[CI[name] for name in PREVIOUS_CHANNELS]
+        original=group['HAP2/features'][:16].copy()
+        # 이전 발행본의 열·정책·지문을 가진 작은 패키지를 재현함.
+        path=self.directory/'contig_metadata.json';metadata=json.loads(path.read_text())
+        policy=dict(POLICY,feature_set=PREVIOUS_FEATURE_SET)
+        provenance=metadata['pileup']['provenance']
+        provenance.update(channels=list(PREVIOUS_CHANNELS),producer=PREVIOUS_FEATURE_SET,policy=policy)
+        fingerprint=digest(provenance)
+        metadata['pileup']['fingerprint_sha256']=fingerprint
+        for hap in ('HAP1','HAP2'):
+            array=group[hap]['features'];array[:]=array[:][:,order]
+            metadata['pileup']['content_sha256'][hap]['features']=hashlib.sha256(array[:].tobytes()).hexdigest()
+        path.write_text(json.dumps(metadata))
+        group.attrs.update(channels=list(PREVIOUS_CHANNELS),feature_set=PREVIOUS_FEATURE_SET,policy=policy,fingerprint_sha256=fingerprint)
+        manifest=self.directory.parent/'manifest.json'
+        for path in (manifest,self.root/'metadata/preprocess.json'):
+            data=json.loads(path.read_text());data.update(channels=list(PREVIOUS_CHANNELS),feature_set=PREVIOUS_FEATURE_SET,feature_policy=policy)
+            path.write_text(json.dumps(data))
+        path=self.root/'metadata/sample.json';data=json.loads(path.read_text())
+        data.update(pileup_feature_set=PREVIOUS_FEATURE_SET,pileup_feature_channels=list(PREVIOUS_CHANNELS));path.write_text(json.dumps(data))
+        metrics={}
+        validate_contig(self.directory,source=True,metrics=metrics)
+        path=self.root/'qc/stage12_trace/pileup_feature/trace_manifest.json'
+        trace=json.loads(path.read_text());trace.update(source_validation={'chr1':metrics},completed_at=time.time())
+        path.write_text(json.dumps(trace))
+        from test_pileup_feature import PileupPackageTest
+        PileupPackageTest._finalize(self)
+        report=json.loads((self.root/'qc/final_package_validation.json').read_text())
+        self.assertEqual(report['pileup_feature_set'],PREVIOUS_FEATURE_SET)
+        reader=WindowReader(self.root)
+        try:
+            value=reader.load('chr1','HAP2',0)
+            self.assertEqual(tuple(value['pileup_channels']),PREVIOUS_CHANNELS)
+            np.testing.assert_array_equal(value['pileup_features'],original[:,order])
+        finally:reader.close()
+        row=dict(sample_id='S1',read_type='short_read',rna_path='')
+        self.assertFalse(payload_matches({},row,self.root))
+        before=manifest.read_bytes()
+        with self.assertRaisesRegex(ValueError,'채널 순서'):self.run_export()
+        self.assertEqual(manifest.read_bytes(),before)
 
     def test_vcf_change_and_unknown_schema_fail_closed(self):
         import json
