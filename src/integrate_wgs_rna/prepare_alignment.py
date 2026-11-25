@@ -491,7 +491,8 @@ def _tag_record_stats_python(path: Path, reference: Path | None = None) -> dict[
     return counts
 
 
-def tag_record_stats(path: Path, reference: Path | None = None, *, samtools: str | None = None) -> dict[str, int]:
+def tag_record_stats(path: Path, reference: Path | None = None, *, samtools: str | None = None,
+                     details: dict | None = None) -> dict[str, int]:
     from integrate_wgs_rna.prepare_phases import mark_read_only_prepare
     mark_read_only_prepare()
     backend = os.environ.get("MFM_RECORD_STATS_BACKEND", "auto")
@@ -500,7 +501,7 @@ def tag_record_stats(path: Path, reference: Path | None = None, *, samtools: str
     if backend == "python" or (backend == "auto" and path.stat().st_size < 64 * 1024**2):
         return _tag_record_stats_python(path, reference)
     from integrate_wgs_rna.alignment_record_stats import native_record_stats
-    return native_record_stats(path, reference, samtools=samtools)
+    return native_record_stats(path, reference, samtools=samtools, details=details)
 
 
 def illumina_duplicate_provenance(row: dict[str, str], fallback_reference: Path | None) -> dict[str, Any]:
@@ -595,7 +596,8 @@ def transcode_aligned_source(row: dict[str, str], output: Path, *, samtools: str
     if fmt == "cram":
         reference = require_reference(reference, "CRAM source decode reference")
     run_checked([samtools, "quickcheck", str(source)], stdout=subprocess.DEVNULL, stderr=log)
-    before = tag_record_stats(source, reference, samtools=samtools)
+    details = {}
+    before = tag_record_stats(source, reference, samtools=samtools, details=details)
     from integrate_wgs_rna.prepare_phases import reserve_prepare_write
     reserve_prepare_write()
     from integrate_wgs_rna.cpu_executor import WorkerBudget
@@ -615,6 +617,22 @@ def transcode_aligned_source(row: dict[str, str], output: Path, *, samtools: str
         time.sleep(.2)
         admitted = budget.capacity(total)
     io_cpu = 3 if gpu_io else 0
+    if (not gpu_io and details.get('coordinate_sorted') is True
+            and details.get('header_coordinate') is True):
+        from integrate_wgs_rna.alignment_record_stats import fingerprint
+        if fingerprint(source) != details['input_fingerprint']:
+            raise PrepareAlignmentError('정렬 순서 확인 뒤 입력이 변경됨')
+        from integrate_wgs_rna.prepare_memory import reserve_transcode
+        reserve_transcode(admitted, 0, sort_memory)
+        command = [samtools, 'view', '-@', str(max(0, admitted-2)), '-O', 'bam,level=1']
+        if fmt == 'cram':command += ['-T', str(reference)]
+        print('[ALIGNED-TRANSCODE-PLAN] '+json.dumps(dict(cpus=admitted,
+              coordinate_order_verified=True, sort_skipped=True, io_backend='cpu')), flush=True)
+        run_checked([*command, '-o', str(output), str(source)],
+                    stdout=subprocess.DEVNULL, stderr=log)
+        if fingerprint(source) != details['input_fingerprint']:
+            raise PrepareAlignmentError('빠른 변환 중 입력이 변경됨')
+        return before
     sort_threads = min(sort_threads, max(0, (admitted - 2 - io_cpu) // 2))
     view_threads = max(0, admitted - sort_threads - 2 - io_cpu)
     view_command = [samtools, "view", "-@", str(view_threads), "-u"]

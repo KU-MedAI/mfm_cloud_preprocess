@@ -27,6 +27,8 @@ REQUIRED = {
     'src/integrate_wgs_rna/native/pileup_complete.hpp',
     'src/integrate_wgs_rna/native/pileup_counts_complete.cpp',
     'src/integrate_wgs_rna/native/pileup_oracle_complete.cpp',
+    'src/integrate_wgs_rna/native/alignment_scan.cpp',
+    'tools/file_inventory.py',
 }
 
 

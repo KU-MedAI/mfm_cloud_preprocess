@@ -223,6 +223,22 @@ class CompletePackageTest(unittest.TestCase):
             return export(self.root,self.bam,self.ref,self.ref,contigs=['chr1'],read_type='short_read',
                           variants=self.vcf,variant_sample='S1',jobs=1)
 
+    def test_write_stream_hash_matches_stored_arrays_and_detects_corruption(self):
+        import json,zarr
+        from integrate_wgs_rna.pileup_features.schema import ARRAYS
+        from integrate_wgs_rna.pileup_features.export import validate_contig
+        self.run_export()
+        metadata=json.loads((self.directory/'contig_metadata.json').read_text())['pileup']
+        self.assertEqual(metadata['content_hash_method'],'write_stream')
+        group=zarr.open_group(str(self.directory/'pileup.zarr'),mode='a')
+        for hap in ('HAP1','HAP2'):
+            for name in ARRAYS:
+                expected=hashlib.sha256(np.ascontiguousarray(group[hap][name][:])).hexdigest()
+                self.assertEqual(metadata['content_sha256'][hap][name],expected,(hap,name))
+        array=group['HAP1/features'];value=array[0:1].copy();value[0,0]+=1
+        array[0:1]=value
+        with self.assertRaises(ValueError):validate_contig(self.directory,source=True)
+
     def test_export_reader_resume_and_cleanup_preserve_36_channel_contract(self):
         import json,zarr
         from integrate_wgs_rna.pileup_features.export import validate_contig

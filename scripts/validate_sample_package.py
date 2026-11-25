@@ -18,6 +18,7 @@ sys.path.insert(0, str(PIPELINE_ROOT / "src"))
 from integrate_wgs_rna.window_contract import read_windows
 from integrate_wgs_rna.validation_parallel import hash_workers, sequence_checks, depth_checks, uint32_stats as zarr_uint32_stats
 from tools.compact_manifest import completed_contigs
+from tools.file_inventory import file_stats
 from tools.personal_assets import MANIFEST as PERSONAL_ASSET_MANIFEST
 from tools.personal_assets import SCHEMA as PERSONAL_ASSET_SCHEMA
 from tools.personal_assets import build as build_personal_assets
@@ -260,6 +261,7 @@ def validate_trace(a: argparse.Namespace, audit: Audit, contigs: set[str], layou
         audit.check("source_trace", False, str(path))
         return
     try:
+        trace_stat = path.stat()
         data = read_json(path)
         got = {key for key, value in data.get("contigs", {}).items() if value == "pass"}
         root_matches = Path(data.get("compact_root", "/")).resolve() == layout.resolve()
@@ -268,8 +270,13 @@ def validate_trace(a: argparse.Namespace, audit: Audit, contigs: set[str], layou
             data.get("status") == "pass" and got == contigs and root_matches,
             f"status={data.get('status')} contigs={len(got)} root_matches={root_matches}",
         )
-        newer = next((p for p in layout.rglob("*") if p.is_file() and p.stat().st_mtime_ns > path.stat().st_mtime_ns), None)
+        newer = next((p for p, info in file_stats(layout) if info.st_mtime_ns > trace_stat.st_mtime_ns), None)
         audit.check("source_trace_fresh", newer is None, str(newer or ""))
+        after = path.stat()
+        audit.check("source_trace_unchanged",
+                    (trace_stat.st_dev,trace_stat.st_ino,trace_stat.st_size,trace_stat.st_mtime_ns,trace_stat.st_ctime_ns)
+                    == (after.st_dev,after.st_ino,after.st_size,after.st_mtime_ns,after.st_ctime_ns),
+                    "검사 도중 source trace 변경 확인")
     except Exception as exc:
         audit.check("source_trace", False, str(exc))
 

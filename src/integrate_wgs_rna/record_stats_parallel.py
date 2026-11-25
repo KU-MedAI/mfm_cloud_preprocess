@@ -42,7 +42,7 @@ def scan_plan(cpus):
 
 
 def native_tool(name="record_stats"):
-    if name not in {"gpu_fastq","record_stats","restore_tags","trace_hash","rna_depth","rna_fastq","rna_ase_partition","rna_primary","rna_variant_support","rna_cnv_sum","rna_ase_read","pileup_oracle","pileup_counts","pileup_counts_complete","pileup_oracle_complete"}:raise ValueError("미지원 native 도구")
+    if name not in {"gpu_fastq","record_stats","alignment_scan","restore_tags","trace_hash","rna_depth","rna_fastq","rna_ase_partition","rna_primary","rna_variant_support","rna_cnv_sum","rna_ase_read","pileup_oracle","pileup_counts","pileup_counts_complete","pileup_oracle_complete"}:raise ValueError("미지원 native 도구")
     compiler = shutil.which(os.environ.get('CXX','c++')) or shutil.which('g++') or shutil.which('x86_64-conda-linux-gnu-c++')
     include, library = Path(sys.prefix) / 'include', Path(sys.prefix) / 'lib'
     header, shared = include / 'htslib/bgzf.h', library / 'libhts.so'

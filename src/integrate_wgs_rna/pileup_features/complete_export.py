@@ -97,10 +97,22 @@ def _contig(root, layout, contig, rows, window_size, alignment, reference, align
                     for i, row in enumerate(chosen):
                         pending.append((int(row['raw_start']), hap, i, int(row['actual_length'])))
                 # 양 HAP의 인접 reference block을 재사용함. 전체 염색체 배열은 만들지 않음.
-                for start, hap, index, actual in sorted(pending):
+                ordered = sorted(pending)
+                sequential = all(
+                    [index for _, side, index, _ in ordered if side == hap]
+                    == list(range(destinations[hap]['depth'].shape[0] // window_size))
+                    for hap in ('HAP1', 'HAP2'))
+                # 기록 순서가 배열 순서일 때 생산 버퍼로 SHA를 누적함.
+                # 뒤의 독립 source 검증은 실제 저장 배열을 계속 전수 읽음.
+                streamed = {hap: {name: hashlib.sha256() for name in ARRAYS}
+                            for hap in ('HAP1', 'HAP2')} if sequential else None
+                for start, hap, index, actual in ordered:
                     values = projected(cache, projections[hap], start, actual, window_size)
                     for name, value in values.items():
-                        destinations[hap][name][index*window_size:(index+1)*window_size] = value
+                        array = destinations[hap][name]
+                        array[index*window_size:(index+1)*window_size] = value
+                        if streamed is not None:
+                            streamed[hap][name].update(np.ascontiguousarray(value, dtype=array.dtype))
                 # 독립 검증의 배열·해독기와 생산 버퍼가 동시에 남지 않도록 반환함.
                 cache.close()
                 projections.clear()
@@ -108,17 +120,23 @@ def _contig(root, layout, contig, rows, window_size, alignment, reference, align
                     del values, value
             if identities != _inputs(root, contig, alignment, reference, alignment_reference, config, variants):
                 raise ValueError('pileup 계산 중 입력이 변경됨')
-            hashes = {}
-            for hap in ('HAP1', 'HAP2'):
-                hashes[hap] = {}
-                for name in ARRAYS:
-                    a = group[hap][name];h = hashlib.sha256()
-                    block = a.chunks[0]
-                    for start in range(0, a.shape[0], block):
-                        h.update(np.ascontiguousarray(a[start:start+block]))
-                    hashes[hap][name] = h.hexdigest()
+            if streamed is not None:
+                hashes = {hap: {name: state.hexdigest() for name, state in states.items()}
+                          for hap, states in streamed.items()}
+            else:
+                # 기존의 비순차 window도 같은 저장 배열 순서 SHA를 유지함.
+                hashes = {}
+                for hap in ('HAP1', 'HAP2'):
+                    hashes[hap] = {}
+                    for name in ARRAYS:
+                        a = group[hap][name];h = hashlib.sha256()
+                        block = a.chunks[0]
+                        for start in range(0, a.shape[0], block):
+                            h.update(np.ascontiguousarray(a[start:start+block]))
+                        hashes[hap][name] = h.hexdigest()
             metadata['pileup'] = dict(fingerprint_sha256=fingerprint, provenance=provenance,
-                                     reference=contract, content_sha256=hashes)
+                                     reference=contract, content_sha256=hashes,
+                                     content_hash_method='write_stream' if streamed is not None else 'stored_array')
             atomic_json(directory/'contig_metadata.json', metadata)
             os.rename(temporary, directory/'pileup.zarr')
         except BaseException:

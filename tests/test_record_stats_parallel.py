@@ -71,6 +71,32 @@ class RecordStatsTests(unittest.TestCase):
             plan = scan_plan(4); plan['batch_bytes'] = 97
             self.assertEqual(run_scan(path, 4, tool=self.tool, plan=plan)['counts'], expected)
 
+    def test_htslib_single_pass_cram_counts_and_real_coordinate_order(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root=Path(raw);path,expected=self.fixture(root)
+            reference=root/'ref.fa';reference.write_text('>chr1\n'+'ACGT'*250000+'\n')
+            pysam.faidx(str(reference))
+            sorted_bam=root/'sorted.bam';pysam.sort('-o',str(sorted_bam),str(path))
+            # BAM의 비표준 double aux는 별도 검사하고 CRAM에는 표준 태그만 기록함.
+            cram_input=root/'cram_input.bam'
+            with pysam.AlignmentFile(sorted_bam,'rb') as src, pysam.AlignmentFile(cram_input,'wb',header=src.header) as dst:
+                for read in src:
+                    read.set_tag('XD',None);dst.write(read)
+            cram=root/'sorted.cram'
+            pysam.view('-C','-T',str(reference),'-o',str(cram),str(cram_input),catch_stdout=False)
+            with patch.dict(os.environ,{'MFM_CPU_BUDGET':'8','MFM_CPU_POOL_GRANTED':'8'}):
+                for source in (sorted_bam,cram):
+                    detail={}
+                    self.assertEqual(stats.native_record_stats(source,reference,details=detail),expected)
+                    self.assertTrue(detail['coordinate_sorted'])
+                    self.assertTrue(detail['header_coordinate'])
+                    self.assertLessEqual(detail['native_threads'],8)
+                    self.assertEqual(detail['passes'],1)
+                self.assertEqual(stats._legacy_record_stats(cram,reference),expected)
+                detail={};self.assertEqual(stats.native_record_stats(path,details=detail),expected)
+                self.assertFalse(detail['coordinate_sorted'])
+                self.assertFalse(detail['header_coordinate'])
+
     def test_잘린BGZF본문과정상압축된잘린레코드거부(self):
         with tempfile.TemporaryDirectory() as raw:
             root = Path(raw); path, _ = self.fixture(root)
@@ -88,6 +114,8 @@ class RecordStatsTests(unittest.TestCase):
             decoded[index + 2] = ord('?')
             with pysam.BGZFile(str(path), 'wb') as handle: handle.write(bytes(decoded))
             with self.assertRaisesRegex(RuntimeError, 'aux'): run_scan(path, 4, tool=self.tool)
+            with self.assertRaisesRegex(RuntimeError,'aux'):
+                stats.native_record_stats(path,details={})
 
     def test_거대레코드는사전RAM상한오류로구분(self):
         with tempfile.TemporaryDirectory() as raw:

@@ -10,6 +10,35 @@ STAGE='17' if (ROOT/'09_personal_fasta.sh').exists() else '15'
 
 
 class MarkdupResourceTest(unittest.TestCase):
+    def test_index_and_independent_counts_parallel_match_serial(self):
+        import importlib.util
+        spec=importlib.util.spec_from_file_location('markdup_stage',ROOT/f'{STAGE}_mark_duplicates.py')
+        stage=importlib.util.module_from_spec(spec);spec.loader.exec_module(stage)
+        with tempfile.TemporaryDirectory() as raw:
+            bam=Path(raw)/'reads.bam'
+            with pysam.AlignmentFile(bam,'wb',header={'HD':{'SO':'coordinate'},'SQ':[{'SN':'chr1','LN':1000}]}) as out:
+                for i in range(4):
+                    read=pysam.AlignedSegment();read.query_name=str(i);read.query_sequence='A'*40
+                    read.query_qualities=[30]*40;read.reference_id=0;read.reference_start=i*50
+                    read.cigarstring='40M';read.flag=1024 if i==1 else 0;out.write(read)
+            for cpu in (1,8):
+                counts,plan=stage.index_and_counts(bam,shutil.which('samtools'),dict(cpu_grant=cpu))
+                self.assertEqual(counts,(1,4))
+                with pysam.AlignmentFile(bam,'rb') as handle:self.assertEqual(handle.count('chr1',read_callback='nofilter'),4)
+                self.assertEqual(plan['parallel'],cpu>=5)
+                if plan['parallel']:
+                    self.assertEqual(plan['parent_cpus']+plan['index_cpus']+plan['qc_cpus'],cpu)
+
+    def test_child_hap_budget_caps_parent_lease(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root=Path(raw);bam=root/'reads.bam';bam.write_bytes(b'fixture')
+            lease=root/'lease.json';lease.write_text(json.dumps(dict(cpus=16,memory_bytes=16*1024**3)))
+            with patch.dict(os.environ,dict(MFM_CPU_POOL_LEASE_FILE=str(lease),
+                            MFM_CPU_BUDGET='16',MFM_SAMPLE_CPU_BUDGET='8'),clear=True), \
+                 patch('integrate_wgs_rna.markdup_resources.cgroup_cpu_limit',return_value=16), \
+                 patch('os.sched_getaffinity',return_value=set(range(16))):
+                self.assertEqual(markdup_plan(1,bam)['cpu_grant'],8)
+
     def test_cpu_lease_and_ram_budget(self):
         with tempfile.TemporaryDirectory() as raw:
             root=Path(raw);bam=root/'reads.bam';bam.write_bytes(b'fixture');lease=root/'lease.json'
@@ -62,6 +91,18 @@ class MarkdupResourceTest(unittest.TestCase):
             serial=[one('serial',h) for h in [1,2]]
             with ThreadPoolExecutor(max_workers=2) as pool:parallel=list(pool.map(lambda h:one('parallel',h),[1,2]))
             self.assertEqual(serial,parallel);self.assertEqual(serial[0][1]['primary_duplicate_records'],2)
+            # 변경 전 압축 수준5와도 duplicate 판정·모든 정렬 레코드가 같아야 함.
+            from rna_profile import MARKDUP_ARGS
+            baseline=root/'baseline';baseline.mkdir()
+            result=subprocess.run([shutil.which('picard'),'-Xmx1g','-XX:ActiveProcessorCount=2',
+                '-Djava.io.tmpdir='+str(baseline),'MarkDuplicates','I='+str(source),
+                'O='+str(baseline/'marked.bam'),'M='+str(baseline/'metrics.txt'),
+                'TMP_DIR='+str(baseline),*MARKDUP_ARGS,'COMPRESSION_LEVEL=5'],
+                env=env,capture_output=True,text=True,timeout=60)
+            self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+            with pysam.AlignmentFile(baseline/'marked.bam','rb') as handle:
+                baseline_rows=[(r.query_name,r.flag,r.reference_start,r.cigarstring,tuple(r.tags)) for r in handle]
+            self.assertEqual(serial[0][0],baseline_rows)
 
 
 if __name__=='__main__':unittest.main()

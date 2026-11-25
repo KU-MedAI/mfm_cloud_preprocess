@@ -25,6 +25,7 @@ import time
 import os
 import shutil
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from rna_cache import cache_fields, cache_valid, file_fingerprint, read_cache, tool_fingerprint
 
@@ -100,6 +101,25 @@ def primary_record_counts(path: Path, threads: int = 8) -> tuple[int, int]:
     return duplicates, primary
 
 
+def index_and_counts(path, samtools, execution):
+    """안정된 BAM의 색인과 독립 QC를 같은 CPU grant 안에서 겹침."""
+    cpu = execution['cpu_grant']
+    if cpu < 5:
+        auxiliary=max(0,cpu-2)
+        run([samtools,'index','-@',str(auxiliary),str(path)],what='MarkDuplicates BAM index')
+        return primary_record_counts(path,threads=auxiliary), dict(parallel=False,cpu_grant=cpu)
+    children=cpu-1
+    index_cpus=children//2;qc_cpus=children-index_cpus
+    plan=dict(parallel=True,cpu_grant=cpu,parent_cpus=1,index_cpus=index_cpus,qc_cpus=qc_cpus)
+    log('MARKDUP-INDEX-QC-PLAN '+json.dumps(plan,sort_keys=True))
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        index=pool.submit(run,[samtools,'index','-@',str(max(0,index_cpus-2)),str(path)],
+                          what='MarkDuplicates BAM index')
+        counts=pool.submit(primary_record_counts,path,threads=max(0,qc_cpus-2))
+        index.result()
+        return counts.result(),plan
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sample", required=True)
@@ -139,9 +159,11 @@ def main() -> int:
               "backend_script": file_fingerprint(parabricks_bam.__file__, content=True),
               "picard": tool_fingerprint(a.picard), "samtools": tool_fingerprint(st),
               "script": file_fingerprint(__file__, content=True)}
+    inputs['bam_compression_level']=None if use_parabricks else 1
     record_path = a.work_dir / f"hap{h}.markdup.json"
     regenerate = a.force or not nonempty(md, Path(str(md) + ".bai"), mt) or not cache_valid(read_cache(record_path), inputs)
     backend_execution = read_cache(record_path).get("backend_execution") if not regenerate else None
+    verified_counts=None;index_qc_plan=None
     if regenerate:
         log(f"  HAP{h}: {'Parabricks markdup' if use_parabricks else 'Picard MarkDuplicates'}")
         tmpd = a.work_dir / f"picard_tmp_hap{h}"; tmpd.mkdir(parents=True, exist_ok=True)
@@ -159,9 +181,10 @@ def main() -> int:
             backend_execution=parabricks_bam.mark_duplicates(star_bam, reference, part_bam, part_mt, tmpd, a.log_dir / f"parabricks.markdup.HAP{h}.log")
         else:
             run([a.picard, f"-Xmx{a.heap_gb}g", f"-XX:ActiveProcessorCount={execution['java_active_processors']}", f"-Djava.io.tmpdir={tmpd}", "MarkDuplicates",
-                 f"I={star_bam}", f"O={part_bam}", f"TMP_DIR={tmpd}", f"M={part_mt}", *rna_profile.MARKDUP_ARGS],
+                 f"I={star_bam}", f"O={part_bam}", f"TMP_DIR={tmpd}", f"M={part_mt}",
+                 *rna_profile.MARKDUP_ARGS,"COMPRESSION_LEVEL=1"],
                 log_path=a.log_dir / f"17.markduplicates.HAP{h}.log", what=f"{S} HAP{h} Picard MarkDuplicates")
-        run([st, "index", "-@", str(execution["htslib_aux_threads"]), str(part_bam)], what=f"{S} HAP{h} MarkDuplicates BAM index")
+        verified_counts,index_qc_plan=index_and_counts(part_bam,st,execution)
         os.replace(part_bam, md); os.replace(str(part_bam) + ".bai", str(md) + ".bai"); os.replace(part_mt, mt)
     a.out_dir.mkdir(parents=True, exist_ok=True)
     final = a.out_dir / f"{S}.rna.personal.HAP{h}.bam"
@@ -169,13 +192,15 @@ def main() -> int:
     link_or_copy_atomic(Path(str(md) + ".bai"), Path(str(final) + ".bai"))
 
     m = metric_values(mt)
-    dup_primary, primary = primary_record_counts(md, threads=execution["htslib_aux_threads"])
+    dup_primary, primary = (verified_counts if verified_counts is not None
+                            else primary_record_counts(md,threads=max(0,execution['cpu_grant']-2)))
     pd, pu = num(m.get("READ_PAIR_DUPLICATES")), num(m.get("UNPAIRED_READ_DUPLICATES"))
     write_json(record_path, {
         "tool": "Parabricks markdup" if use_parabricks else "Picard MarkDuplicates",
         "bam_backend": "parabricks" if use_parabricks else "cpu",
         "backend_execution": backend_execution,
-        "resource_execution": {**execution,"wall_seconds":time.monotonic()-started,"cache_reused":not regenerate},
+        "resource_execution": {**execution,"wall_seconds":time.monotonic()-started,
+                               "cache_reused":not regenerate,"index_qc_plan":index_qc_plan},
         "remove_duplicates": False,
         "marked_bam": str(md),
         "final_bam": str(final),

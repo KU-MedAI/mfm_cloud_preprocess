@@ -21,9 +21,9 @@ def markdup_plan(heap_gb,input_bam):
     for name in ['MFM_CPU_BUDGET','SLURM_CPUS_PER_TASK']:
         if os.environ.get(name):caps.append(int(os.environ[name]))
     if lease.get('cpus'):caps.append(int(lease['cpus']))
-    else:
-        for name in ['MFM_CPU_POOL_GRANTED','MFM_SAMPLE_CPU_BUDGET']:
-            if os.environ.get(name):caps.append(int(os.environ[name]))
+    # HAP worker의 몫은 부모 lease보다 작을 수 있으므로 항상 함께 적용함.
+    for name in ['MFM_CPU_POOL_GRANTED','MFM_SAMPLE_CPU_BUDGET']:
+        if os.environ.get(name):caps.append(int(os.environ[name]))
     cpu=max(1,min(caps));ram=memory_limit()
     for name,multiplier in [('SLURM_MEM_PER_NODE',1),('SLURM_MEM_PER_CPU',min(caps))]:
         if int(os.environ.get(name,'0'))>0:ram=min(ram,int(os.environ[name])*1024**2*multiplier)

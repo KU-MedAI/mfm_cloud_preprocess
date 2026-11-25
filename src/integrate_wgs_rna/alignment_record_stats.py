@@ -60,15 +60,74 @@ def _legacy_record_stats(path,reference=None,*,samtools=None,workers=None):
     return result
 
 
-def native_record_stats(path,reference=None,*,samtools=None,workers=None):
-    """BAM은 index-free 한 번 집계한다. CRAM과 개발 도구 없는 환경은 기존 경로를 쓴다."""
+def _hts_record_stats(path, reference=None, *, workers=None, details=None):
+    """CRAM 해독과 정렬 순서 확인을 별도 전수 순회 없이 함께 수행함."""
+    from .record_stats_parallel import native_tool, NativeUnavailable
+    tool = native_tool('alignment_scan')
+    before = fingerprint(path)
+    total = max(1, min(cpu_budget(), workers or cpu_budget()))
+    lease = os.environ.get('MFM_CPU_POOL_LEASE_FILE')
+    if lease:
+        prior = json.loads(Path(lease).read_text())
+        total = min(total, max(1, int(prior['cpus'])))
+    auxiliary = max(0, total - 2)
+    # reference 사본과 해독·대기 slice 버퍼를 CPU 수에 맞춰 예약함.
+    largest_reference = 0
+    if reference and Path(str(reference)+'.fai').is_file():
+        with Path(str(reference)+'.fai').open() as handle:
+            largest_reference = max((int(line.split('\t')[1]) for line in handle if line.strip()),default=0)
+    memory = (GIB//2 + 2*largest_reference + (auxiliary+2)*256*1024**2) * 11 // 10
+    from .memory_policy import memory_limit
+    if memory > memory_limit() * 9 // 10:
+        raise ValueError('alignment 전수 읽기 RAM이 운영 예산보다 큼')
+    if lease:
+        budget = WorkerBudget(total, total, False)
+        budget.base_memory = max(int(prior.get('memory_bytes', 0)), memory)
+        while budget.capacity(total, grow=False) < total:
+            time.sleep(.2)
+    print('[RECORD-STATS-PLAN] '+json.dumps(dict(input=str(path), cpu_budget=total,
+          mode='single_pass_htslib', decode_threads=auxiliary, passes=1,
+          estimated_peak_rss_bytes=memory, index_required=False)), flush=True)
+    try:
+        result = subprocess.run([str(tool), str(path), str(reference or '-'), str(auxiliary)],
+                                capture_output=True, text=True)
+    except OSError as error:
+        raise NativeUnavailable('네이티브 alignment 집계 실행 불가: '+str(error)) from error
+    if result.returncode:
+        raise RuntimeError('alignment 전수 읽기 실패: '+result.stderr[-4000:])
+    values = json.loads(result.stdout)
+    counts, execution = values['counts'], values['execution']
+    execution['estimated_peak_rss_bytes'] = memory
+    if fingerprint(path) != before:
+        raise RuntimeError('전수 집계 중 alignment가 변경됨')
+    if execution['native_threads'] > total:
+        raise RuntimeError('네이티브 alignment 스레드가 CPU grant를 초과함')
+    if execution['peak_rss_bytes'] > memory:
+        raise RuntimeError('네이티브 alignment RSS가 사전 RAM 계획을 초과함')
+    if (any(v < 0 or v > counts['records'] for v in counts.values()) or
+            sum(counts[k] for k in ('primary_records','secondary_records','supplementary_records')) != counts['records']):
+        raise ValueError('전수 집계 flag 합계/범위 오류')
+    if details is not None:
+        details.update(execution, input_fingerprint=before)
+    print('[RECORD-STATS-COMPLETE] '+json.dumps(dict(counts=counts, **execution)), flush=True)
+    return counts
+
+
+def native_record_stats(path,reference=None,*,samtools=None,workers=None,details=None):
+    """BAM/CRAM을 한 번 집계하며 개발 도구가 없으면 기존 검증으로 돌아감."""
     from .record_stats_parallel import scan_plan, native_tool, run_scan, NativeUnavailable, RecordSizeLimit
     mode=os.environ.get('MFM_RECORD_STATS_SCAN_MODE','auto')
     if mode not in {'auto','legacy','single_pass'}:
         raise ValueError('MFM_RECORD_STATS_SCAN_MODE는 auto/legacy/single_pass여야 함')
-    if mode=='legacy' or Path(path).suffix.lower()!='.bam':
-        if mode=='single_pass':raise ValueError('single_pass는 BAM 입력에만 적용 가능함')
+    if mode=='legacy':
         return _legacy_record_stats(path,reference,samtools=samtools,workers=workers)
+    if Path(path).suffix.lower()=='.cram' or details is not None:
+        try:
+            return _hts_record_stats(path,reference,workers=workers,details=details)
+        except NativeUnavailable as error:
+            if mode=='single_pass':raise
+            print('[RECORD-STATS-FALLBACK] '+str(error),flush=True)
+            return _legacy_record_stats(path,reference,samtools=samtools,workers=workers)
     try:
         tool=native_tool()
     except NativeUnavailable as error:

@@ -5,7 +5,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from tools.file_inventory import file_stats
 
 
 FINAL_SCHEMA = "mfm_final_package_validation_v1"
@@ -101,7 +104,7 @@ def validate_predelete(root: str | Path, sample: str, mode: str) -> dict:
         validate_signal(root,sample,rna.name)
         if report.get('rna_signal_manifest_sha256')!=_sha256(rna/'rna_signal_manifest.json'):
             raise ValueError('삭제 전 RNA signal manifest SHA 불일치')
-        newest=max(p.stat().st_mtime_ns for p in rna.rglob('*') if p.is_file())
+        newest=max(info.st_mtime_ns for _,info in file_stats(rna))
         if report_path.stat().st_mtime_ns<newest:raise ValueError('삭제 전 RNA signal 검증 보고서가 오래됨')
         result.update(rna_payload='coverage_only',rna_label=rna.name,validation_report_fresh=True)
         return result
@@ -158,7 +161,7 @@ def validate_predelete(root: str | Path, sample: str, mode: str) -> dict:
             or sample_qc.get("duplicates_excluded") is not True):
         raise ValueError("삭제 전 ASE schema/revision/input SHA-256/provenance 불일치")
 
-    newest_evidence = max(path.stat().st_mtime_ns for path in rna.rglob("*") if path.is_file())
+    newest_evidence = max(info.st_mtime_ns for _,info in file_stats(rna))
     if report_path.stat().st_mtime_ns < newest_evidence:
         raise ValueError("삭제 전 최종 검증 보고서가 RNA evidence보다 오래됨; Stage 검증 재실행 필요")
 

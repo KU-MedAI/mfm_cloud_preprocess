@@ -13,7 +13,7 @@ sys.path[:0] = [str(ROOT), str(ROOT / 'src'), str(ROOT / 'vendor/MFM-DNARNAFM'),
 
 def main():
     from integrate_wgs_rna.record_stats_parallel import native_tool
-    names = ['record_stats', 'gpu_fastq', 'restore_tags', 'trace_hash', 'rna_depth', 'rna_fastq',
+    names = ['record_stats', 'alignment_scan', 'gpu_fastq', 'restore_tags', 'trace_hash', 'rna_depth', 'rna_fastq',
              'rna_ase_partition', 'rna_primary', 'rna_variant_support', 'rna_cnv_sum',
              'rna_ase_read', 'pileup_oracle', 'pileup_counts', 'pileup_counts_complete', 'pileup_oracle_complete']
     built = {name: str(native_tool(name)) for name in names}
@@ -21,6 +21,11 @@ def main():
         'test_pileup_native',
         'test_pileup_complete',
         'test_package_inventory',
+        'test_file_inventory',
+        'test_prepare_fast_input',
+        'test_record_stats_parallel.RecordStatsTests.test_htslib_single_pass_cram_counts_and_real_coordinate_order',
+        'test_real_markdup.MarkdupResourceTest.test_child_hap_budget_caps_parent_lease',
+        'test_real_markdup.MarkdupResourceTest.test_index_and_independent_counts_parallel_match_serial',
         'test_cram_output',
         # 전체 단계 실행은 실제 작업 RAM 예약이 필요하므로 작은 계산/패키지만 검사함.
         'test_pileup_feature.CountsTest',
