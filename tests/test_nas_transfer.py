@@ -7,6 +7,7 @@ import importlib.util
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -219,17 +220,75 @@ class NasTransferTests(unittest.TestCase):
         (self.sample('S1')/'compact/link').symlink_to(self.base/'outside')
         with self.assertRaises(ValueError):self.prepare(batch_size=1)
 
+    def test_watch_requests_ready_samples_without_waiting_for_ten(self):
+        args=SimpleNamespace(watch=True,allow_partial=False,batch_size=10,batch=None,
+            destination=str(self.nas),source='test-source',ssh=['ssh'],source_code=str(ROOT),
+            source_config=str(self.state/'effective_config.json'),source_python=sys.executable)
+        response=SimpleNamespace(stdout=json.dumps({'status':'waiting','ready':0,'required':10}))
+        with patch.object(receiver.subprocess,'run',return_value=response) as command,patch.object(receiver,'receive') as receive:
+            self.assertFalse(receiver.pull_once(args))
+            self.assertIn('--allow-partial',command.call_args.args[0][-1])
+            receive.assert_not_called()
+
+    def test_watch_waits_only_when_idle_and_immediately_drains_new_completions(self):
+        args=SimpleNamespace(watch=True,poll_interval=300)
+        with patch.object(receiver,'pull_once',side_effect=[False,True,True,KeyboardInterrupt]) as poll,patch.object(receiver.time,'sleep') as sleep:
+            with self.assertRaises(KeyboardInterrupt):receiver.run(args)
+            self.assertEqual(poll.call_count,4);sleep.assert_called_once_with(300)
+
+    def test_watch_retries_connection_failure_after_poll_interval(self):
+        args=SimpleNamespace(watch=True,poll_interval=300)
+        failure=subprocess.CalledProcessError(255,['ssh'],stderr='test connection failure')
+        with patch.object(receiver,'pull_once',side_effect=[failure,True,KeyboardInterrupt]) as poll,patch.object(receiver.time,'sleep') as sleep:
+            with self.assertRaises(KeyboardInterrupt):receiver.run(args)
+            self.assertEqual(poll.call_count,3);sleep.assert_called_once_with(300)
+
+    def test_integrity_errors_stop_watch_and_manual_transfer_does_not_retry(self):
+        for watch,error in [(True,ValueError('NAS checksum mismatch')),
+                            (False,subprocess.CalledProcessError(255,['ssh']))]:
+            with self.subTest(watch=watch),patch.object(receiver,'pull_once',side_effect=error),patch.object(receiver.time,'sleep') as sleep:
+                with self.assertRaises(type(error)):receiver.run(SimpleNamespace(watch=watch,poll_interval=300))
+                sleep.assert_not_called()
+
+    def test_watch_rejects_pinned_batch_or_invalid_polling_before_remote_call(self):
+        common=['pull_completed.py','--source','test-source','--identity','unused',
+            '--source-code',str(ROOT),'--source-config',str(self.state/'effective_config.json'),
+            '--source-python',sys.executable,'--destination',str(self.nas),'--watch']
+        for extra in [['--batch','old_batch'],['--poll-interval','0'],['--batch-size','0']]:
+            with self.subTest(extra=extra),patch.object(sys,'argv',common+extra),patch.object(sys,'stderr'),patch.object(receiver.subprocess,'run') as remote:
+                with self.assertRaises(SystemExit) as caught:receiver.main()
+                self.assertEqual(caught.exception.code,2);remote.assert_not_called()
+                self.assertFalse(self.nas.exists())
+
+    def test_second_receiver_cannot_poll_same_nas_destination(self):
+        import fcntl
+        self.nas.mkdir()
+        argv=['pull_completed.py','--source','test-source','--identity','unused',
+            '--source-code',str(ROOT),'--source-config',str(self.state/'effective_config.json'),
+            '--source-python',sys.executable,'--destination',str(self.nas),'--watch']
+        with (self.nas/'.nas_pull.lock').open('a+') as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+            with patch.object(sys,'argv',argv),patch.object(sys,'stderr'),patch.object(receiver.subprocess,'run') as remote:
+                with self.assertRaises(SystemExit) as caught:receiver.main()
+                self.assertEqual(caught.exception.code,2);remote.assert_not_called()
+        self.assertTrue((self.sample('S1')/'compact').is_dir())
+
     def test_full_receiver_with_real_rsync_and_fake_ssh(self):
         batch=self.prepare(batch_size=1);self.nas.mkdir()
         ssh=self.base/'fake_ssh.py';ssh.write_text("import os,sys\nos.execv('/bin/sh',['sh','-c',' '.join(sys.argv[2:])])\n")
         args=SimpleNamespace(destination=str(self.nas),source='local-test',ssh=[sys.executable,str(ssh)],
             source_code=str(ROOT),source_config=str(self.state/'effective_config.json'),
-            source_python=sys.executable,remove_source=True)
+            source_python=sys.executable,remove_source=True,watch=True)
         receiver.receive(args,batch)
         final=Path(batch['samples'][0]['destination'])
         self.assertEqual((final/'compact/fake/chr1/0').read_bytes(),b'ACGT')
         self.assertFalse((self.sample('S1')/'compact').exists())
         self.assertTrue(list((self.nas/'_transfer_records').rglob('*.verified.json')))
+        with patch.object(receiver.subprocess,'run',wraps=receiver.subprocess.run) as commands:
+            receiver.receive(args,self.prepare(batch_id=batch['batch_id']))
+        payload=args.source+':'+batch['samples'][0]['source_root']+'/'
+        self.assertFalse(any(payload in call.args[0] for call in commands.call_args_list))
+        self.assertEqual(self.prepare()['ready'],1)
 
     def test_receiver_failure_keeps_source_and_resumes_same_batch(self):
         batch=self.prepare(batch_size=1);self.nas.mkdir()

@@ -60,6 +60,6 @@ docker run "${MFM_DOCKER_ARGS[@]}" mfm-preprocess:261125-cpu \
 
 - [Docker 설정·중단/재개·이미지 전달](docs/Docker_실행.md)
 - [환경·자원·출력 모드·전처리 정책](docs/전처리_상세.md)
-- [완료10명씩 NAS `final_pileup`으로 수동 이관](docs/NAS_수동이관.md)
+- [완료 결과 NAS `final_pileup`으로 자동·수동 이관](docs/NAS_수동이관.md)
 
 - [Pileup36채널·BAF·HP별 관측](docs/pileup_36채널.md)

@@ -320,8 +320,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 2506,
-      "sha256": "a27a189a6f6dadc686e08b4c1f641841821d24942967c04d72dca27b25a5cdff"
+      "size_bytes": 2513,
+      "sha256": "fefaa55a3d2103526144258878e8aec1dfa46aee6666814b35290c1955818fea"
     },
     {
       "path": "RESULTS_2026-09-18.md",
@@ -430,8 +430,8 @@
     },
     {
       "path": "docs/NAS_수동이관.md",
-      "size_bytes": 5398,
-      "sha256": "b91b7c21b5cba952a0627f73311211e2eb6882b0480412d80ee6cfb5617fbfa1"
+      "size_bytes": 7457,
+      "sha256": "d9a0b8100390c5c234bcb4d2225660394ccf2345e89dc01493be033c54413edb"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -4210,8 +4210,8 @@
     },
     {
       "path": "tests/test_nas_transfer.py",
-      "size_bytes": 16131,
-      "sha256": "812631222c57a63cfb2497519af749756cba765691e7fb170c63ef93b86aca89"
+      "size_bytes": 20479,
+      "sha256": "9e9d7c30a4b7d4ac55c87026e2ff1bca8e5edcf631ecc1bcfbfaff6a61b6ac8f"
     },
     {
       "path": "tests/test_output_scan_resources.py",
@@ -4780,8 +4780,8 @@
     },
     {
       "path": "tools/pull_completed.py",
-      "size_bytes": 7528,
-      "sha256": "1027561d0723b9313d4bbf4e6183eefb734f1146c3dfa58f13d4397cc71a3acd"
+      "size_bytes": 9272,
+      "sha256": "f4345cfe369871b246d21a194f63d5d56fe2ee76dc5faa1c64a639b79a8c33bd"
     },
     {
       "path": "tools/rebalance_realign.py",
