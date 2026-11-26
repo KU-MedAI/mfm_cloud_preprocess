@@ -10,11 +10,19 @@ NAS 또는 NAS가 마운트된 받는 서버에서 실행함. 전처리 큐는 �
 │   ├── long_read_sequence/
 │   └── short_read_sequence/
 └── final_pileup/                  새 pileup 결과
-    └── <원본 output_root 폴더명>/
-        └── wgs_rna_pair/<project>/<sample>/
+    ├── short_read_pileup/
+    │   ├── wgs_only/<project>/<sample>/
+    │   └── pair/<project>/<sample>/
+    └── long_read_pileup/
+        ├── wgs_only/<project>/<sample>/
+        └── pair/<project>/<sample>/
 ```
 
 원본 서버에서 계산 중인 출력 경로는 유지함. NAS 쪽 `final_pileup`은 수신 명령이 생성함. 기존 `final` 자료와 합치거나 기존 폴더를 변경하지 않음.
+
+manifest의 `read_type`으로 short/long을, `data_group=wgs` 또는 `wgs_rna_pair`로 wgs_only/pair를 구분함. 프로젝트는 `project_id`, 마지막 폴더는 `sample_id`임. 실행명·날짜는 NAS 데이터 경로에 넣지 않음. pair 한 샘플의 DNA와 RNA는 같은 샘플 폴더 아래 `compact/`·`rna_personal/`에 함께 보관함.
+
+예: `final_pileup/short_read_pileup/pair/1KGP_ILLUMINA/HG00186/`임. 기존 준비 배치가 있으면 저장된 목적지로 재개하며 이 변경이 이미 전송된 폴더를 자동 이동하지 않음. 같은 프로젝트/샘플 목적지에 다른 자료가 있으면 덮어쓰지 않고 검증 오류로 중단함.
 
 ## 받는 서버에서 실행
 

@@ -430,8 +430,8 @@
     },
     {
       "path": "docs/NAS_수동이관.md",
-      "size_bytes": 4569,
-      "sha256": "f5e4668e384457b53e10c0d16bbf43f6794d85809c4fdc5388eeee2a52c8b1aa"
+      "size_bytes": 5398,
+      "sha256": "b91b7c21b5cba952a0627f73311211e2eb6882b0480412d80ee6cfb5617fbfa1"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -1005,8 +1005,8 @@
     },
     {
       "path": "handoff/nas_transfer.py",
-      "size_bytes": 14446,
-      "sha256": "1148b8cb9c88e3d5fafe2f12cb2512a54f106eb9ddf0c92f39b249219c1c2c01"
+      "size_bytes": 14962,
+      "sha256": "1db2f256d6d6957c46f745516b28fca83bd6f6638e4307a1a5697845e9dc13ab"
     },
     {
       "path": "handoff/planner.py",
@@ -4210,8 +4210,8 @@
     },
     {
       "path": "tests/test_nas_transfer.py",
-      "size_bytes": 14523,
-      "sha256": "84e687098d5cd67b12bb7a7d1558f9258da56490f20279402839f4f28f9e3462"
+      "size_bytes": 16131,
+      "sha256": "812631222c57a63cfb2497519af749756cba765691e7fb170c63ef93b86aca89"
     },
     {
       "path": "tests/test_output_scan_resources.py",

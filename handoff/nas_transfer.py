@@ -113,6 +113,20 @@ def checked_local(config, row, root):
     return expected is None or policy.get('storage_policy') == expected
 
 
+def destination_relative(row):
+    try:
+        parts = [
+            {'short_read':'short_read_pileup','long_read':'long_read_pileup'}[row['read_type']],
+            {'wgs':'wgs_only','wgs_rna_pair':'pair'}[row['data_group']],
+            row['project_id'], row['sample_id'],
+        ]
+    except KeyError as error:
+        raise ValueError('NAS 분류에 필요한 manifest 값이 없거나 지원하지 않음: '+str(error)) from None
+    if any(not isinstance(part,str) or len(safe_relative(part).parts)!=1 for part in parts):
+        raise ValueError('NAS 분류 항목은 단일 폴더명이어야 함')
+    return '/'.join(parts)
+
+
 def prepare(config, rows, destination_root, batch_size=10, allow_partial=False, batch_id=None):
     from . import cli
     from .sequence_mode import completion_mode
@@ -169,9 +183,7 @@ def prepare(config, rows, destination_root, batch_size=10, allow_partial=False, 
             root = root.resolve()
             if any(path.name not in {'compact','rna_personal','qc','metadata','logs'} for path in root.iterdir()):
                 raise ValueError('모델 전용 정리 후의 패키지만 이관 가능함')
-            relative = Path(config['output_root']).name + '/' + '/'.join(
-                [row['data_group'],row['project_id'],sample])
-            safe_relative(relative)
+            relative = destination_relative(row)
             item = dict(sample=sample,source_root=str(root),destination=str(destination_root / relative),
                         mode=completion_mode(config,row),relative_destination=relative,
                         model_bytes=json.loads((Path(config['state_root'])/'samples'/(sample+'.json')).read_text())['model_bytes'],

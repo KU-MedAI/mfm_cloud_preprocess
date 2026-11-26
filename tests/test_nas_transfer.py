@@ -93,6 +93,29 @@ class NasTransferTests(unittest.TestCase):
         sentinel=self.nas.parent/'final/short_read_sequence/keep';sentinel.parent.mkdir(parents=True);sentinel.write_text('old')
         self.archive();self.assertEqual(sentinel.read_text(),'old')
 
+    def test_destination_is_classified_by_read_group_project_and_sample(self):
+        for read_type,folder in [('short_read','short_read_pileup'),('long_read','long_read_pileup')]:
+            for group,subfolder in [('wgs','wgs_only'),('wgs_rna_pair','pair')]:
+                row={**self.rows[0],'read_type':read_type,'data_group':group}
+                with self.subTest(read_type=read_type,group=group):
+                    self.assertEqual(transfer.destination_relative(row),f'{folder}/{subfolder}/P/S1')
+        batch=self.prepare(batch_size=1);item=batch['samples'][0]
+        self.assertEqual(item['relative_destination'],'short_read_pileup/pair/P/S1')
+        self.assertEqual(item['destination'],str(self.nas/'short_read_pileup/pair/P/S1'))
+
+    def test_unknown_classification_and_nested_project_are_rejected(self):
+        for change in [{'read_type':''},{'read_type':'unknown'},{'data_group':'other'},
+                       {'project_id':'P/subfolder'},{'project_id':'..'},{'project_id':'.'}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                transfer.destination_relative({**self.rows[0],**change})
+
+    def test_prepared_batch_keeps_its_recorded_destination_on_resume(self):
+        batch=self.prepare(batch_size=1)
+        item=batch['samples'][0];item['relative_destination']='old_run/wgs_rna_pair/P/S1'
+        item['destination']=str(self.nas/item['relative_destination'])
+        transfer.save(transfer.batch_path(self.config,batch['batch_id']),batch)
+        self.assertEqual(self.prepare()['samples'][0]['destination'],item['destination'])
+
     def test_not_completed_locked_or_wrong_policy_samples_are_not_selected(self):
         import fcntl
         transfer.save(self.state/'samples/S2.json',dict(sample='S2',status='running',model_bytes=0))
