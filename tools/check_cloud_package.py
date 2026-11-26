@@ -29,6 +29,8 @@ REQUIRED = {
     'src/integrate_wgs_rna/native/pileup_oracle_complete.cpp',
     'src/integrate_wgs_rna/native/alignment_scan.cpp',
     'tools/file_inventory.py',
+    'handoff/archive_receipt.py', 'handoff/nas_transfer.py',
+    'tools/nas_transfer.py', 'tools/pull_completed.py', 'docs/NAS_수동이관.md',
 }
 
 

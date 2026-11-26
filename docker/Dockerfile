@@ -11,7 +11,7 @@ ARG MINIFORGE_SHA256=281b0ac7d550802efc81af633225a5e6116d29ae72f3ab4eae7168c3931
 RUN test "$(uname -m)" = x86_64 \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-       bash bzip2 ca-certificates curl libgomp1 procps tini util-linux \
+       bash bzip2 ca-certificates curl libgomp1 openssh-client procps rsync tini util-linux \
     && rm -rf /var/lib/apt/lists/* \
     && curl --fail --location --retry 5 \
        "https://github.com/conda-forge/miniforge/releases/download/${MINIFORGE_VERSION}/Miniforge3-${MINIFORGE_VERSION}-Linux-x86_64.sh" \

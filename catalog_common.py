@@ -22,6 +22,11 @@ def read_json(path: Path) -> dict:
         return {}
 
 
+def archived_catalog(sample_root):
+    from handoff.archive_receipt import catalog_row
+    return catalog_row(sample_root)
+
+
 def load_population_meta(path: Path | None) -> dict[str, dict]:
     """집단/가족 메타 TSV를 sample ID 기준으로 색인한다."""
     if path is None or not path.is_file():

@@ -18,6 +18,9 @@ ORIGINAL_LAYOUT=(ROOT/"09_personal_fasta.sh").is_file()
 CLOUD_TARGETS=('azure_poc','azure_main','aws_main','server')
 
 def processing_complete(root,sample,mode,require_cleanup=False):
+    from .archive_receipt import read as read_archive
+    archived=read_archive(root)
+    if archived is not None:return archived['sample']==sample and archived['mode']==mode
     if require_cleanup or not ORIGINAL_LAYOUT:return cleanup_complete(root,sample,mode)
     root=Path(root)
     if (root/'metadata/cleanup_completed.json').exists() or (root/'metadata/cleanup_in_progress.json').exists():
@@ -227,6 +230,8 @@ def worker(c,row,executor='local'):
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         record=stats/(sample+'.json');root=sample_root(c,row)
         mode=completion_mode(c,row)
+        from .archive_receipt import matches as archived_match
+        if archived_match(c,row,root) is not None:return 0
         from .sequence_mode import payload_matches
         if processing_complete(root,sample,mode) and not payload_matches(c,row,root):
             raise ValueError('기존 완료본의 WGS payload가 다름. 별도 output_root/state_root를 사용해야 함: '+sample)

@@ -60,6 +60,12 @@ def enqueue(config, rows, samples, stage, overwrite, rebuild, save, original=Tru
     selected = read_tsv(state/'selected_samples.tsv')
     if set(samples) - {r['sample_id'] for r in selected}:
         raise ValueError('기존 큐의 선택 범위 밖임')
+    from .archive_receipt import matches as archived_match
+    for row in selected:
+        if row['sample_id'] in samples:
+            root=Path(running_config['output_root'])/row['data_group']/row['project_id']/row['sample_id']
+            if archived_match(running_config,row,root) is not None:
+                raise ValueError('NAS 이관 완료 샘플은 재개하지 않음. 재처리는 새 output/state를 사용하세요.')
     bindings = StateBindings(running_config, selected)
     if any(locked(bindings.state(s), s) for s in samples):
         raise ValueError('실행 중인 샘플은 재개 요청할 수 없음. 완료/실패 후 요청해야 함')

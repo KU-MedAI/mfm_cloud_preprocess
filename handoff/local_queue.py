@@ -149,6 +149,8 @@ class Adapter:
     def verified(self, row, state=None):
         mode = completion_mode(self.config,row)
         root = self.api.sample_root(self.config, row)
+        from .archive_receipt import matches as archived_match
+        if archived_match(self.config,row,root) is not None:return True
         if sample_environment(self.config,row['sample_id']).get('CLEAN_INTERMEDIATES_ON_SUCCESS')=='1':
             from .cleanup import cleanup_complete
             if not cleanup_complete(root,row['sample_id'],mode):return False

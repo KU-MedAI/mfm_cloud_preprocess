@@ -27,7 +27,8 @@ class LocalTests(unittest.TestCase):
                      'state_root':str(self.base/'state'),'package_root':str(ROOT),
                      'run_id':'test','selection_fingerprint':'a'*64,'sample_cpus':8,
                      'local_jobs':2,'download_jobs':3,'memory_limit_bytes':10**12,
-                     'model_target_bytes':10**12,'pipeline_env':{},
+                     'model_target_bytes':10**12,'pipeline_env':{
+                         'MFM_SHORT_READ_OUTPUT_MODE':'full','MFM_LONG_READ_OUTPUT_MODE':'full'},
                      'resource_resolution':{'requested_local_jobs':'auto','requested_download_jobs':'auto'}}
         self.rows=[dict(sample_id=s,platform='illumina',known_input_total_bytes='1000',
                         data_group='wgs',project_id='P',rna_path='') for s in ['slow','fast','bad']]

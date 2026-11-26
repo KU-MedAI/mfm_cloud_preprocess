@@ -275,8 +275,8 @@
     },
     {
       "path": "27_make_catalog.py",
-      "size_bytes": 19149,
-      "sha256": "3981a6a584a91c3f0fb97a8af2a56b9da5057b7ca0ae07bb20fd7f951021eca3"
+      "size_bytes": 19680,
+      "sha256": "313528004f7d6070b728683f25b0c3abe496a02524c003f2ae43d3fa0c343bb9"
     },
     {
       "path": "GUIDE.md",
@@ -320,8 +320,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 2422,
-      "sha256": "6696995e60f71a134c4e3a89055d863873a27f5869f957744810998b94677525"
+      "size_bytes": 2506,
+      "sha256": "a27a189a6f6dadc686e08b4c1f641841821d24942967c04d72dca27b25a5cdff"
     },
     {
       "path": "RESULTS_2026-09-18.md",
@@ -360,8 +360,8 @@
     },
     {
       "path": "catalog_common.py",
-      "size_bytes": 1775,
-      "sha256": "a6c9c0449b9790fdaf6194aaa2f5211af8e279e436f03c2a6db4fef854b2a4fa"
+      "size_bytes": 1900,
+      "sha256": "32f302ca852848fe76fd2b40f5610b76880c695427f4f71ce51ea7006136e558"
     },
     {
       "path": "clair3_environment.yml",
@@ -405,8 +405,8 @@
     },
     {
       "path": "docker/Dockerfile",
-      "size_bytes": 3183,
-      "sha256": "a83c06bf658784e315575143d77065a79513d27c7140145615463ad15effcd15"
+      "size_bytes": 3204,
+      "sha256": "70e46fb007ebe10e4eaba9e4a518fe812ca36ca8b86741abdbb161c143075980"
     },
     {
       "path": "docker/config.pileup.example.json",
@@ -420,13 +420,18 @@
     },
     {
       "path": "docker/smoke.py",
-      "size_bytes": 3142,
-      "sha256": "3c239592f0cb4fdda923a9c40e37eabb672a3177d931ad8b4b67fa2cd0447eee"
+      "size_bytes": 3171,
+      "sha256": "2e2a2c3c55e1ab65dda11b1da9d8002e3fb51c6973883a3a0a0633055ca25388"
     },
     {
       "path": "docs/Docker_실행.md",
       "size_bytes": 12485,
       "sha256": "0f28de14788daaa8f0ecdd84947ddc16eafa8023092f64e6e460dc503ed642d5"
+    },
+    {
+      "path": "docs/NAS_수동이관.md",
+      "size_bytes": 4569,
+      "sha256": "f5e4668e384457b53e10c0d16bbf43f6794d85809c4fdc5388eeee2a52c8b1aa"
     },
     {
       "path": "docs/QC_근거와_보수성.md",
@@ -874,6 +879,11 @@
       "sha256": "e495cc9232563b2a9ad5cebc4041f00e4c6219389e8bdeb848b7afe991f9e10c"
     },
     {
+      "path": "handoff/archive_receipt.py",
+      "size_bytes": 3856,
+      "sha256": "83c49009d3199a7d2d57bbe1c79451c53567626e90755797d72e0ad55e6ea4af"
+    },
+    {
       "path": "handoff/asset_restore.py",
       "size_bytes": 11321,
       "sha256": "cdf59370209ccbc3efb96f48e6eacf5030bb02906b8b33823d3f1434f0819710"
@@ -900,8 +910,8 @@
     },
     {
       "path": "handoff/cli.py",
-      "size_bytes": 38428,
-      "sha256": "9fffd67f4240db9e297e8d3aa3798d656c8d6c5c1dbc8793b1aeef2f85708355"
+      "size_bytes": 38725,
+      "sha256": "5471469fc8cf83eab2888bb0ee3d02fef3c6967fe44734a0b699c4017ee83f69"
     },
     {
       "path": "handoff/completion_cleanup.py",
@@ -985,13 +995,18 @@
     },
     {
       "path": "handoff/local_queue.py",
-      "size_bytes": 20408,
-      "sha256": "5a5b54cbb7e084744302dab341f1c852b7923e941db9e61909484ea32c4e5320"
+      "size_bytes": 20543,
+      "sha256": "23efe4e82f913d6041e22d46ee5e6f0a28935151aa23f60a9ebe1fdab61a3630"
     },
     {
       "path": "handoff/metrics.py",
       "size_bytes": 7867,
       "sha256": "5bdf3edf29bab477261d8c43006feebb6dc25c49dd05a7883add6e8034169399"
+    },
+    {
+      "path": "handoff/nas_transfer.py",
+      "size_bytes": 14446,
+      "sha256": "1148b8cb9c88e3d5fafe2f12cb2512a54f106eb9ddf0c92f39b249219c1c2c01"
     },
     {
       "path": "handoff/planner.py",
@@ -1005,8 +1020,8 @@
     },
     {
       "path": "handoff/queue_recovery.py",
-      "size_bytes": 3662,
-      "sha256": "9a4a7d129578ce52048452a218da0b71e5ce61da0f43db5e7f592e449330fd0f"
+      "size_bytes": 4095,
+      "sha256": "8f986e4287af912d4fedae0f881b63c71647ba8ec3dc677913b93dc692f21670"
     },
     {
       "path": "handoff/queue_resources.py",
@@ -4160,8 +4175,8 @@
     },
     {
       "path": "tests/test_local_queue.py",
-      "size_bytes": 12208,
-      "sha256": "4de921d470302b00f7963dd0f29d9cc491e0d3b8caf48eb826865969415dc2ad"
+      "size_bytes": 12304,
+      "sha256": "0f7930784977551441abc80e512bc2781b399a3dc38a50116b7a062daf4662a2"
     },
     {
       "path": "tests/test_longread_resume_resources.py",
@@ -4192,6 +4207,11 @@
       "path": "tests/test_model_input_contract.py",
       "size_bytes": 1616,
       "sha256": "0a06038aa948be159d5c9f9339de8cbe97fb5f976de18b252197ecef0569479f"
+    },
+    {
+      "path": "tests/test_nas_transfer.py",
+      "size_bytes": 14523,
+      "sha256": "84e687098d5cd67b12bb7a7d1558f9258da56490f20279402839f4f28f9e3462"
     },
     {
       "path": "tests/test_output_scan_resources.py",
@@ -4720,8 +4740,8 @@
     },
     {
       "path": "tools/check_cloud_package.py",
-      "size_bytes": 5923,
-      "sha256": "d254fd7a7c985422104aae5406086747c4baf9cd37182915647d6974a656ad21"
+      "size_bytes": 6068,
+      "sha256": "cd902285c585db26bbf29871de0aad2dcc7bad018d56bf50f346b847abe1cdce"
     },
     {
       "path": "tools/check_model_input.py",
@@ -4744,6 +4764,11 @@
       "sha256": "fbde0e4fa7424131a642f2525af901a8935a2f6d0e3d2661dafc8333e8445d46"
     },
     {
+      "path": "tools/nas_transfer.py",
+      "size_bytes": 334,
+      "sha256": "a9fbd92087d2e5b4bae41b7d523422528226f04f80512e0fd224b9f3bcebc13a"
+    },
+    {
       "path": "tools/perf_bigmem.env",
       "size_bytes": 1606,
       "sha256": "353a859a6121d2673783c54b6be97612b2e562bdd96a24ef8f6bc6ff9cb6a2ca"
@@ -4752,6 +4777,11 @@
       "path": "tools/personal_assets.py",
       "size_bytes": 7366,
       "sha256": "0a7e1249ebdacd11cb00d04ea42d6f8c2d991a6d49cd26eed84dce8944ccc90c"
+    },
+    {
+      "path": "tools/pull_completed.py",
+      "size_bytes": 7528,
+      "sha256": "1027561d0723b9313d4bbf4e6183eefb734f1146c3dfa58f13d4397cc71a3acd"
     },
     {
       "path": "tools/rebalance_realign.py",

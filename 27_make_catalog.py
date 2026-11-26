@@ -35,7 +35,7 @@ import sys
 from pathlib import Path
 from tools.compact_manifest import completed_contigs
 from catalog_common import (
-    first_existing, load_population_meta, load_splits, read_clair3_qc, read_json,
+    first_existing, load_population_meta, load_splits, read_clair3_qc, read_json, archived_catalog,
  )
 
 
@@ -69,6 +69,7 @@ COLS = [
     "has_rna", "has_compact", "has_realigned", "has_chain",
     "qc_all_paths_exist", "processing_status", "training_eligible", "missing",
     "final_validation_status", "final_validation_failed_checks",
+    "data_location", "archived_root", "archive_training_eligible",
 ]
 
 CHROMS = [f"chr{i}" for i in range(1, 23)]
@@ -85,6 +86,12 @@ REALIGN_PATTERNS = ("{s}.personal.{H}.cram", "{s}.ont.personal.{H}.cram",
 
 
 def scan_sample(sample_root: Path, cohort: str, pop_meta: dict, split_of: dict) -> dict:
+    archived = archived_catalog(sample_root)
+    if archived is not None:
+        if sample_root.name in split_of:archived['split']=split_of[sample_root.name]
+        for key,value in pop_meta.get(sample_root.name,{}).items():
+            if key in {'sex','pop','superpop','family_id','father','mother','related'}:archived[key]=value
+        return archived
     s = sample_root.name
     meta = read_json(sample_root / "metadata" / "sample.json")
     hap_read_mode = meta.get("hap_read_mode", "all_to_both")
@@ -208,6 +215,7 @@ def scan_sample(sample_root: Path, cohort: str, pop_meta: dict, split_of: dict) 
                              "processed_qc_fail" if outputs_complete else "incomplete")
 
     return {
+        "data_location": "local", "archived_root": "", "archive_training_eligible": "",
         "sample_id": s, "cohort": cohort,
         "dataset_role": role, "read_type": meta.get("read_type", ""),
         "project_id": meta.get("project_id", cohort),
